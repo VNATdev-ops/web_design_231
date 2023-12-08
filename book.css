@@ -1,0 +1,39 @@
+@font-face { font-family: Josefin Sans; src: url('./font/Josefin_Sans/JosefinSans-VariableFont_wght.ttf'); } 
+body{
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #18212a;
+    padding: 40px 80px;
+    background-color: #fffced;
+}
+a{
+    text-decoration: none;
+    color: #337ab7;
+}
+.dac-den-dang{
+    display: flex;
+}
+.slideshow{
+    width: 45%;
+}
+.info{
+    width: 55%;
+    padding: 0 20px;
+}
+h1 {
+    font-family: Josefin Sans,sans-serif;
+    font-size: 2rem;
+    color: #4e358a;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 2.75rem;
+}
+.product_price{
+    font-family: Josefin Sans,sans-serif;
+    font-size: 1.5rem;
+    color: #4e358a;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 2.75rem;
+}

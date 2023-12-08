@@ -4,133 +4,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lacàph | Đặc Đen Đắng</title>
+    <link rel="stylesheet" href="./book.css">
+    <style>
+       
+      /* Styling the area of the slides */
+       
+      #slideshow {
+          overflow: hidden;
+          height: 500px;
+          width: 500px;
+          margin: 0 auto;
+      }
+       
+      /* Style each of the sides 
+      with a fixed width and height */
+       
+      .slide {
+          float: left;
+          height: 500px;
+          width: 500px;
+      }
+       
+      /* Add animation to the slides */
+       
+      .slide-wrapper {
+           
+          /* Calculate the total width on the
+        basis of number of slides */
+          width: calc(500px * 4);
+           
+          /* Specify the animation with the
+        duration and speed */
+          animation: slide 20s ease infinite;
+      }
+
+      /* Define the animation 
+      for the slideshow */
+       
+      @keyframes slide {
+           
+          /* Calculate the margin-left for 
+        each of the slides */
+          20% {
+              margin-left: 0px;
+          }
+          40% {
+              margin-left: calc(-500px * 1);
+          }
+          60% {
+              margin-left: calc(-500px * 2);
+          }
+          80% {
+              margin-left: calc(-500px * 3);
+          }
+      }
+      </style>
 </head>
 <body>
     <header></header>
     <main>
         <section class="dac-den-dang">
-            <div class="swiper">
-                <div class="product-image swiper swiper-container-initialized swiper-container-horizontal">
-                    <!-- Additional required wrapper -->
-                        <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
-                            <div class="swiper-slide swiper-slide-active" style="width: 445px; margin-right: 30px;"><div class="" id="">
-                                <img class="" src="./images/sach/sach-1.jpg" alt="Đặc Đen Đắng: The Vietnamese Coffee Book + Free Tote Bag" id="main_image1042" width="500" height="500">
-                            </div>
-                        </div>
+            
 
-                        <div class="swiper-slide swiper-slide-next" style="width: 445px; margin-right: 30px;">
-                            <img class=" jch-lazyloaded" src="./images/sach/sach-2.jpg" title="Đặc Đen Đắng: The Vietnamese Coffee Book" width="500" height="500">
-                        </div>
-                        <div class="swiper-slide" style="width: 445px; margin-right: 30px;">
-                            <img class=" jch-lazyloaded" src="./images/sach/sach-3.jpg" title="Đặc Đen Đắng: The Vietnamese Coffee Book" width="500" height="500">
-                        </div>
-                        <div class="swiper-slide" style="width: 445px; margin-right: 30px;">
-                            <img class="jch-lazyload" src="./images/sach/sach-4.jpg" title="Đặc Đen Đắng: The Vietnamese Coffee Book" width="500" height="500">
-                        </div>
-                        <div class="swiper-slide" style="width: 445px; margin-right: 30px;">
-                            <img class="jch-lazyload" src="./images/sach/sach-5.jpg" title="Đặc Đen Đắng: The Vietnamese Coffee Book" width="500" height="500">
-                        </div>
-                        <div class="swiper-slide" style="width: 445px; margin-right: 30px;">
-                            <img class="jch-lazyload" src="./images/sach/sach-6.jpg" title="Đặc Đen Đắng: The Vietnamese Coffee Book" width="500" height="500">
-                        </div>
-                        <div class="swiper-slide" style="width: 445px; margin-right: 30px;">
-                            <img class="jch-lazyload" src="./images/sach/sach-7.jpg" title="Đặc Đen Đắng: The Vietnamese Coffee Book" width="500" height="500">
-                        </div>
-                        </div>
-                    <!-- If we need navigation buttons -->
-                        <div class="swiper-button-prev swiper-button-disabled"></div>
-                        <div class="swiper-button-next"></div>
-                 </div>
-            </div>
-
-            <div class="swiper">
-                <img class="book" src="./images/sach/sach-1.jpg" style="width:100%;display:none">
-                <img class="book" src="./images/sach/sach-2.jpg" style="width:100%">
-                <img class="book" src="./images/sach/sach-3.jpg" style="width:100%;display:none">
-                <img class="book" src="./images/sach/sach-4.jpg" style="width:100%;display:none">
-                <img class="book" src="./images/sach/sach-5.jpg" style="width:100%;display:none">
-                <img class="book" src="./images/sach/sach-6.jpg" style="width:100%;display:none">
-                <img class="book" src="./images/sach/sach-7.jpg" style="width:100%;display:none">
-              
-                <div class="img-row">
-                  <div class="img-row">
-                    <img class="demo w3-opacity w3-hover-opacity-off" src="./images/sach/sach-1.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(1)">
-                  </div>
-                  <div class="img-row">
-                    <img class="demo w3-opacity w3-hover-opacity-off" src="./images/sach/sach-2.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(2)">
-                  </div>
-                  <div class="img-row">
-                    <img class="demo w3-opacity w3-hover-opacity-off" src="./images/sach/sach-3.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(3)">
-                  </div>
-                  <div class="img-row">
-                    <img class="demo w3-opacity w3-hover-opacity-off" src="./images/sach/sach-4.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(4)">
-                  </div>
-                  <div class="img-row">
-                    <img class="demo w3-opacity w3-hover-opacity-off" src="./images/sach/sach-5.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(5)">
-                  </div>
-                  <div class="img-row">
-                    <img class="demo w3-opacity w3-hover-opacity-off" src="./images/sach/sach-6.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(6)">
-                  </div>
-                  <div class="img-row">
-                    <img class="demo w3-opacity w3-hover-opacity-off" src="./images/sach/sach-7.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(7)">
-                  </div>
-                </div>
+            <!-- Define the slideshow container -->
+          <div id="slideshow">
+              <div class="slide-wrapper">
+                  
+                <!-- Define each of the slides and write the content -->
+                <div class="slide"><img src="./images/sach/sach-1.jpg" alt=""></div>
+                <div class="slide"><img src="./images/sach/sach-2.jpg" alt=""></div>
+                <div class="slide"><img src="./images/sach/sach-3.jpg" alt=""></div>
+                <div class="slide"><img src="./images/sach/sach-4.jpg" alt=""></div>
               </div>
+          </div>
               
-              <script>
-              function currentDiv(n) {
-                showDivs(slideIndex = n);
-              }
-              
-              function showDivs(n) {
-                var i;
-                var x = document.getElementsByClassName("swiper");
-                var dots = document.getElementsByClassName("demo");
-                if (n > x.length) {slideIndex = 1}
-                if (n < 1) {slideIndex = x.length}
-                for (i = 0; i < x.length; i++) {
-                  x[i].style.display = "none";
-                }
-                for (i = 0; i < dots.length; i++) {
-                  dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
-                }
-                x[slideIndex-1].style.display = "block";
-                dots[slideIndex-1].className += " w3-opacity-off";
-              }
-              </script>
-
-            <div class="info">
-                <h1>Đặc Đen Đắng</h1>
-                <div class="description">
-                    <p>Coffee is deeply rooted in the culture of Việt Nam, an intrinsic part of the 
-                        country’s history and society for over a hundred years. But have you ever 
-                        wondered how Việt Nam became a global coffee powerhouse, the role coffee 
-                        played in President Hồ Chí Minh’s rise to power, or how a small brown bean 
-                        lifted thousands out of poverty and created a coffee culture unlike any other?
-                    </p>
-                    <p><a href="#">Đặc Đen Đắng: The Vietnamese Coffee Book</a> 
-                        answers these questions and more. It shares the story of Việt Nam 
-                        and its coffee, tales of people who work in the country’s booming coffee sector, 
-                        and the role coffee has played in shaping Việt Nam since the arrival of the first 
-                        beans more than 160 years ago.
-                    </p>
-                    <div class="product_price">
-                        1.250.000 VND
-                    </div>
-                    <div class="chon-mua">
-                        <div class="quantity">
-                            <input type="number" id="quantity"  name="quantity" value="1" min="1">
-                        </div>
-                        <div class="chon-mua-button">
-                            <button>
-                                Chọn mua
-                            </button>
-                        </div>
-                    </div>
-                    
-                    
-                </div>
-            </div>
+          <div class="info">
+              <h1>Đặc Đen Đắng</h1>
+              <div class="description">
+                  <p>Coffee is deeply rooted in the culture of Việt Nam, an intrinsic part of the 
+                      country’s history and society for over a hundred years. But have you ever 
+                      wondered how Việt Nam became a global coffee powerhouse, the role coffee 
+                      played in President Hồ Chí Minh’s rise to power, or how a small brown bean 
+                      lifted thousands out of poverty and created a coffee culture unlike any other?
+                  </p>
+                  <p><a href="#">Đặc Đen Đắng: The Vietnamese Coffee Book</a> 
+                      answers these questions and more. It shares the story of Việt Nam 
+                      and its coffee, tales of people who work in the country’s booming coffee sector, 
+                      and the role coffee has played in shaping Việt Nam since the arrival of the first 
+                      beans more than 160 years ago.
+                  </p>
+                  <div class="product_price">
+                      1.250.000 VND
+                  </div>
+                  <div class="chon-mua">
+                      <div class="quantity">
+                          <input type="number" id="quantity"  name="quantity" value="1" min="1">
+                      </div>
+                      <div class="chon-mua-button">
+                          <button>
+                              Chọn mua
+                          </button>
+                      </div>
+                  </div>
+              </div>
+          </div>
         </section>
 
     </main>
