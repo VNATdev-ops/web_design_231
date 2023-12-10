@@ -1,25 +1,107 @@
-@font-face { font-family: Josefin Sans; src: url('./font/Josefin_Sans/JosefinSans-VariableFont_wght.ttf'); } 
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('./font/Josefin_Sans/JosefinSans-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Open-Sans';
+    src: url('./font/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf') format('truetype');
+}
+*,:after,:before {
+    box-sizing: border-box
+}
 body{
+    font-family: Open-Sans;
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
     color: #18212a;
-    padding: 40px 80px;
+    margin: 40px 80px;
     background-color: #fffced;
 }
 a{
     text-decoration: none;
     color: #337ab7;
 }
+
+/*dac-den-dang*/
+    .slideshow{
+        display: flex;
+        flex-direction: column;
+    }
+    .dot-container{
+        margin-top: 5px;
+        text-align:center;
+    }
+   /* Slideshow container */
+   .slideshow-container {
+    max-width: 500px;
+    height: 500px;
+    position: relative;
+    margin: auto;
+    background-color: black;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  .dot {
+    cursor: pointer;
+    height: 8px;
+    width: 8px;
+    margin: 0 2px;
+    background-color: #4e358a;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #e2e2e2;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 0.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+  }
 .dac-den-dang{
     display: flex;
 }
-.slideshow{
-    width: 45%;
-}
 .info{
     width: 55%;
-    padding: 0 20px;
+    padding-left: 40px;
 }
 h1 {
     font-family: Josefin Sans,sans-serif;
@@ -36,4 +118,261 @@ h1 {
     text-transform: uppercase;
     font-weight: 700;
     line-height: 2.75rem;
+}
+.cart{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.cart_quantity{
+    display: flex;
+    align-items: center;
+}
+.cart_quantity input{
+    color: #4e358a;
+    font-size: 1.25rem;
+    background-color: transparent;
+    border: 1px solid rgba(105, 102, 102, 0.326);
+    margin: 0;
+}
+.cart_quantity .quantity{
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+}
+.cart_quantity .button{
+    display: flex;
+    flex-direction: column;
+}
+.cart_quantity .button .myupbutton,
+.cart_quantity .button .mydownbutton{
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    cursor: pointer;
+}
+.cart_quantity .button .myupbutton:hover,
+.cart_quantity .button .mydownbutton:hover{
+    background-color: #4e358a;
+    color: #fff;
+}
+
+.cart-button{
+    padding-left: 20px;
+}
+.cart-button button{
+    justify-content: center;
+    align-items: center;
+    width: 165px;
+    height: 50px;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgb(78, 53, 138);
+    background-color: transparent;
+    background-image: url(./images/sach/chon-mua-button.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: inline-flex;
+    padding: 3px 20px 0px 0px;
+    background-position: 50% center;
+    border-width: 0px;
+    transition: opacity 0.2s ease 0s;
+    cursor: pointer;
+}
+
+.information{
+    margin: 50px 0;
+}
+.tab{
+    display: flex;
+}
+.tab button{
+    opacity: 0.4;
+    height: 50px;
+    width: calc(100% / 2 - 2%);
+    text-align: left;
+    margin-right: 2%;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: #4e358a solid ;
+    background-color: transparent;
+    transition: opacity .4s ease;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgb(78, 53, 138);
+    cursor: pointer;
+}
+.tab button.active{
+    opacity: 1;
+}
+.description-box {
+    transition: opacity 0.5s ease; 
+}
+
+.description-box.hide {
+    opacity: 0; 
+}
+
+
+.product{
+    margin-top: 30px;
+    display: grid;
+    grid-template-rows:  [border-top-start] 30px [border-left-start] 550px [border-bottom-start] 30px;
+    grid-template-columns: [border-left] 30px [product-swiper] 95% [border-right] 30px;
+    grid-template-areas: 
+        "top top top"
+        "left product right"
+        "bottom bottom bottom";
+    }
+.border-top{
+    background-image: url(./images/sach/product/border-x.png);
+    grid-area: top;
+}
+.border-left{
+    background-image: url(./images/sach/product/border-y.png);
+    grid-area: left;
+}
+.border-right{
+    background-image: url(./images/sach/product/border-y.png);
+    grid-area: right;
+}
+.border-bottom{
+    background-image: url(./images/sach/product/border-x.png);
+    grid-area: bottom;
+}
+.product-swiper{
+    background-color: transparent;
+    grid-area: product;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    color: #4e358a;
+}
+.product-swiper h2{
+    font-family: Josefin Sans,sans-serif;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 2.75rem;
+}
+.swiper-container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+.swiper-wrapper {
+    display: flex;
+    transition: transform 0.3s ease;
+    margin-bottom: 10px;
+}
+.mod_redshop_product {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+}
+.mod_redshop_products_title {
+    position: relative;
+    margin-top: 15px;
+    font-family: Josefin Sans,sans-serif;
+    font-size: 1.5rem;
+    color: #4e358a;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    line-height: 2.75rem;
+}
+.mod_redshop_products_image{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+}
+.mod_redshop_products_image img{
+    width: 100%;
+}
+.mod_redshop_products_desc {
+    margin-bottom: 10px;
+}
+
+.mod_redshop_products_price {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.swiper-pagination-bullet{
+    background-color: #4e358a;
+    position: relative;
+}
+.swiper-button-next,
+.swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    color: #4e358a;
+    cursor: pointer;
+}
+.swiper-button-next {
+    right: 30px;
+}
+.swiper-button-prev {
+    left: 30px;
+}
+
+.product-popup-content {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    left: -100%; /* Initially set to -100% to hide the popup */
+    top: 0;
+    width: 26%;
+    height: 100%;
+    background-color: #4e358a;
+    padding: 0 20px;
+    color: #fff;
+    z-index: 99999;
+    transition: left .4s ease; /* Transition effect for the left property */
+}
+.product-popup-content .mod_redshop_products_title{
+    text-align: left;
+    color: #fff;
+}
+.popup-navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.btn-wrap{
+    border-bottom: #fff 2px solid;
+    margin-top: 30px;
+    width: 90px;
+}
+.btn-wrap a{
+    color: #fff;   
+    font-family: Josefin Sans,sans-serif;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0;
+    display: inline;
+}
+.btn-wrap:hover{
+    width: 120px;
+    transition: 0.4s ease;
 }

@@ -4,110 +4,322 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lacàph | Đặc Đen Đắng</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="./book.css">
-    <style>
-       
-      /* Styling the area of the slides */
-       
-      #slideshow {
-          overflow: hidden;
-          height: 500px;
-          width: 500px;
-          margin: 0 auto;
-      }
-       
-      /* Style each of the sides 
-      with a fixed width and height */
-       
-      .slide {
-          float: left;
-          height: 500px;
-          width: 500px;
-      }
-       
-      /* Add animation to the slides */
-       
-      .slide-wrapper {
-           
-          /* Calculate the total width on the
-        basis of number of slides */
-          width: calc(500px * 4);
-           
-          /* Specify the animation with the
-        duration and speed */
-          animation: slide 20s ease infinite;
-      }
-
-      /* Define the animation 
-      for the slideshow */
-       
-      @keyframes slide {
-           
-          /* Calculate the margin-left for 
-        each of the slides */
-          20% {
-              margin-left: 0px;
-          }
-          40% {
-              margin-left: calc(-500px * 1);
-          }
-          60% {
-              margin-left: calc(-500px * 2);
-          }
-          80% {
-              margin-left: calc(-500px * 3);
-          }
-      }
-      </style>
 </head>
 <body>
     <header></header>
     <main>
         <section class="dac-den-dang">
+            <div class="slideshow">
+                <div class="slideshow-container">
+                    <div class="mySlides fade"><img src="./images/sach/sach-1.jpg" alt=""></div>
+                    <div class="mySlides fade"><img src="./images/sach/sach-2.jpg" alt=""></div>
+                    <div class="mySlides fade"><img src="./images/sach/sach-3.jpg" alt=""></div>
+                    <div class="mySlides fade"><img src="./images/sach/sach-4.jpg" alt=""></div>
+                    <div class="mySlides fade"><img src="./images/sach/sach-5.jpg" alt=""></div>
+                    <div class="mySlides fade"><img src="./images/sach/sach-6.jpg" alt=""></div>
+                    <div class="mySlides fade"><img src="./images/sach/sach-7.jpg" alt=""></div>
+                
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+                </div>
+                
+                <div class="dot-container">
+                    <span class="dot" onclick="currentSlide(1)"></span> 
+                    <span class="dot" onclick="currentSlide(2)"></span> 
+                    <span class="dot" onclick="currentSlide(3)"></span> 
+                    <span class="dot" onclick="currentSlide(4)"></span> 
+                    <span class="dot" onclick="currentSlide(5)"></span> 
+                    <span class="dot" onclick="currentSlide(6)"></span> 
+                    <span class="dot" onclick="currentSlide(7)"></span> 
+                </div>
+            </div>
             
+            
+            <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
+                
+                function plusSlides(n) {
+                showSlides(slideIndex += n);
+                }
+                
+                function currentSlide(n) {
+                showSlides(slideIndex = n);
+                }
+                
+                function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}    
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
+                }
+            </script>
+                
+            <div class="info">
+                <h1>Đặc Đen Đắng</h1>
+                <div class="description">
+                    <p>Coffee is deeply rooted in the culture of Việt Nam, an intrinsic part of the 
+                        country’s history and society for over a hundred years. But have you ever 
+                        wondered how Việt Nam became a global coffee powerhouse, the role coffee 
+                        played in President Hồ Chí Minh’s rise to power, or how a small brown bean 
+                        lifted thousands out of poverty and created a coffee culture unlike any other?
+                    </p>
+                    <p><a href="#">Đặc Đen Đắng: The Vietnamese Coffee Book</a> 
+                        answers these questions and more. It shares the story of Việt Nam 
+                        and its coffee, tales of people who work in the country’s booming coffee sector, 
+                        and the role coffee has played in shaping Việt Nam since the arrival of the first 
+                        beans more than 160 years ago.
+                    </p>
+                    <div class="product_price">
+                        1.250.000 VND
+                    </div>
+                    <div class="cart">
+                        <div class="cart_quantity">
+                            <input class="quantity" type="text" id="quantity1042" name="quantity" size="1" value="1" onkeypress="return event.keyCode!=13;">
+                            <div class="button">
+                                <input type="button" class="myupbutton" value="+" onclick="quantity1042.value = (+quantity1042.value + 1);">
+                                <input type="button" class="mydownbutton" value="-" onclick="var qty1 = quantity1042.value; if (!isNaN(qty1) && qty1 > 1) quantity1042.value = qty1 - 1; return false;">
+                            </div>
+                        </div>
+                        <div class="cart-button">
+                            <button>
+                                Chọn mua
+                            </button>
+                        </div>
+                    </div>
+                    
+              </div>
+          </div>
+        </section>
 
-            <!-- Define the slideshow container -->
-          <div id="slideshow">
-              <div class="slide-wrapper">
-                  
-                <!-- Define each of the slides and write the content -->
-                <div class="slide"><img src="./images/sach/sach-1.jpg" alt=""></div>
-                <div class="slide"><img src="./images/sach/sach-2.jpg" alt=""></div>
-                <div class="slide"><img src="./images/sach/sach-3.jpg" alt=""></div>
-                <div class="slide"><img src="./images/sach/sach-4.jpg" alt=""></div>
-              </div>
-          </div>
-              
-          <div class="info">
-              <h1>Đặc Đen Đắng</h1>
-              <div class="description">
-                  <p>Coffee is deeply rooted in the culture of Việt Nam, an intrinsic part of the 
-                      country’s history and society for over a hundred years. But have you ever 
-                      wondered how Việt Nam became a global coffee powerhouse, the role coffee 
-                      played in President Hồ Chí Minh’s rise to power, or how a small brown bean 
-                      lifted thousands out of poverty and created a coffee culture unlike any other?
-                  </p>
-                  <p><a href="#">Đặc Đen Đắng: The Vietnamese Coffee Book</a> 
-                      answers these questions and more. It shares the story of Việt Nam 
-                      and its coffee, tales of people who work in the country’s booming coffee sector, 
-                      and the role coffee has played in shaping Việt Nam since the arrival of the first 
-                      beans more than 160 years ago.
-                  </p>
-                  <div class="product_price">
-                      1.250.000 VND
-                  </div>
-                  <div class="chon-mua">
-                      <div class="quantity">
-                          <input type="number" id="quantity"  name="quantity" value="1" min="1">
-                      </div>
-                      <div class="chon-mua-button">
-                          <button>
-                              Chọn mua
-                          </button>
-                      </div>
-                  </div>
-              </div>
-          </div>
+        <section class="information">
+            <div class="tab">
+                <button id='tab-des'>Về sản phẩm</button>
+                <button id='tab-spec'>Thành phần</button>
+            </div>
+            
+            <div id="product-info" style="height: 134px;">
+                <div id="des" class="description-box">
+                    <p>Đặc Đen Đắng: The Vietnamese Coffee Book is 224 pages, consisting of five chapters; Coffee 101, History of Coffee, Historic Cafés, Local Stories, and Movers &amp; Shakers.
+                        <br>
+                        The book is 27.1cm by 35.7cm and 2.2cm thick (10.7″, 14.0″, 0.9″). It weighs in at 2.1kg (4.6lbs). It can comfortably fit in a regular size carry-on suitcase.
+                        <br>
+                        ISBN: 978-604-310-318-2.</p>
+                </div>
+
+                <div id="spec" class="description-box"></div>
+            </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    var tabDes = document.getElementById('tab-des');
+                    var tabSpec = document.getElementById('tab-spec');
+                    var divDes = document.getElementById('des');
+                    var divSpec = document.getElementById('spec');
+
+                    tabDes.addEventListener('click', function () {
+                        divDes.classList.remove('hide');
+                        divSpec.classList.add('hide');  
+                        tabDes.classList.add('active');
+                        tabSpec.classList.remove('active');
+                    });
+
+                    tabSpec.addEventListener('click', function () {
+                        divDes.classList.add('hide');   
+                        divSpec.classList.remove('hide');
+                        tabDes.classList.remove('active');
+                        tabSpec.classList.add('active');
+                    });
+                });
+            </script>
+        </section>
+
+       
+        <section class="product"> 
+                <div class="border-top"></div>
+                <div class="border-right"></div>
+                <div class="border-left"></div>
+                <div class="border-bottom"></div>
+                <div class="product-swiper">
+                    <h2>SẢN PHẨM CỦA CHÚNG TÔI</h2>
+
+                    <!-- Swiper container with product slides -->
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper" style="transform: translate3d(-720px, 0px, 0px); transition: all 0ms ease 0s;">
+                            
+                            <!-- Product 1 -->
+                            <div class="mod_redshop_product swiper-slide swiper-slide-active" data-swiper-slide-index="0" onclick="togglePopup(1)">
+                                <!-- Product content for slide 1 -->
+                                <div class="mod_redshop_products_image">
+                                    <img src="./images/sach/product/cold-brew-1.png" alt="">
+                                </div>
+                                <h3 class="mod_redshop_products_title">Lacàph Signature Cold Brew</h3>
+                            </div>
+
+                            <!-- Product 2 -->
+                            <div class="mod_redshop_product swiper-slide swiper-slide-next" data-swiper-slide-index="1" onclick="togglePopup(2)">
+                                <!-- Product content for slide 2 -->
+                                <div class="mod_redshop_products_image">
+                                    <img src="./images/sach/product/products-02.png" alt="">
+                                </div>
+                                <h3 class="mod_redshop_products_title">Lacàph Espresso Blend</h3>
+                            </div>
+
+                            <!-- Product 3 -->
+                            <div class="mod_redshop_product swiper-slide" data-swiper-slide-index="2" onclick="togglePopup(3)">
+                                <!-- Product content for slide 3 -->
+                                <div class="mod_redshop_products_image">
+                                    <img src="./images/sach/product/products-01.png" alt="">
+                                </div>
+                                <h3 class="mod_redshop_products_title">Lacàph Filter Blend</h3>
+                            </div>
+
+                            <!-- Product 4 -->
+                            <div class="mod_redshop_product swiper-slide swiper-slide-prev" data-swiper-slide-index="3" onclick="togglePopup(4)">
+                                <!-- Product content for slide 4 -->
+                                <div class="mod_redshop_products_image">
+                                    <img src="./images/sach/product/products-03.png" alt="">
+                                </div>
+                                <h3 class="mod_redshop_products_title">Lacàph Phin Blend</h3>
+                            </div>
+
+
+                        </div>
+
+                        <!-- Pagination -->
+                        <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
+                            <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+                            <span class="swiper-pagination-bullet"></span>
+                            <span class="swiper-pagination-bullet"></span>
+                            <span class="swiper-pagination-bullet"></span>
+                        </div>
+                        
+                        <!-- Navigation buttons -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+
+                    <div class="product-popup-content">
+                        <i class="fa-solid fa-xmark" style="color: #ffffff; cursor: pointer; position:absolute; top:30px; right: 30px; " onclick="closePopup()"></i>
+                        <div class="mod_redshop_products_title">
+                            <h3></h3>
+                        </div>
+                        <div class="mod_redshop_products_desc">
+                            <p></p>
+                        </div>
+                        <div class="product-price-wrap">
+                            <div class="mod_redshop_products_price"></div>
+                        </div>
+                        <div class="btn-wrap">
+                            <div class="mod_redshop_products_readmore" onclick="closePopup()">
+                                <a class="readmore-link" href="#">
+                                    Khám Phá
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- JavaScript -->
+                    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+                    <script>
+                        // Initialize Swiper
+                        var swiper = new Swiper('.swiper-container', {
+                            slidesPerView: 1,
+                            spaceBetween: 10,
+                            navigation: {
+                                nextEl: '.swiper-button-next',
+                                prevEl: '.swiper-button-prev',
+                            },
+                            pagination: {
+                                el: '.swiper-pagination',
+                                clickable: true,
+                            },
+                            loop: true, //infinite scrolling
+                        });
+
+                        // toggle the left position of the pop-up content
+                        var popupContent = document.querySelector('.product-popup-content');
+                        var currentProductIndex = 0; // Track the current product index
+
+                        swiper.on('slideChange', function () {
+                            popupContent.style.left = '-100%';
+                        });
+
+                        // Function to toggle the pop-up content visibility
+                        function togglePopup(productIndex) {
+                            currentProductIndex = productIndex;
+                            popupContent.style.left = '0';
+                            var productDetails = getProductDetails(currentProductIndex);
+                            renderPopupContent(productDetails);
+                        }
+
+                        function renderPopupContent(productDetails) {
+                            var productTitle = document.querySelector('.mod_redshop_products_title h3');
+                            var productDescription = document.querySelector('.mod_redshop_products_desc p');
+                            var productPrice = document.querySelector('.mod_redshop_products_price');
+
+                            productTitle.textContent = productDetails.title;
+                            productDescription.textContent = productDetails.description;
+                            productPrice.textContent = productDetails.price;
+                        }
+
+                        function getProductDetails(productIndex) {
+                            var productDetails = {
+                                1: { 
+                                    title: 'Lacàph Signature Cold Brew', 
+                                    description: 'Sản xuất từ những hạt cà phê Arabica chất lượng được rang một cách tỉ mỉ làm tăng hương vị sô cô la đậm đà, sau đó cà phê được chúng tôi ủ lạnh hơn 18 tiếng đồng hồ để tạo ra một sản phẩm cà phê đóng chai cực kỳ tươi ngon.', 
+                                    price: '90.000 VND' },
+                                2: { 
+                                    title: 'Lacàph Espresso Blend', 
+                                    description: 'Sản xuất từ hạt Arabica và hạt Robusta giúp lưu giữ nhiều lớp mùi vị. Cà phê từ nông trường tiên phong trong lĩnh vực canh tác Arabica vùng Tây Nguyên được thu hoạch, chọn lọc bằng tay trước khi được sơ chế bằng phương pháp khô tự nhiên, phơi và đóng gói. Lacàph Espresso Blend là một loại cà phê mượt mà, tròn vị, kết hợp hoàn hảo giữa vị chua nhẹ và vị ngọt thanh.', 
+                                    price: '190.000 VND' },
+                                3: { 
+                                    title: 'Lacàph Filter Blend', 
+                                    description: 'Sản xuất từ những hạt Arabica Red Bourbon chất lượng thu hoạch bằng tay từ vườn cà phê của anh Hadjim, nằm ở miền Trung Tây Nguyên. Những hạt cà phê được sơ chế ướt (Fully - Washed) sau đó sẽ vận chuyển đến xưởng rang Lacàph để kết hợp cùng Arabica từ nông hộ khác. Lacàph Filter Blend là một loại cà phê có sự kết hợp nhịp nhàng giữa vị chua và ngọt dịu êm.', 
+                                    price: '200.000 VND' },
+                                4: { 
+                                    title: 'Lacàph Phin Blend', 
+                                    description: 'Sản xuất từ những hạt Robusta chất lượng ở vùng đất đỏ bazan tỉnh Đắk Nông kết hợp với tỉ lệ nhỏ hạt Arabica tạo ra hương vị đậm đà. Hạt Robusta được sơ chế theo phương pháp bán ướt giúp tăng vị ngọt và tạo thêm nhiều lớp hương vị. Lacàph Phin Blend là một loại cà phê hướng đến sự cân bằng, hơi hướng hiện đại hơn so với các loại cà phê phin truyền thống.', 
+                                    price: '180.000 VND' }
+                            };
+
+                            return productDetails[productIndex];
+                        }
+
+                        function showPreviousProduct() {
+                            if (currentProductIndex > 1) {
+                                currentProductIndex--;
+                                var productDetails = getProductDetails(currentProductIndex);
+                                renderPopupContent(productDetails);
+                            }
+                        }
+
+                        function showNextProduct() {
+                            if (currentProductIndex < 4) {
+                                currentProductIndex++;
+                                var productDetails = getProductDetails(currentProductIndex);
+                                renderPopupContent(productDetails);
+                            }
+                        }
+
+                        function closePopup() {
+                            popupContent.style.left = '-100%';
+                        }
+                    </script>                    
+                </div>
+            
         </section>
 
     </main>
