@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #fffced;
+    font-family: Josefin Sans,sans-serif;
+}
+.dongdautrang{
+    height: 118px;
+    width: 100px;
+}
+.dongdautrang .h_dongchu p{
+    width: 1380px;
+    height:55px;
+    margin-bottom: 15px;
+    padding: 15px 45px;
+    background-color: #4e358a;
+    text-align: center;
+    justify-items: center;
+    color: #fff;
+    font-weight: 100;
+}
+.hang_noidung .hang_thangchidan {
+    width: 100%;
+    background-color: #4e358a;
+}
+.hang_noidung .hang_thangchidan .hang_dongdan {
+    background-color: #4e358a;
+    color: #fff;
+    height: 54px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 15px 15px 15px 5px;
+    line-height: 25px;
+    font-size: 100%;
+
+
+}
+.hang_noidung .hang_thangchidan .hang_dongdan a{
+    margin: 0 auto;
+    text-decoration: none;
+    width: 90%;
+    background-color: #4e358a;
+    align-items: center;
+    color: #fff;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-weight: 400;
+}
+.hang_allnoidung{
+    width: 84%;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+.hang_allnoidung .hang_noidung1{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.hang_allnoidung .hang_noidung1 .hang_noidung1_phai {
+    padding: 0 15px;
+}
+.hang_allnoidung .hang_noidung1 .hang_noidung1_phai img {
+    width: 445px;
+    height: 475px;
+}
+.hang_allnoidung .hang_noidung1 .hang_noidung1_trai{
+    width: 653px;
+    height: 475px;
+    padding: 0 15px;
+}
+.hang_allnoidung .hang_noidung1 .hang_noidung1_trai h1{
+    color: #4e358a;
+    margin-bottom: 8px;
+    font-weight: 700;
+    line-height: 2.75rem;
+}
+.hang_allnoidung .hang_noidung1 .hang_noidung1_trai p{
+    font-weight: 100;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    line-height: 25px;
+}
+.hang_allnoidung .hang_noidung1 .hang_noidung1_trai h2{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    color: #4e358a;
+    
+}
+.hang_noidung2{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.hang_noidung2 .vesanpham{
+text-transform: uppercase;
+color: #4e358a;
+font-weight: 700;
+letter-spacing: 1px;
+position: relative;
+display: inline-block;
+
+}
+.hang_noidung2 .thanhphan{
+    text-transform: uppercase;
+    color: #4e358a;
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
+    right: 27rem;
+    /* left: 60px; */
+}
