@@ -7,9 +7,6 @@
     font-family: 'Open-Sans';
     src: url('./font/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf') format('truetype');
 }
-*,:after,:before {
-    box-sizing: border-box
-}
 body{
     font-family: Open-Sans;
     font-size: 1rem;
@@ -173,7 +170,7 @@ h1 {
     text-transform: uppercase;
     color: rgb(78, 53, 138);
     background-color: transparent;
-    background-image: url(./images/sach/chon-mua-button.png);
+    background-image: url(./images/button.png);
     background-size: 100%;
     background-repeat: no-repeat;
     opacity: 1;
@@ -232,19 +229,19 @@ h1 {
         "bottom bottom bottom";
     }
 .border-top{
-    background-image: url(./images/sach/product/border-x.png);
+    background-image: url(./images/border-x.png);
     grid-area: top;
 }
 .border-left{
-    background-image: url(./images/sach/product/border-y.png);
+    background-image: url(./images/border-y.png);
     grid-area: left;
 }
 .border-right{
-    background-image: url(./images/sach/product/border-y.png);
+    background-image: url(./images/border-y.png);
     grid-area: right;
 }
 .border-bottom{
-    background-image: url(./images/sach/product/border-x.png);
+    background-image: url(./images/border-x.png);
     grid-area: bottom;
 }
 .product-swiper{
@@ -359,7 +356,7 @@ h1 {
     width: 100%;
 }
 .btn-wrap{
-    border-bottom: #fff 2px solid;
+    border-bottom: #fff 3px solid;
     margin-top: 30px;
     width: 90px;
 }
@@ -370,7 +367,6 @@ h1 {
     font-size: 1rem;
     font-weight: 700;
     margin: 0;
-    display: inline;
 }
 .btn-wrap:hover{
     width: 120px;
