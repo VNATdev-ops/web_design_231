@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character set and viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Title of the document -->
+    <title>Document</title>
+    
+    <!-- Link to the Swiper CSS file -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    
+    <!-- Custom styles for the Swiper container and product popup content -->
+    <style>
+        body {
+            margin: 0;
+        }
+        .swiper-container {
+            position: relative;
+            display: flex;
+            width: 100%;
+            overflow: hidden;
+        }
+        .swiper-wrapper {
+            display: flex;
+            transition: transform 0.3s ease;
+        }
+        .mod_redshop_product {
+            width: 300px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .mod_redshop_products_title {
+            position: relative;
+            margin-top: 15px;
+            font-family: Josefin Sans,sans-serif;
+            font-size: 1.5rem;
+            color: #4e358a;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 700;
+            line-height: 2.75rem;
+        }
+        .mod_redshop_products_image{
+            width: 300px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+        }
+        .mod_redshop_products_image img{
+            width: 100%;
+        }
+        .mod_redshop_products_desc {
+            margin-bottom: 10px;
+        }
+
+        .mod_redshop_products_price {
+            font-weight: bold;
+        }
+        
+        .swiper-pagination-bullet{
+            background-color: #4e358a;
+            position: relative;
+            bottom: 10px;
+        }
+        .swiper-button-next,
+        .swiper-button-prev {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 30px;
+            height: 30px;
+            color: #4e358a;
+            cursor: pointer;
+        }
+        .swiper-button-next {
+            right: 30px;
+        }
+        .swiper-button-prev {
+            left: 30px;
+        }
+
+        .product-popup-content {
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            left: -100%; /* Initially set to -100% to hide the popup */
+            top: 0;
+            width: 30%;
+            height: 100%;
+            background-color: #4e358a;
+            padding: 0;
+            color: #fff;
+            z-index: 99999;
+            transition: left .4s ease; /* Transition effect for the left property */
+        }
+        .popup-navigation {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .btn-wrap{
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Swiper container with product slides -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper" style="transform: translate3d(-720px, 0px, 0px); transition: all 0ms ease 0s;">
+            
+            <!-- Product 1 -->
+            <div class="mod_redshop_product swiper-slide swiper-slide-active" data-swiper-slide-index="0" onclick="togglePopup(1)">
+                <!-- Product content for slide 1 -->
+                <div class="mod_redshop_products_image">
+                    <img src="./images/sach/product/cold-brew-1.png" alt="">
+                </div>
+                <h3 class="mod_redshop_products_title">Lacàph Signature Cold Brew</h3>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="mod_redshop_product swiper-slide swiper-slide-next" data-swiper-slide-index="1" onclick="togglePopup(2)">
+                <!-- Product content for slide 2 -->
+                <div class="mod_redshop_products_image">
+                    <img src="./images/sach/product/products-02.png" alt="">
+                </div>
+                <h3 class="mod_redshop_products_title">Lacàph Espresso Blend</h3>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="mod_redshop_product swiper-slide" data-swiper-slide-index="2" onclick="togglePopup(3)">
+                <!-- Product content for slide 3 -->
+                <div class="mod_redshop_products_image">
+                    <img src="./images/sach/product/products-01.png" alt="">
+                </div>
+                <h3 class="mod_redshop_products_title">Lacàph Filter Blend</h3>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="mod_redshop_product swiper-slide swiper-slide-prev" data-swiper-slide-index="3" onclick="togglePopup(4)">
+                <!-- Product content for slide 4 -->
+                <div class="mod_redshop_products_image">
+                    <img src="./images/sach/product/products-03.png" alt="">
+                </div>
+                <h3 class="mod_redshop_products_title">Lacàph Phin Blend</h3>
+            </div>
+
+
+        </div>
+
+        <!-- Pagination -->
+        <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
+            <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+            <span class="swiper-pagination-bullet"></span>
+            <span class="swiper-pagination-bullet"></span>
+            <span class="swiper-pagination-bullet"></span>
+        </div>
+        
+        <!-- Navigation buttons -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <div class="product-popup-content">
+        <h3 class="mod_redshop_products_title"></h3>
+        <div class="mod_redshop_products_desc">
+            <p></p>
+        </div>
+        <div class="product-price-wrap">
+            <div class="mod_redshop_products_price"></div>
+        </div>
+        <div class="btn-wrap">
+            <div class="mod_redshop_products_readmore">
+                <button onclick="closePopup()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Initialize Swiper
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            loop: true, //infinite scrolling
+        });
+
+        // toggle the left position of the pop-up content
+        var popupContent = document.querySelector('.product-popup-content');
+        var currentProductIndex = 0; // Track the current product index
+
+        swiper.on('slideChange', function () {
+            popupContent.style.left = '-100%';
+        });
+
+        // Function to toggle the pop-up content visibility
+        function togglePopup(productIndex) {
+            currentProductIndex = productIndex;
+            popupContent.style.left = '0';
+            var productDetails = getProductDetails(currentProductIndex);
+            renderPopupContent(productDetails);
+        }
+
+        function renderPopupContent(productDetails) {
+            var productTitle = document.querySelector('.mod_redshop_products_title');
+            var productDescription = document.querySelector('.mod_redshop_products_desc p');
+            var productPrice = document.querySelector('.mod_redshop_products_price');
+
+            productTitle.textContent = productDetails.title;
+            productDescription.textContent = productDetails.description;
+            productPrice.textContent = productDetails.price;
+        }
+
+        function getProductDetails(productIndex) {
+            var productDetails = {
+                1: { title: 'Lacàph Signature Cold Brew', description: 'Description for Signature Cold Brew.', price: '$4.99' },
+                2: { title: 'Lacàph Espresso Blend', description: 'Description for Espresso Blend.', price: '$6.99' },
+                3: { title: 'Lacàph Filter Blend', description: 'Description for Filter Blend.', price: '$5.99' },
+                4: { title: 'Lacàph Phin Blend', description: 'Description for Phin Blend.', price: '$7.99' }
+            };
+
+            return productDetails[productIndex];
+        }
+
+        function showPreviousProduct() {
+            if (currentProductIndex > 1) {
+                currentProductIndex--;
+                var productDetails = getProductDetails(currentProductIndex);
+                renderPopupContent(productDetails);
+            }
+        }
+
+        function showNextProduct() {
+            if (currentProductIndex < 4) {
+                currentProductIndex++;
+                var productDetails = getProductDetails(currentProductIndex);
+                renderPopupContent(productDetails);
+            }
+        }
+
+        function closePopup() {
+            popupContent.style.left = '-100%';
+        }
+    </script>
+</body>
+</html>
