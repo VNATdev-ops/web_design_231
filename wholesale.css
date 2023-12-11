@@ -1,0 +1,205 @@
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('./font/Josefin_Sans/JosefinSans-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Open-Sans';
+    src: url('./font/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf') format('truetype');
+}
+*{
+    font-family: Open-Sans;
+}
+body{
+    margin: 0;
+    background-color: #fffced;
+}
+.banner {
+    position: relative; /* Make the container position relative */
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.52);
+    z-index: 1; /* Place the pseudo-element above the image */
+}
+
+.banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(./images/wholesale/banner.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0; /* Place the image below the pseudo-element */
+}
+.banner p, .banner h1 {
+    margin: 0;
+    color: #fff;
+    font-family: Josefin Sans,sans-serif;
+    z-index: 2;
+}
+.banner p{
+    font-weight: 400;
+    font-size: 1rem;
+}
+.banner h1{
+    font-weight: 600;
+    font-size: 2rem;
+    padding-top: 10px;
+}
+.container{
+    margin: 50px 220px;
+}
+a{
+    text-decoration: none;  
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 3rem;
+    color: #4e358a;
+}
+h1{
+    line-height: 3rem;
+    color: #4e358a;
+    font-family: Josefin Sans,sans-serif;
+    text-transform: uppercase;
+}
+h2{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 2.25rem;
+    color: #4e358a;
+    font-family: Josefin Sans,sans-serif;
+    text-transform: uppercase;
+}
+h3{
+    font-size: 1.5rem;
+    line-height: 3rem;
+    color: #4e358a;
+    font-family: Josefin Sans,sans-serif;
+    text-transform: uppercase;
+}
+.ls-product{
+    text-align: center;
+
+}
+.ls-product a{
+    font-family: Josefin Sans,sans-serif;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 3rem;
+}
+.contact-us{
+    text-align: center;
+}
+.contact-us a{
+    font-family: Josefin Sans,sans-serif;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 3rem;
+}
+
+.article-links{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 50px;
+}
+
+.categorises{
+    margin-top: 30px;
+    display: grid;
+    grid-template-rows:  [border-top-start] 30px [border-left-start] 300px [border-bottom-start] 30px;
+    grid-template-columns: [border-left] 30px [category-container] 95% [border-right] 30px;
+    grid-template-areas: 
+        "top top top"
+        "left category-container right"
+        "bottom bottom bottom";
+    }
+.border-top{
+    background-image: url(./images/border-x.png);
+    grid-area: top;
+}
+.border-left{
+    background-image: url(./images/border-y.png);
+    grid-area: left;
+}
+.border-right{
+    background-image: url(./images/border-y.png);
+    grid-area: right;
+}
+.border-bottom{
+    background-image: url(./images/border-x.png);
+    grid-area: bottom;
+}
+.category-container{
+    background-color: transparent;
+    grid-area: category-container;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px 10%;
+    color: #4e358a;
+}
+.newest-articles{
+    margin: 50px 0;
+}
+.articles{
+    display: flex;
+    justify-content: space-between;
+}
+.article-1, .article-2, .article-3{
+    width: 31%;
+    height: 500px;
+}
+.article-1 img, .article-2 img, .article-3 img{
+    width: 100%;
+}
+.articles h2, .articles h3, .articles a{
+    color: #4e358a;
+    font-family: Josefin Sans,sans-serif;
+    text-transform: uppercase;
+}
+.article-1 .tag, .article-2 .tag, .article-3 .tag{
+    font-size: 1rem;
+    font-weight: 600;
+    color: #4e358a;
+}
+.article-1 h3 a, .article-2 h3 a, .article-3 h3 a{
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #4e358a;
+}
+.btn-wrap{
+    border-bottom: #4e358a 3px solid;
+    margin-top: 30px;
+    width: 90px;
+}
+.btn-wrap a{
+    color: #4e358a;   
+    font-family: Josefin Sans,sans-serif;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0;
+}
+.btn-wrap:hover{
+    width: 120px;
+    transition: 0.4s ease;
+}
