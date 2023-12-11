@@ -131,22 +131,30 @@ h3{
         "left category-container right"
         "bottom bottom bottom";
     }
-.border-top{
-    background-image: url(./images/border-x.png);
-    grid-area: top;
-}
-.border-left{
-    background-image: url(./images/border-y.png);
-    grid-area: left;
-}
-.border-right{
-    background-image: url(./images/border-y.png);
-    grid-area: right;
-}
-.border-bottom{
-    background-image: url(./images/border-x.png);
-    grid-area: bottom;
-}
+    .border-top{
+        background-image: url(./images/border-x.png);
+        grid-area: top;
+        background-position: center;
+        border: 2px solid #f4dcbb;
+    }
+    .border-left{
+        background-image: url(./images/border-y.png);
+        grid-area: left;
+        background-position: center;
+        border: 2px solid #f4dcbb;
+    }
+    .border-right{
+        background-image: url(./images/border-y.png);
+        grid-area: right;
+        background-position: center;
+        border: 2px solid #f4dcbb;
+    }
+    .border-bottom{
+        background-image: url(./images/border-x.png);
+        grid-area: bottom;
+        background-position: center;
+        border: 2px solid #f4dcbb;
+    }
 .category-container{
     background-color: transparent;
     grid-area: category-container;
