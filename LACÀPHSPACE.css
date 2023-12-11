@@ -1,0 +1,195 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background-color: #fffced;
+}
+
+
+.menu,.menu-logo {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu-logo {
+    justify-content: space-around;
+}
+  
+.menu-item {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #222;
+    text-decoration: none;
+  }
+  
+.menu-item:hover {
+    color: #000;
+}
+
+.banner {
+    position: relative; /* Make the container position relative */
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.52);
+    z-index: 1; /* Place the pseudo-element above the image */
+}
+
+.banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(images/LacafeBanner.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0; /* Place the image below the pseudo-element */
+}
+.banner p, .banner h1 {
+    margin: 0;
+    color: #fff;
+    font-family: Josefin Sans,sans-serif;
+    z-index: 2;
+}
+.banner p{
+    font-weight: 400;
+    font-size: 1rem;
+}
+.banner h1{
+    font-weight: 600;
+    font-size: 2rem;
+    padding-top: 10px;
+}
+
+.container{
+    margin: 50px 220px;
+}
+a{
+    text-decoration: none;  
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 3rem;
+    color: #4e358a;
+}
+h1{
+    line-height: 3rem;
+    color: #4e358a;
+    font-family: Josefin Sans,sans-serif;
+    text-transform: uppercase;
+}
+h2{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 2.25rem;
+    color: #4e358a;
+    font-family: Josefin Sans,sans-serif;
+    text-transform: uppercase;
+}
+h3{
+    font-size: 1.5rem;
+    line-height: 3rem;
+    color: #4e358a;
+    font-family: Josefin Sans,sans-serif;
+    text-transform: uppercase;
+}
+.container{
+    margin: 50px 220px;
+}
+a{
+    text-decoration: none;  
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 3rem;
+    color: #4e358a;
+}
+h1{
+    line-height: 3rem;
+    color: #4e358a;
+    font-family: Josefin Sans,sans-serif;
+    text-transform: uppercase;
+}
+h2{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 2.25rem;
+    color: #4e358a;
+    font-family: Josefin Sans,sans-serif;
+    text-transform: uppercase;
+}
+h3{
+    font-size: 1.5rem;
+    line-height: 3rem;
+    color: #4e358a;
+    font-family: Josefin Sans,sans-serif;
+    text-transform: uppercase;
+}
+
+.banner-2 {
+    position: relative; /* Make the container position relative */
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.52);
+    z-index: 1; /* Place the pseudo-element above the image */
+}
+
+.banner-2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(images/Lacàph_Bar_10.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0; /* Place the image below the pseudo-element */
+}
+.banner-2 p, .banner-2 h1 {
+    margin: 0;
+    color: #fff;
+    font-family: Josefin Sans,sans-serif;
+    z-index: 2;
+}
+.banner-2 p{
+    font-weight: 400;
+    font-size: 1rem;
+}
+.banner-2 h1{
+    font-weight: 600;
+    font-size: 2rem;
+    padding-top: 10px;
+}
