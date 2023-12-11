@@ -111,3 +111,103 @@ display: inline-block;
     right: 27rem;
     /* left: 60px; */
 }
+.cart{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.cart_quantity{
+    display: flex;
+    align-items: center;
+}
+.cart_quantity input{
+    color: #4e358a;
+    font-size: 1.25rem;
+    background-color: transparent;
+    border: 1px solid rgba(105, 102, 102, 0.326);
+    margin: 0;
+}
+.cart_quantity .quantity{
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+}
+.cart_quantity .button{
+    display: flex;
+    flex-direction: column;
+}
+.cart_quantity .button .myupbutton,
+.cart_quantity .button .mydownbutton{
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    cursor: pointer;
+}
+.cart_quantity .button .myupbutton:hover,
+.cart_quantity .button .mydownbutton:hover{
+    background-color: #4e358a;
+    color: #fff;
+}
+
+.cart-button{
+    padding-left: 20px;
+}
+.cart-button button{
+    justify-content: center;
+    align-items: center;
+    width: 165px;
+    height: 50px;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgb(78, 53, 138);
+    background-color: transparent;
+    background-image: url(./images/button.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: inline-flex;
+    padding: 3px 20px 0px 0px;
+    background-position: 50% center;
+    border-width: 0px;
+    transition: opacity 0.2s ease 0s;
+    cursor: pointer;
+}
+.information{
+    margin: 50px 0;
+}
+.tab{
+    display: flex;
+}
+.tab button{
+    opacity: 0.4;
+    height: 50px;
+    width: calc(100% / 2 - 2%);
+    text-align: left;
+    margin-right: 2%;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: #4e358a solid ;
+    background-color: transparent;
+    transition: opacity .4s ease;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgb(78, 53, 138);
+    cursor: pointer;
+}
+.tab button.active{
+    opacity: 1;
+}
+.description-box {
+    transition: opacity 0.5s ease; 
+}
+
+.description-box.hide {
+    opacity: 0; 
+}
+

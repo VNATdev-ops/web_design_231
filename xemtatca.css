@@ -4,16 +4,16 @@
     background-color: #fffced;
     font-family: Josefin Sans,sans-serif;
 }
-.anhmuahang img{
+.anhcauchuỵen img{
     width: 100%;
     height: 10cm;
     object-fit: cover;
+    margin-bottom: 30px;
+    
 }
-.anhmuahang {
-    margin-bottom: 10px;
-}
-.anhmuahang h1{
+.anhcauchuỵen h1{
     font-size: 2.5rem;
+    text-transform: uppercase;
     font-weight: 400;
     position: absolute;
     color: #fff;
@@ -24,77 +24,77 @@
     align-items: center;
     background-color: rgba(0,0,0,.5);
 }
-/* --------- */
-.phan2mh{
-    padding: 10px 0 30px 0;
-    
+.chuanoidung{
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 15px;
 }
-.nd2_bentrong{
-    margin: 0 120px 0 120px;
-    padding: 0 15px 0 15px;
-    
-}
-.phan2mh .noidungtrong_phan2mh .nd2_bentrong .nd2_dongchu1 {
-    margin: 20px 0 50px 0;
+.noidung1 h2{
     font-family: Josefin Sans,sans-serif;
-    width: 100%;
-    height: 64px;
-    text-align: center;
-    font-size: 2rem;
-    height: auto;
-    display: block;
-    
-
-}
-.phan2mh .noidungtrong_phan2mh .nd2_bentrong h2 a{
-    text-decoration: none;
+    font-weight: 700;
+    line-height: 2;
+    font-size: 1.25rem;
     color: #4e358a;
-    justify-items: center;
+    height: 75px;
 }
-.phan2mh .noidungtrong_phan2mh .nd2_bentrong .noidung2_trong .noidung2_caco .noidung2_tatca{
+.noidung1 p{
+margin-bottom: 1rem;
+font-size: 100%;
+font-weight: 100;
+line-height: 25px;
+}
+/* .noidung2_1{
+    display: flex;
+    flex-wrap: wrap;
+}
+.noidung2_2{
+    width: 32%;
+    height: auto;
+}
+.noidunganh img{
+    width: 100%;
+} */
+.noidung2_trong .noidung2_caco .noidung2_tatca{
     margin: 0 -15px 0 -15px;
     display: flex;
     flex-wrap: wrap;
 }
-.phan2mh .noidungtrong_phan2mh .nd2_bentrong .noidung2_trong .noidung2_caco .noidung2_tatca .noidung2_ndchinh{
+.noidung2_trong .noidung2_caco .noidung2_tatca .noidung2_ndchinh{
     width: 33%;
     padding: 0 15px;
     height: 598px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 .nd2_hinhanh img{
     width: 100%;
     margin-bottom: 20px;
    
 }
-.phan2mh .noidungtrong_phan2mh .nd2_bentrong .noidung2_trong .noidung2_caco .noidung2_tatca .nd2_dongdan1 {
+.noidung2_trong .noidung2_caco .noidung2_tatca .nd2_dongdan1 {
     height: 75px;
     font-weight: 600;
     font-size: 1.25rem;
     line-height: 2;
     color: #4e358a;
-    overflow: hidden; 
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    text-overflow: ellipsis;
-    margin-bottom: 8px;
-    flex-wrap: wrap;
 }
-.phan2mh .noidungtrong_phan2mh .nd2_bentrong .noidung2_trong .noidung2_caco .noidung2_tatca .nd2_dongchu{
+.noidung2_trong .noidung2_caco .noidung2_tatca .nd2_dongdan1 a{
+    text-decoration: none;
+    color: #4e358a;
+}
+.noidung2_trong .noidung2_caco .noidung2_tatca .nd2_dongchu{
     margin-bottom: 16px;
     height: 75px;
     line-height: 25px;
     font-weight: 100;
     width: 100%;
 }
-.phan2mh .noidungtrong_phan2mh .nd2_bentrong .noidung2_trong .noidung2_caco .noidung2_tatca .nd2_dongchu p{
+.noidung2_trong .noidung2_caco .noidung2_tatca .nd2_dongchu p{
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
 }
-.phan2mh .noidungtrong_phan2mh .nd2_bentrong .noidung2_trong .noidung2_caco .noidung2_tatca .dongkhampha a{
+.noidung2_trong .noidung2_caco .noidung2_tatca .dongkhampha a{
     text-decoration: none;
     display: inline-flex;
     justify-content: center;
@@ -110,77 +110,7 @@
     background-position: 50%;
     background-repeat: no-repeat;
 }
- .phan2mh .noidungtrong_phan2mh .nd2_bentrong .noidung2_trong .noidung2_caco .noidung2_tatca .dongkhampha a:hover{ 
+.noidung2_trong .noidung2_caco .noidung2_tatca .dongkhampha a:hover{ 
 background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUIAAABiCAMAAAASqCosAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAN5QTFRFAAAAUDCPTjWKTTSKTjSKTjWKTjSLSjWKTDSLTzaKTjWJTjOJeWWi0srV9O/n//ztx73Om4u1YkuVTTOJppe7vLLIY02WTTSJTTSJsaXBTTSK3dfbWECPTjWK6ePgblmckH+uTzWKTTWKTTWKVz+PUDCHVz6OTTSKeGSjTjSJ/PTg+erR9+TI9eDB9Ny79uLE/fbj+/Da+/Db/vjn9N6++erQ9uTHb1qcWD+QkICvsqbCTjSJTTWJWUGQWECQTjWJTjWKemaiTTSKp5m8vbHIZE6WTjWK08vVyL7PTjWK4wRUkQAAAEp0Uk5TABBvv+//fzBA4N9f/////////VD///+PcP/A///P////8GCf/iD9sP6A///////////////////+///w0P/+oPH/4P///5D//+HNunsTAAAC8ElEQVR4nO3da1PTQBiG4cT21YokglBtgwIeUFvoplXaGosCVUD//x9yhenQ7CnZvM4kzjzX52Rm5542ybbJJgiCIHzQahMYtFoPHwUldB7XPdJG23hSXJBoM4qfgkG0tf1MRtxxFww3aLfukTZa9znRC2fCHm3WPcim68uDYuhImFBU9xAbb+8lvXI0bBOOg4X2D1wNieoe3/8gPqC29fIGCUtxNUTCcuJDem1piIRlHRK9QUIeW0MkLK9vboiEHrpEb5GQx9gQCb1E7/SGSOjHMNlDQk96QyT0pU2YkdCbOtlDQn9KQySsQE6Y1xoiYSXrkz0krGatIRJWdD9hRsKququGSFjZqiESVicbHiEhzza1kJAnfk87SMjTpw9IyBMThUjI81GelJGQZZcGSMiDhGxb8nyChAbD45OREOnJ8bhoy4gSJNRNZL6V0Sf3tkhoME5FTvrZtTUS6oanQnE6dGyOhJqhGvAvR0MkVI21z+Dt59D+XUZCVWoqKERq3QEJFRNzQSEmtj2QUDGyJRzZ9kDCPOO55I7tGhsJ86b2hFPLLkiYN7MnnFl2QcI866FQiNSyCxLm2QsKYdkFCfOQkA1fZDacTthwUcOGS2s+TPDY8DMDH37sYsNPrnzGM4rjr1Ak1OHvJz78CfoP5P6Kt56L7+CGEIvxdCY/i+lsWnhDCG5LYkNCtjlu0WTCjcJsuF2dK/6ChyaYMnlViIQceICMC48xcuFhWq6vRD080s2RYWEBpgzLW/DEGS06WGSFIZ7TAkv9cCgFkdDb/pzOjrDsGcPeNzrD4nscekEk9BN9p3N1tX8k9CEndeeBCgk9GAsioYf7aTESVpNhgXomW0EkLElOiy86xoJIWI46qUNCX66CwQKvzyqmTYtz8BK3YoZJ3boeXdY9wqaTl4OJ61WC4ZJ+1D3GRvt5RXTtCBjcvlb18gbHQ6ObX5kMuCx4raps+Lvu9+c22tJ8Pa18lwfJou6BNlOSDIpfMf0HH/IoG4b+TigAAAAASUVORK5CYII=);
 /* background-color: #4e358a; */
 } 
-.xemall{
-    margin-bottom: 50px;
-    text-align: center;
-}
-.xemall a{
-    color: #4e358a;
-    font-weight: 700;
-    text-transform: uppercase;
-    padding-bottom: 15px;
-    text-decoration: none;
-
-}
-.xemall hr{
-    width: 50%;
-    height: 3px;
-    transition: 0.4 ease;
-    background-color: #fff;
-}
-.xemall:hover > br{
-    width:100%;
-}
-/* .xemall a:hover{
-    border-bottom: 2px solid #4e358a;
-}
-.xemall a:focus{
-    outline: 5px auto -webkit-focus-ring-color;
-    outline-offset: -2px;
-} */
-
-.dongkp {
-    
-    align-items: center;
-    padding: 3px 40px 0 20px;
-    width: 165px;
-    height: 54px;
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUIAAABiCAMAAAASqCosAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAN5QTFRFAAAAUDCPTjWKTTSKTjSKTjWKTjSLSjWKTDSLTzaKTjWJTjOJeWWi0srV9O/n//ztx73Om4u1YkuVTTOJppe7vLLIY02WTTSJTTSJsaXBTTSK3dfbWECPTjWK6ePgblmckH+uTzWKTTWKTTWKVz+PUDCHVz6OTTSKeGSjTjSJ/PTg+erR9+TI9eDB9Ny79uLE/fbj+/Da+/Db/vjn9N6++erQ9uTHb1qcWD+QkICvsqbCTjSJTTWJWUGQWECQTjWJTjWKemaiTTSKp5m8vbHIZE6WTjWK08vVyL7PTjWK4wRUkQAAAEp0Uk5TABBvv+//fzBA4N9f/////////VD///+PcP/A///P////8GCf/iD9sP6A///////////////////+///w0P/+oPH/4P///5D//+HNunsTAAAC8ElEQVR4nO3da1PTQBiG4cT21YokglBtgwIeUFvoplXaGosCVUD//x9yhenQ7CnZvM4kzjzX52Rm5542ybbJJgiCIHzQahMYtFoPHwUldB7XPdJG23hSXJBoM4qfgkG0tf1MRtxxFww3aLfukTZa9znRC2fCHm3WPcim68uDYuhImFBU9xAbb+8lvXI0bBOOg4X2D1wNieoe3/8gPqC29fIGCUtxNUTCcuJDem1piIRlHRK9QUIeW0MkLK9vboiEHrpEb5GQx9gQCb1E7/SGSOjHMNlDQk96QyT0pU2YkdCbOtlDQn9KQySsQE6Y1xoiYSXrkz0krGatIRJWdD9hRsKququGSFjZqiESVicbHiEhzza1kJAnfk87SMjTpw9IyBMThUjI81GelJGQZZcGSMiDhGxb8nyChAbD45OREOnJ8bhoy4gSJNRNZL6V0Sf3tkhoME5FTvrZtTUS6oanQnE6dGyOhJqhGvAvR0MkVI21z+Dt59D+XUZCVWoqKERq3QEJFRNzQSEmtj2QUDGyJRzZ9kDCPOO55I7tGhsJ86b2hFPLLkiYN7MnnFl2QcI866FQiNSyCxLm2QsKYdkFCfOQkA1fZDacTthwUcOGS2s+TPDY8DMDH37sYsNPrnzGM4rjr1Ak1OHvJz78CfoP5P6Kt56L7+CGEIvxdCY/i+lsWnhDCG5LYkNCtjlu0WTCjcJsuF2dK/6ChyaYMnlViIQceICMC48xcuFhWq6vRD080s2RYWEBpgzLW/DEGS06WGSFIZ7TAkv9cCgFkdDb/pzOjrDsGcPeNzrD4nscekEk9BN9p3N1tX8k9CEndeeBCgk9GAsioYf7aTESVpNhgXomW0EkLElOiy86xoJIWI46qUNCX66CwQKvzyqmTYtz8BK3YoZJ3boeXdY9wqaTl4OJ61WC4ZJ+1D3GRvt5RXTtCBjcvlb18gbHQ6ObX5kMuCx4raps+Lvu9+c22tJ8Pa18lwfJou6BNlOSDIpfMf0HH/IoG4b+TigAAAAASUVORK5CYII=);
-    background-size: 100%;
-    margin-top: 0;
-    background-position: 50%;
-    background-repeat: no-repeat;
-    border: none;
-}
-.dongkhampha_cc{
-    margin-top: 30px;
-    width: 90px;
-    height: 50px;
-    width: 100px;
-    margin-left: 46%;
-}
-.dongkhampha1{
-    margin-right: 100px;
-}
-.dongkhampha_cc a{
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 1rem;
-    font-weight: 700;
-    margin: 0;
-    color: #4e358a;
-}
-.dongkhampha_cc hr{
-    width: 50%;
-    height: 3px;
-    background-color: #4e358a;
-    transition: 0.4 ease;
-}
-.dongkhampha_cc:hover > hr{
-    width: 100%;
-}

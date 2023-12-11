@@ -118,7 +118,7 @@
     line-height: 25px ;
     font-weight: 100;
 }
-.phan2cc .noidung_phan2cc .noidungtrong_phan2cc .noidung2_phan2cc .dongkhampha_cc a{
+/* .phan2cc .noidung_phan2cc .noidungtrong_phan2cc .noidung2_phan2cc .dongkhampha_cc a{
     
     text-decoration: none;
     text-transform: uppercase;
@@ -126,8 +126,29 @@
     font-weight: 700;
     letter-spacing: 1px;
     padding-bottom: 15px;
-    border-bottom: 2px solid #4e358a;
+    /* border-bottom: 2px solid #4e358a; */
+
+.dongkhampha_cc{
+    margin-top: 30px;
+    width: 90px;
+    height: 50px;
 }
-.phan2cc .noidung_phan2cc .noidungtrong_phan2cc .noidung2_phan2cc .dongkhampha_cc a{
-    
+.dongkhampha_cc a{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0;
+    color: #4e358a;
+}
+.dongkhampha_cc hr{
+    width: 50%;
+    height: 3px;
+    background-color: #4e358a;
+    margin-left: 0;
+    transition: 0.4 ease;
+}
+.dongkhampha_cc:hover > hr{
+    width: 100%;
 }

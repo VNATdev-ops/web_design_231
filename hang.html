@@ -37,17 +37,60 @@
                 </div>
                 
                 <h2>190.000 VND</h2>
+                <div class="cart">
+                    <div class="cart_quantity">
+                        <input class="quantity" type="text" id="quantity1042" name="quantity" size="1" value="1" onkeypress="return event.keyCode!=13;">
+                        <div class="button">
+                            <input type="button" class="myupbutton" value="+" onclick="quantity1042.value = (+quantity1042.value + 1);">
+                            <input type="button" class="mydownbutton" value="-" onclick="var qty1 = quantity1042.value; if (!isNaN(qty1) && qty1 > 1) quantity1042.value = qty1 - 1; return false;">
+                        </div>
+                    </div>
+                    <div class="cart-button">
+                        <button>
+                            Chọn mua
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="hang_noidung2">
-            <div class="vesanpham">
-                <h4>VỀ SẢN PHẨM</h4>
+        <section class="information">
+            <div class="tab">
+                <button id='tab-des'>Về sản phẩm</button>
+                <button id='tab-spec'>Thành phần</button>
             </div>
-            <div class="thanhphan">
-                <h4> THÀNH PHẦN</h4>
+            
+            <div id="product-info" style="height: 134px;">
+                <div id="des" class="description-box">
+                </div>
+
+                <div id="spec" class="description-box"></div>
             </div>
-        </div>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    var tabDes = document.getElementById('tab-des');
+                    var tabSpec = document.getElementById('tab-spec');
+                    var divDes = document.getElementById('des');
+                    var divSpec = document.getElementById('spec');
+
+                    tabDes.addEventListener('click', function () {
+                        divDes.classList.remove('hide');
+                        divSpec.classList.add('hide');  
+                        tabDes.classList.add('active');
+                        tabSpec.classList.remove('active');
+                    });
+
+                    tabSpec.addEventListener('click', function () {
+                        divDes.classList.add('hide');   
+                        divSpec.classList.remove('hide');
+                        tabDes.classList.remove('active');
+                        tabSpec.classList.add('active');
+                    });
+                });
+            </script>
+        </section>
     </div>
+    
     
 </body>
 </html>
