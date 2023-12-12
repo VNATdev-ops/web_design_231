@@ -16,7 +16,7 @@ body{
 }
 .banner {
     position: relative; 
-    height: 400px;
+    height: 350px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -61,9 +61,10 @@ body{
     font-weight: 600;
     font-size: 2rem;
     padding-top: 10px;
+    text-align: center;
 }
 .container{
-    margin: 50px 220px;
+    margin: 50px 10%;
 }
 a{
     text-decoration: none;  
@@ -71,6 +72,7 @@ a{
     font-weight: 500;
     line-height: 3rem;
     color: #4e358a;
+    text-align: left;
 }
 h1{
     line-height: 3rem;
@@ -124,37 +126,37 @@ h3{
 .categorises{
     margin-top: 30px;
     display: grid;
-    grid-template-rows:  [border-top-start] 30px [border-left-start] 300px [border-bottom-start] 30px;
-    grid-template-columns: [border-left] 30px [category-container] 95% [border-right] 30px;
+    grid-template-rows:  [border-top-start] 30px [border-left-start] auto [border-bottom-start] 30px;
+    grid-template-columns: [border-left] 30px [category-container] calc(100% - 30px*2) [border-right] 30px;
     grid-template-areas: 
         "top top top"
         "left category-container right"
         "bottom bottom bottom";
-    }
-    .border-top{
-        background-image: url(./images/border-x.png);
-        grid-area: top;
-        background-position: center;
-        border: 2px solid #f4dcbb;
-    }
-    .border-left{
-        background-image: url(./images/border-y.png);
-        grid-area: left;
-        background-position: center;
-        border: 2px solid #f4dcbb;
-    }
-    .border-right{
-        background-image: url(./images/border-y.png);
-        grid-area: right;
-        background-position: center;
-        border: 2px solid #f4dcbb;
-    }
-    .border-bottom{
-        background-image: url(./images/border-x.png);
-        grid-area: bottom;
-        background-position: center;
-        border: 2px solid #f4dcbb;
-    }
+}
+.border-top{
+    background-image: url(./images/border-x.png);
+    grid-area: top;
+    background-position: center;
+    border: 2px solid #f4dcbb;
+}
+.border-left{
+    background-image: url(./images/border-y.png);
+    grid-area: left;
+    background-position: center;
+    border: 2px solid #f4dcbb;
+}
+.border-right{
+    background-image: url(./images/border-y.png);
+    grid-area: right;
+    background-position: center;
+    border: 2px solid #f4dcbb;
+}
+.border-bottom{
+    background-image: url(./images/border-x.png);
+    grid-area: bottom;
+    background-position: center;
+    border: 2px solid #f4dcbb;
+}
 .category-container{
     background-color: transparent;
     grid-area: category-container;
@@ -162,7 +164,7 @@ h3{
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 30px 10%;
+    padding: 20px 10%;
     color: #4e358a;
 }
 .newest-articles{
@@ -170,13 +172,15 @@ h3{
 }
 .articles{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
 }
-.article-1, .article-2, .article-3{
-    width: 31%;
+.article{
+    width: 30%;
     height: 500px;
 }
-.article-1 img, .article-2 img, .article-3 img{
+.article img{
     width: 100%;
 }
 .articles h2, .articles h3, .articles a{
@@ -184,18 +188,17 @@ h3{
     font-family: Josefin Sans,sans-serif;
     text-transform: uppercase;
 }
-.article-1 .tag, .article-2 .tag, .article-3 .tag{
+.article .tag{
     font-size: 1rem;
     font-weight: 600;
     color: #4e358a;
 }
-.article-1 h3 a, .article-2 h3 a, .article-3 h3 a{
+.article h3 a{
     font-size: 1.75rem;
     font-weight: 700;
     color: #4e358a;
 }
 .btn-wrap{
-    border-bottom: #4e358a 3px solid;
     margin-top: 30px;
     width: 90px;
 }
@@ -205,9 +208,28 @@ h3{
     text-transform: uppercase;
     font-size: 1rem;
     font-weight: 700;
+    line-height: 1.5rem;
     margin: 0;
 }
-.btn-wrap:hover{
-    width: 120px;
+.btn-wrap hr{
+    width: 50%;
+    height: 2px;
+    background-color: #4e358a;
+    margin-left: 0;
     transition: 0.4s ease;
+}
+.btn-wrap:hover > hr{
+    width: 100%;
+}
+
+@media screen and (max-width: 700px) {
+    .container{
+        margin: 30px 20px;
+    }
+    .article-links{
+        margin: 30px 0;
+    }
+    .newest-articles{
+        padding: 0 20px;
+    }
 }
