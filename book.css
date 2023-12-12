@@ -15,20 +15,66 @@ body{
     color: #18212a;
     margin: 40px 80px;
     background-color: #fffced;
+    transition: all .4s ease;
+}
+h1 {
+    font-family: Josefin Sans,sans-serif;
+    font-size: 2rem;
+    color: #4e358a;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 2.75rem;
+}
+h2{
+    font-family: Josefin Sans,sans-serif;
+    font-size: 2rem;
+    color: #4e358a;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 2.5rem;
+}
+h3{
+    margin-top: 15px;
+    font-family: Josefin Sans,sans-serif;
+    font-size: 1.5rem;
+    color: #4e358a;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
 }
 a{
     text-decoration: none;
     color: #337ab7;
 }
 
+@media screen and (max-width: 700px) {
+    body {
+        margin: 0 40px 20px 40px; 
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+    p {
+        font-size: 0.9rem;
+    }
+}
+
 /*dac-den-dang*/
 
 .dac-den-dang{
     display: flex;
+    justify-content: space-between;
 }
 .slideshow{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 .dot-container{
     margin-top: 5px;
@@ -36,30 +82,21 @@ a{
 }
    /* Slideshow container */
 .slideshow-container {
-    width: 500px;
-    height: 500px;
+    width: 100%;
+    height: auto;
     position: relative;
     margin: 0;
-    background-color: black;
   }
-  @media screen and (max-width: 700px) {
-    .dac-den-dang {
-        flex-direction: column;
-    }
-
-    .slideshow {
-        width: 100%;
-    }
-
-  }
-
-  @media only screen and (max-width: 500px) {
-    .slideshow-container {
-        width: 100%;
-    }
-  }
-
-
+.mySlides{
+    width: 100%;
+    height: 100%;
+}
+.mySlides img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
   /* Next & previous buttons */
   .prev, .next {
     cursor: pointer;
@@ -110,25 +147,11 @@ a{
     to {opacity: 1}
   }
   
-  /* On smaller screens, decrease text size */
-  @media only screen and (max-width: 300px) {
-    .prev, .next,.text {font-size: 11px}
-  }
-.dac-den-dang{
-    display: flex;
-}
 .info{
     width: 55%;
     padding-left: 40px;
 }
-h1 {
-    font-family: Josefin Sans,sans-serif;
-    font-size: 2rem;
-    color: #4e358a;
-    text-transform: uppercase;
-    font-weight: 700;
-    line-height: 2.75rem;
-}
+
 .product_price{
     font-family: Josefin Sans,sans-serif;
     font-size: 1.5rem;
@@ -202,6 +225,26 @@ h1 {
     transition: opacity 0.2s ease 0s;
     cursor: pointer;
 }
+.cart-button button:hover{
+    background-image: url(./images/button-focus.png);
+    color: #f4dcbb;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .dac-den-dang{
+        flex-direction: column;
+    }
+    .slideshow{
+        margin-left: -40px;
+        margin-right: -40px;
+    }
+    .prev, .next, .text {font-size: 30px}
+    .info {
+        width: 100%; 
+        padding-left: 0;
+    }
+  }
 
 .information{
     margin: 50px 0;
@@ -217,7 +260,7 @@ h1 {
     margin-right: 2%;
     box-sizing: border-box;
     border: none;
-    border-bottom: #4e358a solid ;
+    border-bottom: #4e358a solid 2px;
     background-color: transparent;
     transition: opacity .4s ease;
     font-family: "Josefin Sans", sans-serif;
@@ -231,19 +274,20 @@ h1 {
     opacity: 1;
 }
 .description-box {
-    transition: opacity 0.5s ease; 
+    max-height: 500px; 
+    overflow: hidden;
+    transition: max-height 0.6s ease;
 }
 
 .description-box.hide {
-    opacity: 0; 
+    max-height: 0;
 }
-
-
 .product{
+    width: 100%;
     margin-top: 30px;
     display: grid;
-    grid-template-rows:  [border-top-start] 30px [border-left-start] 550px [border-bottom-start] 30px;
-    grid-template-columns: [border-left] 30px [product-swiper] 95% [border-right] 30px;
+    grid-template-rows:  [border-top-start] 30px [border-left-start] auto [border-bottom-start] 30px;
+    grid-template-columns: [border-left] 30px [product-swiper] calc(100% - 30px*2) [border-right] 30px;
     grid-template-areas: 
         "top top top"
         "left product right"
@@ -280,15 +324,9 @@ h1 {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
     padding: 20px 0;
     color: #4e358a;
-}
-.product-swiper h2{
-    font-family: Josefin Sans,sans-serif;
-    font-size: 2rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    line-height: 2.75rem;
 }
 .swiper-container {
     position: relative;
@@ -311,13 +349,6 @@ h1 {
 }
 .mod_redshop_products_title {
     position: relative;
-    margin-top: 15px;
-    font-family: Josefin Sans,sans-serif;
-    font-size: 1.5rem;
-    color: #4e358a;
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: 700;
     line-height: 2.75rem;
 }
 .mod_redshop_products_image{
@@ -328,9 +359,12 @@ h1 {
 }
 .mod_redshop_products_image img{
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-.mod_redshop_products_desc {
+.mod_redshop_products_desc > p{
     margin-bottom: 10px;
+    text-align: left;
 }
 
 .mod_redshop_products_price {
@@ -347,8 +381,6 @@ h1 {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 30px;
-    height: 30px;
     color: #4e358a;
     cursor: pointer;
 }
@@ -359,23 +391,27 @@ h1 {
     left: 30px;
 }
 
-.product-popup-content {
+.pop-up-window{
     position: fixed;
+    left: -100%; /* Initially set to -100% to hide the popup */
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #4e358a;
+    z-index: 99999;
+    transition: left .4s ease; 
+    display: flex;
+    justify-content: center;
+}
+.product-popup-content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    left: -100%; /* Initially set to -100% to hide the popup */
-    top: 0;
-    width: 26%;
-    height: 100%;
-    background-color: #4e358a;
-    padding: 0 20px;
+    padding: 0 30px;
     color: #fff;
-    z-index: 99999;
-    transition: left .4s ease; /* Transition effect for the left property */
 }
-.product-popup-content .mod_redshop_products_title{
+.product-popup-content .mod_redshop_products_title > h3{
     text-align: left;
     color: #fff;
 }
@@ -407,4 +443,28 @@ h1 {
 }
 .btn-wrap:hover > hr{
     width: 100%;
+}
+
+@media screen and (max-width: 700px){
+    .pop-up-window{
+        width: 100%;
+        padding: 0;
+    }
+    .mod_redshop_products_title{
+        width: 250px;
+    }
+    .mod_redshop_products_image{
+        width: 200px;
+        height: 200px;
+    }
+    .swiper-button-next,
+    .swiper-button-prev{
+        top: 40%;
+    }
+    .swiper-button-next {
+        right: 15px;
+    }
+    .swiper-button-prev {
+        left: 15px;
+    }
 }
