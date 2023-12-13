@@ -1,8 +1,22 @@
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('./font/Josefin_Sans/JosefinSans-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Open-Sans';
+    src: url('./font/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf') format('truetype');
+}
 *{
     margin: 0;
     box-sizing: border-box;
-    background-color: #fffced;
     font-family: Josefin Sans,sans-serif;
+}
+body{
+    background-color: #fffced;
+}
+p{
+    font-family: Open-Sans;
 }
 .dongdautrang{
     height: 118px;
@@ -228,6 +242,10 @@ h1 {
     border-width: 0px;
     transition: opacity 0.2s ease 0s;
     cursor: pointer;
+}
+.cart-button button:hover{
+    background-image: url(./images/button-focus.png);
+    color: #f4dcbb;
 }
 
 main{
