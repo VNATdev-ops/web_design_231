@@ -68,7 +68,6 @@ p {
 /* --------- */
 .phan2mh{
     margin: 50px 0;
-    
 }
 .noidungtrong_phan2mh{
     display: flex;
@@ -81,7 +80,7 @@ p {
     flex-direction: column;    
     justify-content: center;
     align-items: center;
-    padding: 50px 0;
+    padding: 50px 0 0 0;
 }
 .nd2_dongchu1 {
     text-transform: uppercase;
@@ -96,9 +95,9 @@ p {
     flex-wrap: wrap;
 }
 .noidung2_ndchinh{
-    width: 31%;
+    width: 30%;
     height: auto;
-    padding: 20px 10px;
+    padding: 20px 1.5%;
     display: flex;
     flex-direction: column;
 }
@@ -136,6 +135,7 @@ p {
     -webkit-box-orient: vertical;
 }
 .dongkhampha_cc{
+    margin-top: 20px;
     align-items: center;
 }
 .dongkhampha_cc a{
@@ -158,13 +158,14 @@ p {
 }
 .summit-button{
     margin-top: 30px;
+    justify-content: center;
+    align-items: center;
 }
 .summit-button button{
     justify-content: center;
     align-items: center;
-    text-align: center;
     width: 165px;
-    height: 55px;
+    height: 50px;
     font-family: "Josefin Sans", sans-serif;
     font-size: 1rem;
     font-weight: 700;
@@ -175,9 +176,11 @@ p {
     background-size: 100%;
     background-repeat: no-repeat;
     opacity: 1;
-    background-position: center;
-    border: none;
-    transition: opacity 0.3s ease;
+    display: inline-flex;
+    padding: 3px 20px 0px 0px;
+    background-position: 50% center;
+    border-width: 0px;
+    transition: opacity 0.2s ease 0s;
     cursor: pointer;
 }
 .summit-button button:hover{
