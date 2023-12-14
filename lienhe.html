@@ -23,32 +23,20 @@
                 <p>Chúng tôi có thể giúp gì cho bạn?</p>
                 <form action="#">
                     <div class="input-field">
-                        <label for="in-name">Your Name *</label>
+                        <label for="in-name">Họ và Tên *</label>
                         <input type="text" id="in-name" value="">
-                        <!--
-                            <div class="field-inline-error">This field is required</div>
-                        -->
                     </div>
                     <div class="input-field">
-                        <label for="in-phone">Phone *</label>
+                        <label for="in-phone">Điện Thoại *</label>
                         <input type="number" id="in-phone" value="">
-                        <!--
-                            <div class="field-inline-error">This field is required</div>
-                        -->
                     </div>
                     <div class="input-field">
                         <label for="in-email">Email *</label>
                         <input type="email" id="in-email" value="">
-                        <!--
-                            <div class="field-inline-error">This field is required</div>
-                        -->
                     </div>
                     <div class="input-field">
-                        <label for="in-enquiry">Enquiry *</label>
-                        <textarea id="in-enquiry"></textarea>                        
-                        <!--
-                            <div class="field-inline-error">This field is required</div>
-                        -->
+                        <label for="in-enquiry">Nội dung *</label>
+                        <textarea id="in-enquiry"></textarea>
                     </div>
                     <div class="summit-button">
                         <button type="submit">Gửi</button>
@@ -87,7 +75,7 @@
                         <hr>
                     </div>
 
-                    <div class="map" style="display: none;">
+                    <div class="map hide">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.464259374663!2d106.70099831538788!3d10.775710192322009!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f250219e89b:0x74f9cd6a6fa5317!2sLacàph Bar!5e0!3m2!1svi!2s!4v1609839820738!5m2!1svi!2s" frameborder="" width="100%" height="100%"></iframe>
                     </div>
                 </div>
@@ -122,49 +110,48 @@
                         <hr>
                     </div>
 
-                    <div class="map" style="display: none;">
+                    <div class="map hide"">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.5646514907953!2d106.6982655153878!3d10.767996492327185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752fafb4f8a93d:0x620ce60882082fd4!2sLacàph Space!5e0!3m2!1svi!2s!4v1609839780651!5m2!1svi!2s" frameborder="" width="100%" height="100%"></iframe>
                     </div>
                 </div>
 
                 <script>
                     document.addEventListener('DOMContentLoaded', function () {
-                    var mapDisplayBar = document.querySelector('.bar .map');
-                    var openButtonBar = document.querySelector('.bar .open-button');
-                    var closeButtonBar = document.querySelector('.bar .close-button');
+                        var mapDisplayBar = document.querySelector('.bar .map');
+                        var openButtonBar = document.querySelector('.bar .open-button');
+                        var closeButtonBar = document.querySelector('.bar .close-button');
 
-                    openButtonBar.addEventListener('click', function () {
-                        mapDisplayBar.style.display = 'block';
-                        mapDisplayBar.style.height = '500px';
-                        openButtonBar.style.display = 'none';
-                        closeButtonBar.style.display = 'block';
+                        openButtonBar.addEventListener('click', function () {
+                            mapDisplayBar.classList.remove('hide');
+                            mapDisplayBar.style.display = 'block';
+                            openButtonBar.style.display = 'none';
+                            closeButtonBar.style.display = 'block';
+                        });
+
+                        closeButtonBar.addEventListener('click', function () {
+                            mapDisplayBar.classList.add('hide');
+                            openButtonBar.style.display = 'block';
+                            closeButtonBar.style.display = 'none';
+                        });
+
+                        var mapDisplaySpace = document.querySelector('.space .map');
+                        var openButtonSpace = document.querySelector('.space .open-button');
+                        var closeButtonSpace = document.querySelector('.space .close-button');
+
+                        openButtonSpace.addEventListener('click', function () {
+                            mapDisplaySpace.classList.remove('hide');
+                            mapDisplaySpace.style.display = 'block';
+                            openButtonSpace.style.display = 'none';
+                            closeButtonSpace.style.display = 'block';
+                        });
+
+                        closeButtonSpace.addEventListener('click', function () {
+                            mapDisplaySpace.classList.add('hide');
+                            openButtonSpace.style.display = 'block';
+                            closeButtonSpace.style.display = 'none';
+                        });
                     });
 
-                    closeButtonBar.addEventListener('click', function () {
-                        mapDisplayBar.style.display = 'none';
-                        mapDisplayBar.style.height = '0';
-                        openButtonBar.style.display = 'block';
-                        closeButtonBar.style.display = 'none';
-                    });
-
-                    var mapDisplaySpace = document.querySelector('.space .map');
-                    var openButtonSpace = document.querySelector('.space .open-button');
-                    var closeButtonSpace = document.querySelector('.space .close-button');
-
-                    openButtonSpace.addEventListener('click', function () {
-                        mapDisplaySpace.style.display = 'block';
-                        mapDisplaySpace.style.height = '500px';
-                        openButtonSpace.style.display = 'none';
-                        closeButtonSpace.style.display = 'block';
-                    });
-
-                    closeButtonSpace.addEventListener('click', function () {
-                        mapDisplaySpace.style.display = 'none';
-                        mapDisplaySpace.style.height = '0';
-                        openButtonSpace.style.display = 'block';
-                        closeButtonSpace.style.display = 'none';
-                    });
-                });
                 </script>
                 
             </div>
