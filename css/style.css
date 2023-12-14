@@ -1,0 +1,308 @@
+body{
+    background-color: #fffced;
+}
+section{
+    background-color: #fffced;   
+}
+a{
+    text-decoration: none;
+    color: #4e358a;
+}
+li{
+    list-style-type: none;
+}
+.frame {
+    border: 10px solid black;
+  padding: 35px;
+  background: url(/images.tuan/tải\ xuống.png);
+  background-repeat: no-repeat;
+  background-origin: content-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body{
+	line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+}
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+footer i {
+    font-size: 40px;
+  }
+  .container{
+      max-width: 1170px;
+      margin:auto;
+  }
+  .row{
+      display: flex;
+      flex-wrap: wrap;
+  }
+  ul{
+      list-style: none;
+  }
+  .footer{
+      background-color: #4e358a;
+    padding: 120px 0;
+  }
+  .footer-col{
+     width: 25%;
+     padding: 0 15px;
+     
+  }
+  .footer-col h4{
+      font-size: 26px;
+      color: #ffffff;
+      text-transform: capitalize;
+      margin-bottom: 35px;
+      font-weight: 900;
+    font-style: normal;
+      position: relative;
+  }
+  
+  .footer-col ul li:not(:last-child){
+      margin-bottom: 10px;
+  }
+  a{
+    text-decoration: none;
+  }
+  .footer-col ul li a{
+      font-size: 20px;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 300;
+      color: #fff;
+      display: block;
+  }
+  
+  .footer-col .social-links a{
+      display: inline-block;
+      height: 40px;
+      width: 40px;
+      margin:0 10px 10px 0;
+      text-align: center;
+      line-height: 40px;
+      border-radius: 50%;
+      color: #ffffff;
+  }
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+body{
+    margin: 0;
+    background-color: #fffced;
+}
+.banner {
+    position: relative; /* Make the container position relative */
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.52);
+    z-index: 1; /* Place the pseudo-element above the image */
+}
+
+.banner::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(/images.tuan/Lacàph_Bar_10.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0; /* Place the image below the pseudo-element */
+}
+.banner p, .banner h1 {
+    margin: 0;
+    color: #fff;
+    font-family: Josefin Sans,sans-serif;
+    z-index: 2;
+}
+.banner p{
+    font-weight: 400;
+    font-size: 1rem;
+}
+.banner h1{
+    font-weight: 600;
+    font-size: 2rem;
+    padding-top: 10px;
+}
+
+.banner-2 {
+    position: relative; /* Make the container position relative */
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.52);
+    z-index: 1; /* Place the pseudo-element above the image */
+}
+
+.banner-2::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(/images.tuan/Lacàph_Space_1.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0; /* Place the image below the pseudo-element */
+}
+.banner-2 p, .banner-2 h1 {
+    margin: 0;
+    color: #fff;
+    font-family: Josefin Sans,sans-serif;
+    z-index: 2;
+}
+.banner-2 p{
+    font-weight: 400;
+    font-size: 1rem;
+}
+.banner-2 h1{
+    font-weight: 600;
+    font-size: 2rem;
+    padding-top: 10px;
+}
+
+.banner-3 {
+    position: relative; /* Make the container position relative */
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.52);
+    z-index: 1; /* Place the pseudo-element above the image */
+}
+
+.banner-3::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(/images.tuan/LacafeBanner.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0; /* Place the image below the pseudo-element */
+}
+.banner-3 p, .banner-3 h1 {
+    margin: 0;
+    color: #fff;
+    font-family: Josefin Sans,sans-serif;
+    z-index: 2;
+}
+.banner-3 p{
+    font-weight: 400;
+    font-size: 1rem;
+}
+.banner-3 h1{
+    font-weight: 600;
+    font-size: 2rem;
+    padding-top: 10px;
+}
+
+.banner-4 {
+    position: relative; /* Make the container position relative */
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-4::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.52);
+    z-index: 1; /* Place the pseudo-element above the image */
+}
+
+.banner-4::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(/images.tuan/Lacàph_Bar_10.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0; /* Place the image below the pseudo-element */
+}
+.banner-4 p, .banner-4 h1 {
+    margin: 0;
+    color: #fff;
+    font-family: Josefin Sans,sans-serif;
+    z-index: 2;
+}
+.banner-4 p{
+    font-weight: 400;
+    font-size: 1rem;
+}
+.banner-4 h1{
+    font-weight: 600;
+    font-size: 2rem;
+    padding-top: 10px;
+}
+
+
+
+
+
+
+
+  
