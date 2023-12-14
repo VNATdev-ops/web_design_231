@@ -24,12 +24,14 @@
     align-items: center;
     background-color: rgba(0,0,0,.5);
 }
+
 .chuanoidung{
     width: 90%;
     margin: 0 auto;
-    padding: 0 55px;
+    padding: 0 auto;
     
 }
+
 .noidung1 h2{
     font-family: Josefin Sans,sans-serif;
     font-weight: 700;
@@ -65,13 +67,15 @@ line-height: 25px;
 }
 .noidung2_trong .noidung2_caco .noidung2_tatca .noidung2_ndchinh{
     width: 33%;
-    padding: 0 15px;
-    height: 598px;
+    padding: 20px 15px;
+    height: 628px;
     margin-bottom: 50px;
 }
+
 .nd2_hinhanh img{
     width: 100%;
     margin-bottom: 20px;
+    box-shadow: 2px 4px 9px 6px  #44444423;
    
 }
 .noidung2_trong .noidung2_caco .noidung2_tatca .nd2_dongdan1 {
