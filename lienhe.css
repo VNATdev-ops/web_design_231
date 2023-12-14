@@ -75,6 +75,9 @@ a{
 }
 .container{
     margin: 50px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .contact-form{
     width: 100%;
@@ -85,7 +88,7 @@ a{
         "top top top"
         "left form right"
         "bottom bottom bottom";
-    }
+}
 .border-top{
     background-image: url(./images/border-x.png);
     grid-area: top;
@@ -246,6 +249,9 @@ textarea:focus{
 @media screen and (max-width: 1000px) {
     .container{
         margin: 30px 50px;
+    }
+    .contact-form{
+        
     }
     .place{
         flex-direction: column;

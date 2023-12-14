@@ -1,154 +1,174 @@
-*{
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('./font/Josefin_Sans/JosefinSans-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Open-Sans';
+    src: url('./font/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf') format('truetype');
+}
+
+body, h1, h2, p, a {
     margin: 0;
-    box-sizing: border-box;
+    padding: 0;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
     background-color: #fffced;
-    font-family: Josefin Sans,sans-serif;
 }
-.anhcauchuỵen img{
-    width: 100%;
+p {
+    font-family: 'Open-Sans', sans-serif;
+}
+.anhcauchuỵen {
+    position: relative; 
     height: 10cm;
-    object-fit: cover;
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.anhcauchuỵen h1{
+.anhcauchuỵen::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.52);
+    z-index: 1; 
+}
+
+.anhcauchuỵen::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(images/cauc-muah/Stories.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0; 
+}
+.anhcauchuỵen h1 { 
+    margin: 0;
+    color: #fff;
+    font-family: Josefin Sans,sans-serif;
+    z-index: 2;
     font-size: 2.5rem;
     text-transform: uppercase;
     font-weight: 400;
-    position: absolute;
-    color: #fff;
-    width: 100%;
-    height: 10cm;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0,0,0,.5);
 }
-/* ------- */
-.phan2cc .noidung_phan2cc{
-    margin: 0 120px;
-    padding: 25px 15px;
-    margin-top: 20px;
+
+.phan2cc {
+    margin: 50px 0;
 }
-.phan2cc .noidung_phan2cc .noidungtrong_phan2cc{
+
+.noidung_phan2cc {
+    margin: 0 100px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
-.phan2cc .noidung_phan2cc .noidungtrong_phan2cc .noidung2_phan2cc{
-    width: 33%;
-    padding: 0 15px;
-    height: 638px;
-    padding-bottom: 40px;
+
+.noidung {
+    width: 31%;
+    height: auto;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
 }
-.phan2cc .noidung_phan2cc .noidungtrong_phan2cc .noidung2_phan2cc .anhnoidung2_phan2cc img{
+@media screen and (max-width: 1000px){
+   .noidung{
+        width: 45%;
+   } 
+}
+
+.anhnoidung2_phan2cc img {
     width: 100%;
     margin-bottom: 20px;
+    object-fit: cover;
 }
-.phan2cc .noidung_phan2cc .noidungtrong_phan2cc .noidung2_phan2cc .dongdanvecc{
+
+.dongdanvecc a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #4e358a;
+    display: block;
     margin-bottom: 8px;
 }
-.phan2cc .noidung_phan2cc .noidungtrong_phan2cc .noidung2_phan2cc .dongdanvecc a{
-    text-decoration: none;
-    font-size: 100%;
-    color: #4e358a;
-}
-.phan2cc .noidung_phan2cc .noidungtrong_phan2cc .noidung2_phan2cc .noidungtruycap .tennd{
+
+.tennd {
     text-transform: uppercase;
     font-weight: 700;
-    line-height: 2;
-    font-size: 1.25rem;
+    line-height: 2.5rem;
+    font-size: 1.75rem;
     color: #4e358a;
-    height: 75px;
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
 }
-.phan2cc .noidung_phan2cc .noidungtrong_phan2cc .noidung2_phan2cc .noidungtruycap .tennd a{
+
+.tennd a {
     text-decoration: none;
     color: #4e358a;
     font-size: 90%;
     font-weight: 600;
 }
-.phan2cc .noidung_phan2cc .noidungtrong_phan2cc .noidung2_phan2cc .noidungtruycap{
+
+.noidungtruycap {
     letter-spacing: 1px;
     font-size: 1em;
-    height: 75px;
     line-height: 1.5;
-     
 }
-.phan2cc .noidung_phan2cc .noidungtrong_phan2cc .noidung2_phan2cc .dongchu_cc{
+
+.dongchu_cc {
     margin-top: 8px;
-    max-height: 75px;
     margin-bottom: 1rem;
-}
-.phan2cc .noidung_phan2cc .noidungtrong_phan2cc .noidung2_phan2cc .dongchu_cc p{
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
 }
-.phan2cc .noidung_phan2cc .noidungtrong_phan2cc .noidung2_phan2cc .dongchu_cc h1{
-    overflow: hidden;
-    height: 80px;
-    font-size: 350%;
-    font-weight: 300;
-    line-height: 80px;
-    display: flex;
-    justify-content: space-between;
-    word-spacing: 110px;
-    
-}
-.phan2cc .noidung_phan2cc .noidungtrong_phan2cc .noidung2_phan2cc .dongchu_quatet_cc{
-    width: 100%;
-    height: 75px;
-    margin-bottom: 16px;
-    font-size: 100%;
-    line-height: 25px ;
-    font-weight: 100;  
-    line-height: 40px;
 
-}
-.phan2cc .noidung_phan2cc .noidungtrong_phan2cc .noidung2_phan2cc .dongchu_cc p{
+.dongchu_cc p {
     width: 100%;
-    height: 75px;
     margin-bottom: 16px;
     font-size: 100%;
-    line-height: 25px ;
+    line-height: 25px;
     font-weight: 100;
 }
-/* .phan2cc .noidung_phan2cc .noidungtrong_phan2cc .noidung2_phan2cc .dongkhampha_cc a{
-    
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #4e358a;
-    font-weight: 700;
-    letter-spacing: 1px;
-    padding-bottom: 15px;
-    /* border-bottom: 2px solid #4e358a; */
 
-.dongkhampha_cc{
+.dongkhampha_cc {
     margin-top: 30px;
     width: 90px;
     height: 50px;
 }
-.dongkhampha_cc a{
+
+.dongkhampha_cc a {
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 1rem;
     font-weight: 700;
+    display: block;
     margin: 0;
     color: #4e358a;
 }
-.dongkhampha_cc hr{
+
+.dongkhampha_cc hr {
     width: 50%;
-    height: 3px;
+    height: 2px;
     background-color: #4e358a;
     margin-left: 0;
-    transition: 0.4 ease;
+    transition: width 0.4s ease;
 }
-.dongkhampha_cc:hover > hr{
+
+.dongkhampha_cc:hover > hr {
     width: 100%;
 }
