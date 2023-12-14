@@ -84,6 +84,23 @@ p {
    .noidung{
         width: 45%;
    } 
+   .anhcauchuỵen{
+    height: 13cm;
+}
+}
+@media screen and (max-width: 700px){
+    .noidung{
+        width: 48%;
+   } 
+   .noidung_phan2cc{
+    margin: 0 20px;
+   }
+   .phan2cc {
+    margin: 17px 0;
+   }
+    .anhcauchuỵen{
+        height: 15cm;
+    }
 }
 
 .anhnoidung2_phan2cc img {
