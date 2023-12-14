@@ -188,28 +188,32 @@
             <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
             <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
             <script>
-                // Initialize Swiper when the DOM is ready
-                document.addEventListener('DOMContentLoaded', function () {
+                // Function to initialize Swiper based on screen width
+                function initSwiper() {
                     let screenWidth = window.innerWidth;
-
+                    
                     if (screenWidth <= 700) {
-                        // Initialize Swiper
+                        // Initialize Swiper for small screens
                         var swiper = new Swiper('.articles', {
                             slidesPerView: 1,
                             spaceBetween: 10
                         });
-                    } 
-                    else{
-                        // Initialize Swiper
+                    } else {
+                        // Initialize Swiper for larger screens
                         var swiper = new Swiper('.articles', {
                             slidesPerView: 3,
                             spaceBetween: 10
                         });
                     }
-                });
-
-
+                }
+            
+                // Initialize Swiper when the DOM is ready
+                document.addEventListener('DOMContentLoaded', initSwiper);
+            
+                // Reinitialize Swiper on window resize
+                window.addEventListener('resize', initSwiper);
             </script>
+            
 
             </div>
         </div>
