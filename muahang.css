@@ -73,7 +73,7 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 50px 80px;
+    margin: 50px 80px;/*luu y tự mo */
 }
 .nd2_bentrong{
     display: flex;
@@ -95,11 +95,29 @@ p {
     flex-wrap: wrap;
 }
 .noidung2_ndchinh{
-    width: 30%;
+    width: 30%; /*luu y 1000 45%*/
     height: auto;
     padding: 20px 1.5%;
     display: flex;
     flex-direction: column;
+}
+@media screen and (max-width: 1000px){
+    .noidung2_ndchinh{
+        width: 45%;
+    }
+    .noidungtrong_phan2mh{
+        margin: 40px 70px;
+    }
+    
+}
+@media screen and (max-width: 700px){
+    .noidung2_ndchinh{
+        width: 45%;
+    }
+    .noidungtrong_phan2mh{
+        margin: 0 5px;
+    }
+    
 }
 .nd2_hinhanh img{
     width: 100%;
