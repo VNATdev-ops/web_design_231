@@ -152,6 +152,57 @@ body{
     padding-top: 10px;
 }
 
+
+
+.banner-1 {
+    position: relative; /* Make the container position relative */
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.52);
+    z-index: 1; /* Place the pseudo-element above the image */
+}
+
+.banner-1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(/images.tuan/Lacàph_Space_1.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0; /* Place the image below the pseudo-element */
+}
+.banner-1 p, .banner-1 h1 {
+    margin: 0;
+    color: #fff;
+    font-family: Josefin Sans,sans-serif;
+    z-index: 2;
+}
+.banner-1 p{
+    font-weight: 400;
+    font-size: 1rem;
+}
+.banner-1 h1{
+    font-weight: 600;
+    font-size: 2rem;
+    padding-top: 10px;
+}
+
 .banner-2 {
     position: relative; /* Make the container position relative */
     height: 400px;
@@ -179,7 +230,7 @@ body{
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url(/images.tuan/Lacàph_Space_1.webp);
+    background-image: url(/images.tuan/LacafeBanner.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -228,7 +279,7 @@ body{
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url(/images.tuan/LacafeBanner.webp);
+    background-image: url(/images.tuan/Lacàph_Bar_10.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -250,54 +301,7 @@ body{
     padding-top: 10px;
 }
 
-.banner-4 {
-    position: relative; /* Make the container position relative */
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 
-.banner-4::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.52);
-    z-index: 1; /* Place the pseudo-element above the image */
-}
-
-.banner-4::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url(/images.tuan/Lacàph_Bar_10.webp);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: 0; /* Place the image below the pseudo-element */
-}
-.banner-4 p, .banner-4 h1 {
-    margin: 0;
-    color: #fff;
-    font-family: Josefin Sans,sans-serif;
-    z-index: 2;
-}
-.banner-4 p{
-    font-weight: 400;
-    font-size: 1rem;
-}
-.banner-4 h1{
-    font-weight: 600;
-    font-size: 2rem;
-    padding-top: 10px;
-}
 
 
 
