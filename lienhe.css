@@ -169,6 +169,7 @@ form{
     font-size: 1rem;
     font-weight: 400;
     color: #18212a;
+    cursor: pointer;
 }
 input:focus,
 textarea:focus{
