@@ -1,13 +1,3 @@
-@font-face {
-    font-family: 'Josefin Sans';
-    src: url('./font/Josefin_Sans/JosefinSans-VariableFont_wght.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Open-Sans';
-    src: url('./font/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf') format('truetype');
-}
-
 body, h1, h2, p, a {
     margin: 0;
     padding: 0;
@@ -46,7 +36,7 @@ p {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url(images/cauc-muah/Stories.jpeg);
+    background-image: url(/images/cauc-muah/Stories.jpeg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
