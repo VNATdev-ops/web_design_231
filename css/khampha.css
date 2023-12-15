@@ -59,6 +59,7 @@ p {
     width: 60%;
     margin: 0 auto;
 }
+
 .kp_dongdau{
     font-weight: 700;
     font-size: 1rem;
@@ -75,10 +76,11 @@ p{
     color: #18212a;
 }
 p img{
+    justify-content: center;
     width: 600px;
     height: 600px;
     margin: 60px auto;
-    display: block;
+    /* display: block; */
 }
 .kp_indam{
     font-weight: 700;
@@ -197,7 +199,7 @@ h2{
 }
 .btn-wrap{
     margin-top: 30px;
-    width: 90px;
+    width: 100px;
 }
 .btn-wrap a{
     color: #4e358a;   
@@ -218,10 +220,32 @@ h2{
 .btn-wrap:hover > hr{
     width: 100%;
 }
-
+@media screen and (max-width: 1000px) {
+    .kp_noidung1{
+        width: 75%;
+        
+    }
+    p img{
+        width: 550px;
+        height: 500px;
+        
+    }
+    .article-links{
+        margin: 30px 25px;
+    }
+    .newest-articles{
+        padding: 0 10px;
+    }
+}
 @media screen and (max-width: 700px) {
-    .container{
-        margin: 30px 20px;
+    .kp_noidung1{
+        width: 90%;
+        
+    }
+    p img{
+        width: 500px;
+        height: 400px;
+        
     }
     .article-links{
         margin: 30px 0;
