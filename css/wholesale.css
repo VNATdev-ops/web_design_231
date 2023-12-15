@@ -41,7 +41,7 @@ body{
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url(./images/wholesale/banner.webp);
+    background-image: url(/images/wholesale/banner.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -134,25 +134,25 @@ h3{
         "bottom bottom bottom";
 }
 .border-top{
-    background-image: url(./images/border-x.png);
+    background-image: url(/images/border-x.png);
     grid-area: top;
     background-position: center;
     border: 2px solid #f4dcbb;
 }
 .border-left{
-    background-image: url(./images/border-y.png);
+    background-image: url(/images/border-y.png);
     grid-area: left;
     background-position: center;
     border: 2px solid #f4dcbb;
 }
 .border-right{
-    background-image: url(./images/border-y.png);
+    background-image: url(/images/border-y.png);
     grid-area: right;
     background-position: center;
     border: 2px solid #f4dcbb;
 }
 .border-bottom{
-    background-image: url(./images/border-x.png);
+    background-image: url(/images/border-x.png);
     grid-area: bottom;
     background-position: center;
     border: 2px solid #f4dcbb;

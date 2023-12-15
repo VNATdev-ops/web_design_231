@@ -1,74 +1,71 @@
-@font-face {
-    font-family: 'Josefin Sans';
-    src: url('./font/Josefin_Sans/JosefinSans-VariableFont_wght.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Open-Sans';
-    src: url('./font/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf') format('truetype');
-}
-*{
-    margin: 0;
-    box-sizing: border-box;
-    font-family: Josefin Sans,sans-serif;
-}
 body{
-    background-color: #fffced;
-}
-p{
     font-family: Open-Sans;
-}
-.dongdautrang{
-    height: 118px;
-    width: 100px;
-}
-.dongdautrang .h_dongchu p{
-    width: 1380px;
-    height:55px;
-    margin-bottom: 15px;
-    padding: 15px 45px;
-    background-color: #4e358a;
-    text-align: center;
-    justify-items: center;
-    color: #fff;
-    font-weight: 100;
-}
-.hang_noidung .hang_thangchidan {
-    width: 100%;
-    background-color: #4e358a;
-}
-.hang_noidung .hang_thangchidan .hang_dongdan {
-    background-color: #4e358a;
-    color: #fff;
-    height: 54px;
-    width: 80%;
-    margin: 0 auto;
-    padding: 15px 15px 15px 5px;
-    line-height: 25px;
-    font-size: 100%;
-
-
-}
-.hang_noidung .hang_thangchidan .hang_dongdan a{
-    margin: 0 auto;
-    text-decoration: none;
-    width: 90%;
-    background-color: #4e358a;
-    align-items: center;
-    color: #fff;
-    padding-right: 10px;
-    padding-left: 10px;
+    font-size: 1rem;
     font-weight: 400;
+    line-height: 1.5;
+    color: #18212a;
+    margin: 40px 80px;
+    background-color: #fffced;
+    transition: all .4s ease;
 }
-/* /-------- */
+h1 {
+    font-family: Josefin Sans,sans-serif;
+    font-size: 2rem;
+    color: #4e358a;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 2.75rem;
+}
+h2{
+    font-family: Josefin Sans,sans-serif;
+    font-size: 2rem;
+    color: #4e358a;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 2.5rem;
+}
+h3{
+    margin-top: 15px;
+    font-family: Josefin Sans,sans-serif;
+    font-size: 1.5rem;
+    color: #4e358a;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+}
+a{
+    text-decoration: none;
+    color: #337ab7;
+}
+
+@media screen and (max-width: 700px) {
+    body {
+        margin: 0 40px 20px 40px; 
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+    p {
+        font-size: 0.9rem;
+    }
+}
+
 /*dac-den-dang*/
 
 .dac-den-dang{
     display: flex;
+    justify-content: space-between;
 }
 .slideshow{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 .dot-container{
     margin-top: 5px;
@@ -76,30 +73,21 @@ p{
 }
    /* Slideshow container */
 .slideshow-container {
-    width: 500px;
-    height: 500px;
+    width: 100%;
+    height: auto;
     position: relative;
     margin: 0;
-    background-color: black;
   }
-  @media screen and (max-width: 700px) {
-    .dac-den-dang {
-        flex-direction: column;
-    }
-
-    .slideshow {
-        width: 100%;
-    }
-
-  }
-
-  @media only screen and (max-width: 500px) {
-    .slideshow-container {
-        width: 100%;
-    }
-  }
-
-
+.mySlides{
+    width: 100%;
+    height: 100%;
+}
+.mySlides img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
   /* Next & previous buttons */
   .prev, .next {
     cursor: pointer;
@@ -150,26 +138,11 @@ p{
     to {opacity: 1}
   }
   
-  /* On smaller screens, decrease text size */
-  @media only screen and (max-width: 300px) {
-    .prev, .next,.text {font-size: 11px}
-  }
-.dac-den-dang{
-    display: flex;
-}
 .info{
     width: 55%;
     padding-left: 40px;
 }
-h1 {
-    font-family: Josefin Sans,sans-serif;
-    font-size: 2rem;
-    color: #4e358a;
-    text-transform: uppercase;
-    font-weight: 700;
-    line-height: 2.75rem;
-    margin-bottom: 15px;
-}
+
 .product_price{
     font-family: Josefin Sans,sans-serif;
     font-size: 1.5rem;
@@ -232,7 +205,7 @@ h1 {
     text-transform: uppercase;
     color: rgb(78, 53, 138);
     background-color: transparent;
-    background-image: url(./images/button.png);
+    background-image: url(/images/button.png);
     background-size: 100%;
     background-repeat: no-repeat;
     opacity: 1;
@@ -244,15 +217,26 @@ h1 {
     cursor: pointer;
 }
 .cart-button button:hover{
-    background-image: url(./images/button-focus.png);
+    background-image: url(/images/button-focus.png);
     color: #f4dcbb;
 }
 
-main{
-    width: 80%;
-    margin: 40px auto;
 
-}
+@media screen and (max-width: 1000px) {
+    .dac-den-dang{
+        flex-direction: column;
+    }
+    .slideshow{
+        margin-left: -40px;
+        margin-right: -40px;
+    }
+    .prev, .next, .text {font-size: 30px}
+    .info {
+        width: 100%; 
+        padding-left: 0;
+    }
+  }
+
 .information{
     margin: 50px 0;
 }
@@ -267,7 +251,7 @@ main{
     margin-right: 2%;
     box-sizing: border-box;
     border: none;
-    border-bottom: #4e358a solid ;
+    border-bottom: #4e358a solid 2px;
     background-color: transparent;
     transition: opacity .4s ease;
     font-family: "Josefin Sans", sans-serif;
@@ -281,46 +265,45 @@ main{
     opacity: 1;
 }
 .description-box {
-    transition: opacity 0.5s ease; 
+    max-height: 500px; 
+    overflow: hidden;
+    transition: max-height 0.6s ease;
 }
 
 .description-box.hide {
-    opacity: 0; 
+    max-height: 0;
 }
-.slideshow img{
-    width: 100%;
-}
-
 .product{
+    width: 100%;
     margin-top: 30px;
     display: grid;
-    grid-template-rows:  [border-top-start] 30px [border-left-start] 550px [border-bottom-start] 30px;
-    grid-template-columns: [border-left] 30px [product-swiper] 95% [border-right] 30px;
+    grid-template-rows:  [border-top-start] 30px [border-left-start] auto [border-bottom-start] 30px;
+    grid-template-columns: [border-left] 30px [product-swiper] calc(100% - 30px*2) [border-right] 30px;
     grid-template-areas: 
         "top top top"
         "left product right"
         "bottom bottom bottom";
     }
 .border-top{
-    background-image: url(./images/border-x.png);
+    background-image: url(/images/border-x.png);
     grid-area: top;
     background-position: center;
     border: 2px solid #f4dcbb;
 }
 .border-left{
-    background-image: url(./images/border-y.png);
+    background-image: url(/images/border-y.png);
     grid-area: left;
     background-position: center;
     border: 2px solid #f4dcbb;
 }
 .border-right{
-    background-image: url(./images/border-y.png);
+    background-image: url(/images/border-y.png);
     grid-area: right;
     background-position: center;
     border: 2px solid #f4dcbb;
 }
 .border-bottom{
-    background-image: url(./images/border-x.png);
+    background-image: url(/images/border-x.png);
     grid-area: bottom;
     background-position: center;
     border: 2px solid #f4dcbb;
@@ -332,15 +315,9 @@ main{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    text-align: center;
     padding: 20px 0;
     color: #4e358a;
-}
-.product-swiper h2{
-    font-family: Josefin Sans,sans-serif;
-    font-size: 2rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    line-height: 2.75rem;
 }
 .swiper-container {
     position: relative;
@@ -363,13 +340,6 @@ main{
 }
 .mod_redshop_products_title {
     position: relative;
-    margin-top: 15px;
-    font-family: Josefin Sans,sans-serif;
-    font-size: 1.5rem;
-    color: #4e358a;
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: 700;
     line-height: 2.75rem;
 }
 .mod_redshop_products_image{
@@ -380,9 +350,12 @@ main{
 }
 .mod_redshop_products_image img{
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-.mod_redshop_products_desc {
+.mod_redshop_products_desc > p{
     margin-bottom: 10px;
+    text-align: left;
 }
 
 .mod_redshop_products_price {
@@ -399,8 +372,6 @@ main{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 30px;
-    height: 30px;
     color: #4e358a;
     cursor: pointer;
 }
@@ -411,23 +382,27 @@ main{
     left: 30px;
 }
 
-.product-popup-content {
+.pop-up-window{
     position: fixed;
+    left: -100%; /* Initially set to -100% to hide the popup */
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #4e358a;
+    z-index: 99999;
+    transition: left .4s ease; 
+    display: flex;
+    justify-content: center;
+}
+.product-popup-content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    left: -100%; /* Initially set to -100% to hide the popup */
-    top: 0;
-    width: 26%;
-    height: 100%;
-    background-color: #4e358a;
-    padding: 0 20px;
+    padding: 0 30px;
     color: #fff;
-    z-index: 99999;
-    transition: left .4s ease; /* Transition effect for the left property */
 }
-.product-popup-content .mod_redshop_products_title{
+.product-popup-content .mod_redshop_products_title > h3{
     text-align: left;
     color: #fff;
 }
@@ -447,6 +422,7 @@ main{
     text-transform: uppercase;
     font-size: 1rem;
     font-weight: 700;
+    line-height: 1.5rem;
     margin: 0;
 }
 
@@ -458,16 +434,29 @@ main{
     transition: 0.4s ease;
 }
 .btn-wrap:hover > hr{
-    width: 10%;
-    height: auto;
-}
-.dac-den-dang .slideshow{
-    width: 40%;
-}
-.dac-den-dang .slideshow .anh img{
     width: 100%;
 }
-p{
-    margin-bottom: 15px;
-    font-weight: 100;
+
+@media screen and (max-width: 700px){
+    .pop-up-window{
+        width: 100%;
+        padding: 0;
+    }
+    .mod_redshop_products_title{
+        width: 250px;
+    }
+    .mod_redshop_products_image{
+        width: 200px;
+        height: 200px;
+    }
+    .swiper-button-next,
+    .swiper-button-prev{
+        top: 40%;
+    }
+    .swiper-button-next {
+        right: 15px;
+    }
+    .swiper-button-prev {
+        left: 15px;
+    }
 }

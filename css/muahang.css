@@ -190,7 +190,7 @@ p {
     text-transform: uppercase;
     color: rgb(78, 53, 138);
     background-color: transparent;
-    background-image: url(./images/button.png);
+    background-image: url(/images/button.png);
     background-size: 99%;
     background-repeat: no-repeat;
     opacity: 1;
@@ -202,6 +202,6 @@ p {
     cursor: pointer;
 }
 .summit-button button:hover{
-    background-image: url(./images/button-focus.png);
+    background-image: url(/images/button-focus.png);
     color: #fff;
 }
