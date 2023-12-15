@@ -1,8 +1,24 @@
-*{
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('./font/Josefin_Sans/JosefinSans-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Open-Sans';
+    src: url('./font/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf') format('truetype');
+}
+
+body, h1, h2, p, a {
     margin: 0;
-    box-sizing: border-box;
-    /* background-color: #fffced; */
-    font-family: Josefin Sans,sans-serif;
+    padding: 0;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #fffced;
+}
+p {
+    font-family: 'Open-Sans', sans-serif;
 }
  .all img{
     width: 100%;
@@ -36,7 +52,6 @@
 .kp_cauchuyen{
     margin-bottom: 15px;
     font-weight: 100;
-    
 }
 .haha h1{
     font-weight: 500;
@@ -55,7 +70,7 @@
     margin: 0 auto;
 }
 .kp_dongdau{
-    font-weight: 600;
+    font-weight: 700;
     font-size: 1rem;
     line-height: 2;
     font-size: 1rem;
@@ -70,13 +85,13 @@ p{
     color: #18212a;
 }
 p img{
-    width: 597px;
-    height: 597px;
-    margin: 0 auto;
+    width: 600px;
+    height: 600px;
+    margin: 60px auto;
     display: block;
 }
 .kp_indam{
-    font-weight: 600;
+    font-weight: 700;
     color: #18212a;
 }
 .kp_ngaylam i {
