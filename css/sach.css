@@ -285,25 +285,25 @@ a{
         "bottom bottom bottom";
     }
 .border-top{
-    background-image: url(/images/border-x.png);
+    background-image: url(../images/border-x.png);
     grid-area: top;
     background-position: center;
     border: 2px solid #f4dcbb;
 }
 .border-left{
-    background-image: url(/images/border-y.png);
+    background-image: url(../images/border-y.png);
     grid-area: left;
     background-position: center;
     border: 2px solid #f4dcbb;
 }
 .border-right{
-    background-image: url(/images/border-y.png);
+    background-image: url(../images/border-y.png);
     grid-area: right;
     background-position: center;
     border: 2px solid #f4dcbb;
 }
 .border-bottom{
-    background-image: url(/images/border-x.png);
+    background-image: url(../images/border-x.png);
     grid-area: bottom;
     background-position: center;
     border: 2px solid #f4dcbb;
