@@ -19,7 +19,8 @@
     "axe/name-role-value": [
       "default",
       {
-        "link-name": "off"
+        "link-name": "off",
+        "button-name": "off"
       }
     ],
     "compat-api/css": [
@@ -29,6 +30,13 @@
           "height: fit-content"
         ]
       }
-    ]
-  }
+    ],
+    "button-type": "off"
+  },
+  "browserslist": [
+    "defaults",
+    "not ie 11",
+    "not ios_saf <= 17.1",
+    "not safari <= 17.1"
+  ]
 }

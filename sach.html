@@ -234,11 +234,8 @@
                         </div>
                     </div>
                     
-
-                    <!-- JavaScript -->
                     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
                     <script>
-                        // Initialize Swiper
                         var swiper = new Swiper('.swiper-container', {
                             slidesPerView: 1,
                             spaceBetween: 10,
@@ -250,18 +247,16 @@
                                 el: '.swiper-pagination',
                                 clickable: true,
                             },
-                            loop: true, //infinite scrolling
+                            loop: true, 
                         });
 
-                        // toggle the left position of the pop-up content
                         var popupContent = document.querySelector('.pop-up-window');
-                        var currentProductIndex = 0; // Track the current product index
+                        var currentProductIndex = 0; 
 
                         swiper.on('slideChange', function () {
                             popupContent.style.left = '-100%';
                         });
 
-                        // Function to toggle the pop-up content visibility
                         function togglePopup(productIndex) {
                             currentProductIndex = productIndex;
                             popupContent.style.left = '0';
