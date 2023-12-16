@@ -28,6 +28,361 @@ body{
 	padding:0;
 	box-sizing: border-box;
 }
+.article-links{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 50px;
+}
+.carousel-item img{
+    font-size: 15px;
+}
+
+.categorises{
+    margin-top: 30px;
+    display: grid;
+    grid-template-rows:  [border-top-start] 30px [border-left-start] auto [border-bottom-start] 30px;
+    grid-template-columns: [border-left] 30px [category-container] calc(100% - 30px*2) [border-right] 30px;
+    grid-template-areas: 
+        "top top top"
+        "left category-container right"
+        "bottom bottom bottom";
+}
+.border-top{
+    background-image: url(../images/border-x.png);
+    grid-area: top;
+    background-position: center;
+    border: 2px solid #f4dcbb;
+}
+.border-left{
+    background-image: url(../images/border-y.png);
+    grid-area: left;
+    background-position: center;
+    border: 2px solid #f4dcbb;
+}
+.border-right{
+    background-image: url(../images/border-y.png);
+    grid-area: right;
+    background-position: center;
+    border: 2px solid #f4dcbb;
+}
+.border-bottom{
+    background-image: url(../images/border-x.png);
+    grid-area: bottom;
+    background-position: center;
+    border: 2px solid #f4dcbb;
+}
+.category-container{
+    background-color: transparent;
+    grid-area: category-container;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 10%;
+}
+.category-container h2,
+.card-body h4,
+.text-center h1 {
+    color: #4e358a;
+}
+.btn-wrap{
+    margin-top: 30px;
+    width: 90px;
+}
+.btn-wrap a{
+    color: #4e358a;   
+    font-family: Josefin Sans,sans-serif;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+    margin: 0;
+}
+.btn-wrap hr{
+    width: 50%;
+    height: 2px;
+    background-color: #4e358a;
+    margin-left: 0;
+    transition: 0.4s ease;
+}
+.btn-wrap:hover > hr{
+    width: 100%;
+}
+
+.cotainer-tuan {
+    position: relative;
+}
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+.img-tuan{
+    width: 100%;
+    height: 100%;
+}
+.content h2{
+    text-transform: uppercase;
+}
+
+.product{
+    margin-top: 30px;
+    display: grid;
+    grid-template-rows:  [border-top-start] 30px [border-left-start] 550px [border-bottom-start] 30px;
+    grid-template-columns: [border-left] 30px [product-swiper] 95% [border-right] 30px;
+    grid-template-areas: 
+        "top top top"
+        "left product right"
+        "bottom bottom bottom";
+    }
+.border-top{
+    background-image: url(../images/border-x.png);
+    grid-area: top;
+    background-position: center;
+    border: 2px solid #f4dcbb;
+}
+.border-left{
+    background-image: url(../images/border-y.png);
+    grid-area: left;
+    background-position: center;
+    border: 2px solid #f4dcbb;
+}
+.border-right{
+    background-image: url(../images/border-y.png);
+    grid-area: right;
+    background-position: center;
+    border: 2px solid #f4dcbb;
+}
+.border-bottom{
+    background-image: url(../images/border-x.png);
+    grid-area: bottom;
+    background-position: center;
+    border: 2px solid #f4dcbb;
+}
+.product-swiper{
+    background-color: transparent;
+    grid-area: product;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    color: #4e358a;
+}
+.product-swiper h2{
+    font-family: Josefin Sans,sans-serif;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 2.75rem;
+}
+.swiper-container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+.swiper-wrapper {
+    display: flex;
+    transition: transform 0.3s ease;
+    margin-bottom: 10px;
+}
+.mod_redshop_product {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+}
+.mod_redshop_products_title {
+    position: relative;
+    margin-top: 15px;
+    font-family: Josefin Sans,sans-serif;
+    font-size: 1.5rem;
+    color: #4e358a;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    line-height: 2.75rem;
+}
+.mod_redshop_products_image{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+}
+.mod_redshop_products_image img{
+    width: 100%;
+}
+.mod_redshop_products_desc {
+    margin-bottom: 10px;
+}
+
+.mod_redshop_products_price {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.cart-button{
+    padding-left: 20px;
+}
+.cart-button button{
+    justify-content: center;
+    align-items: center;
+    width: 165px;
+    height: 50px;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgb(78, 53, 138);
+    background-color: transparent;
+    background-image: url(../images/button.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: inline-flex;
+    padding: 3px 20px 0px 0px;
+    background-position: 50% center;
+    border-width: 0px;
+    transition: opacity 0.2s ease 0s;
+    cursor: pointer;
+}
+.cart-button button:hover{
+    background-image: url(../images/button-focus.png);
+    color: #f4dcbb;
+}
+.contact-form{
+    display: grid;
+    grid-template-rows:  [border-top-start] 30px [border-left-start] auto [border-bottom-start] 30px;
+    grid-template-columns: [border-left] 30px [form] calc(100% - 30px*2) [border-right] 30px;
+    grid-template-areas: 
+        "top top top"
+        "left form right"
+        "bottom bottom bottom";
+}
+.form{
+    background-color: transparent;
+    grid-area: form;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 10%;
+    color: #4e358a;
+}
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+.input-field{
+    padding: 10px 0;
+    width: 100%;
+}
+.input-field input{
+    background-color: transparent;
+    border: none;
+    border-bottom: #4e358a 2px solid;
+    height: 30px;
+    width: 100%;
+    font-family: Open-Sans;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #18212a;
+    cursor: pointer;
+}
+.input-field input::placeholder,
+.input-field textarea::placeholder {
+    color: #4e358a;
+    font-family: Open-Sans;
+    font-size: 1rem;
+    font-weight: 400;
+}
+.input-field textarea{
+    background-color: transparent;
+    border: none;
+    border-bottom: #4e358a 2px solid;
+    height: 80px;
+    width: 100%;
+    resize: none;
+    display: flex;
+    font-family: Open-Sans;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #18212a;
+    cursor: pointer;
+}
+input:focus,
+textarea:focus{
+    outline: none;
+}
+.summit-button{
+    margin-top: 30px;
+}
+.summit-button button{
+    justify-content: center;
+    align-items: center;
+    width: 165px;
+    height: 50px;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgb(78, 53, 138);
+    background-color: transparent;
+    background-image: url(../images/button.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: inline-flex;
+    padding: 3px 20px 0px 0px;
+    background-position: 50% center;
+    border-width: 0px;
+    transition: opacity 0.2s ease 0s;
+    cursor: pointer;
+}
+.summit-button button:hover{
+    background-image: url(../images/button-focus.png);
+    color: #f4dcbb;
+}
+.dongkhampha_cc{
+    margin-top: 20px;
+    align-items: center;
+}
+.dongkhampha_cc a{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0;
+    color: #fff;
+}
+.dongkhampha_cc hr{
+    width: 50%;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.4s ease;
+}
+.dongkhampha_cc:hover > hr{
+    width: 100%;
+    background-color: #fff;
+}
 footer i {
     font-size: 40px;
   }
@@ -81,7 +436,7 @@ footer i {
       height: 40px;
       width: 40px;
       margin:0 10px 10px 0;
-      text-align: center;
+      /* text-align: center; */
       line-height: 40px;
       border-radius: 50%;
       color: #ffffff;
