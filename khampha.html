@@ -4,12 +4,159 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lacàph | Luỹ Blend - Hạt cà phê thấm nhuấn tinh thần Việt Nam | Câu Chuyện </title>
-    <link rel="stylesheet" href="./css/default.css">
-    <link rel="stylesheet" href="./css/khampha.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="./css/default.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/khampha.css">
 </head>
 <body>
-    <div class="all">
+    <header>
+        <div class="header-wrap">
+            <div class="row" id="top-nav">
+                <div class="pop-up-checkbox">
+                    <input id="menu-toggle" type="checkbox">
+                    <label for="menu-toggle" onclick="togglePopup()">
+                        <div class='menu-button-container'>
+                            <div class="menu-button"></div>
+                            <div class="menu-button"></div>
+                            <div class="menu-button"></div>
+                        </div>
+                    </label>
+                </div>
+                <div class="logo">
+                    <a href="#"><img src="images/logo.svg" alt=""></a>
+                </div>
+                <div class="chucnang">
+                    <a href="#"><img src="images/vi_vn.svg" alt=""></a>
+                    <span class="timkiem-button"><i class="fa-solid fa-magnifying-glass" style="color: #4e358a;"></i></span>
+                    <a href="#"><i class="fa-solid fa-user" style="color: #4e358a;"></i></a>
+                    <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #4e358a;"></i></a>
+                </div>
+            </div>
+
+            <div class="row hide" id="thanh-tim-kiem">
+                <div class="timkiem">
+                    <input type="search" id="" placeholder="Nhập nội dung bạn cần tìm tại đây">
+                    <span><i class="fa-solid fa-magnifying-glass" style="color: white;"></i></span>
+                </div>
+            </div>
+
+            <div class="row" id="menu">
+                <nav>
+                    <ul>
+                        <li><a href="#">Về chúng tôi</a></li>
+                        <li><a href="#">Mua hàng</a></li>
+                        <li><a href="#">Câu chuyện</a></li>
+                        <li><a href="#">Lacàph Bar</a></li>
+                        <li><a href="#">Lacàph Space</a></li>
+                        <li><a href="#">Sách</a></li>
+                        <li><a href="#">Wholesale</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="pop-up-header">
+                <div class="header-container" >
+                    <div class="button-nav">
+                        <div class="close-button" onclick="closePopup()">
+                            <button><img src="./images/close-button.png" alt=""></button>
+                        </div>
+                        <div class="chucnang">
+                            <a href="#"><i class="fa-solid fa-user" style="color: #ffffff;"></i></a>
+                            <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #ffffff;"></i></a>
+                        </div>
+                    </div>
+                    <div class="timkiem">
+                        <input type="search" id="" placeholder="Nhập nội dung bạn cần tìm tại đây">
+                        <span><i class="fa-solid fa-magnifying-glass" style="color: white;"></i></span>
+                    </div>
+                </div>
+                
+                <div class="menu">
+                    <nav>
+                        <ul>
+                            <li><a href="#">Về chúng tôi</a></li>
+                            <li><a href="#">Mua hàng</a></li>
+                            <li><a href="#">Câu chuyện</a></li>
+                            <li><a href="#">Lacàph Bar</a></li>
+                            <li><a href="#">Lacàph Space</a></li>
+                            <li><a href="#">Sách</a></li>
+                            <li><a href="#">Wholesale</a></li>
+                            <li><a href="#">Liên hệ</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                var openButton = document.querySelector('.timkiem-button');
+                var timkiemBar = document.querySelector('#thanh-tim-kiem');
+                var menu = document.querySelector('#menu');
+                var headWrap = document.querySelector('.header-wrap');
+                var topSize = document.querySelector('#top-nav');
+                var prevScrollPos = window.pageYOffset;
+                var buffer = 10; // Adjust the buffer as needed
+
+                function updateScroll() {
+                    let screenWidth = window.innerWidth;
+                    var currentScrollPos = window.pageYOffset;
+
+                    
+                    if (window.innerWidth > 1200) {
+                        if (timkiemBar && currentScrollPos < buffer * 2) {
+                            return;
+                        }
+
+                        // Check the scroll direction and toggle the 'hide' class for the menu
+                        if (currentScrollPos > prevScrollPos + buffer) {
+                            menu.classList.add('hide');
+                            topSize.style.height = '50px';
+                            headWrap.style.padding = '3px 0';
+                        } else if (currentScrollPos < prevScrollPos - buffer) {
+                            menu.classList.remove('hide');
+                            topSize.style.height = '60px';
+                            headWrap.style.padding = '10px 0';
+                        }
+
+                        // Update the scroll position
+                        prevScrollPos = currentScrollPos;
+                    }
+                }
+                    
+
+                function toggleSearchBar() {
+                    if (timkiemBar.classList.contains("hide")) {
+                        timkiemBar.classList.remove('hide');
+                    } else {
+                        timkiemBar.classList.add('hide');
+                    }
+                }
+
+                // Check screen width before attaching event listeners
+                    window.addEventListener('scroll', updateScroll);
+                    openButton.addEventListener('click', toggleSearchBar);
+            });
+
+
+
+                //pop-up header
+                var popupContent = document.querySelector('.pop-up-header');
+
+                function togglePopup() {
+                    popupContent.style.left = '0';
+                }
+
+                function closePopup() {
+                    popupContent.style.left = '-100%';
+                }
+            </script>
+        </div>
+    </header>
+    <main>
+        <div class="all">
             <img src="images/cauc-muah/Untitled00126150_1.jpg" alt="">
             <div class="kp_dongchuanh">
                 <div class="kp_dongchutronganh">
@@ -18,137 +165,139 @@
                         <div class="kp_cauchuyen">CÂU CHUYỆN</div>
                         <h1>LŨY BLEND - HẠT CÀ PHÊ THẤM NHUẦN TINH THẦN <br>VIỆT NAM</h1></div>
                 </div>
-        </div>
-    </div>
-    <div class="kp_allnoidung">
-        <div class="kp_noidung1">
-            <p class="kp_dongdau">Hạt cà phê xứng tầm Specialty của Việt Nam đầu tiên tại Lacàph</p>
-            <p></p>
-            <p>Lacàph luôn tự hào là cầu nối “dẫn dắt” những trí óc tò mò khám phá hành trình hương vị cà phê Việt Nam và cái nôi đã nuôi dưỡng một nền văn hóa chia sẻ và thưởng thức.</p>
-            <p>Vì vậy chúng tôi tự hào ra mắt dòng blend mới nhất - một sản phẩm cà phê chất lượng đặc sản đầu tiên của Lacàph, Lũy Blend. Lacàph tự tin rằng Lũy Blend là một “sứ giả” xứng đáng có thể đại diện cho tiềm năng hương vị cà phê Việt Nam trên cán cân thế giới.</p>
-            <p>
-                <img src="images/cauc-muah/khampha2.jpg" alt="">
-            </p>
-            <p class="kp_indam">Lũy Blend - hạt cà phê thấm nhuần tinh thần Việt Nam </p>
-            <p>Màu sắc cá tính dân tộc </p>
-            <p>“...Cây tre hiền lành,</p>
-            <p>Mà giặc khiếp kinh.</p>
-            <p>Nhìn tre giặc sợ,</p>
-            <p>Thấp thỏm, giật mình [...]</p>
-            <p>Tre thù quân giặc,</p>
-            <p>Tre yêu xóm làng.</p>
-            <p>Tre mọc thành hàng,</p>
-            <p>Chở che bao bọc...” </p>
-            <p style="margin-bottom: 60px;">(Ca dao Việt Nam) </p>
-            <p style="margin-bottom: 60px;">Lacàph xây dựng ý tưởng chủ đạo của Lũy dựa trên hình ảnh Lũy tre. Từ kho tàng dân gian cùng dòng lịch sử gian nan, con người Việt Nam đã tạo dấu ấn tích cực trong ánh nhìn của bạn bè năm châu qua tinh thần đoàn kết và ý chí bền bỉ. Đó chính là nét đẹp dân tộc mà chúng tôi muốn truyền tải - đồng thời là tố chất được tìm thấy ở tre: thống nhất, tương trợ, và ý khí. Cây tre còn là hình ảnh gắn liền với đời sống của người Việt Nam, vốn là một đất nước dĩ nông vi bản.</p>
-            <p class="kp_indam">Từ lũy tre đến Lũy Blend by Lacàph </p>
-            <p style="margin-bottom: 60px;">Từ “thống nhất”, Lacàph phối hợp hai giống cà phê từ ba nông trại ở ba mảnh đất trồng cà phê trứ danh trải dài từ Bắc chí Nam. Từ “tương trợ”, Lacàph thiết kế tỉ lệ để có thể tận dụng ưu điểm của Robusta Sẻ để tương trợ cho Catimor, mang lại  một trải nghiệm hương vị đặc sắc trọn vẹn. Lacàph thiết kế hồ sơ rang của Lũy để bạn có thể cảm thụ Lũy dù là với hình thức yêu thích nào. Trên tất cả, câu chuyện của Lũy chính là câu chuyện của những người nông dân tiên phong làm cà phê chất lượng mà chúng tôi đặc biệt tự hào khi được làm việc cùng. </p>
-            <p style="margin-bottom: 60px;">Lacàph muốn thông qua Lũy dẫn dắt người yêu cà phê và cả người tò mò hành trình khám phá giá trị văn hóa, cái đẹp thuần khiết từ tình yêu của những con người tham gia tạo nên dòng hương vị đặc sản này. Đó là anh Marian và câu chuyện thay đổi chất lượng sống cho người dân ở Lang Biang; đó là chị Ngọc và hoài bão với Fine Robusta; đó là hợp tác xã Ara-Tay mang hy vọng bảo bọc từng trái cà. Họ là những người hùng thầm lặng, chăm chỉ ươm mầm khát vọng, để một ngày rạng danh cà phê quê hương. </p>
-            <p class="kp_indam">Sợi chỉ muôn màu dệt trên tấm thảm lịch sử </p>
-            <p>Đối với Lacàph, Lũy dệt vào màu sắc mới trên tấm thảm lịch sử của giai đoạn phát triển hết sức sôi nổi của cà phê Việt Nam. Đồng thời, Lũy Blend gửi gắm tham vọng của Lacàph ở vai trò là người kể chuyện cà phê và văn hóa Việt Nam.</p>
-            <p>Cà phê Việt Nam là một viên ngọc thô sáng giá, với nhiều cơ hội khai thác màu mỡ còn chờ được khai phá. Vì vậy Lacàph tin rằng, đây là thời điểm thích hợp để những “hương vị” tiềm năng xứng đáng được lan tỏa.</p>
-            <p style="margin-bottom: 60px;">Mời bạn đến khám phá hương vị của Lũy, đặc biệt chỉ có tại các địa chỉ của Lacàph ở 220 Nguyễn Công Trứ và 151 Đồng Khởi, thành phố Hồ Chí Minh!</p>
-            <div class="kp_ngaylam">
-                <i class="fa-solid fa-calendar-days" style="color:#4e358a;"></i>
-                <time datetime="2023-05-12T10:08:00+07:00" itemprop="dateCreated" style="font-family: Open-Sans;">Được viết: 12/05/2023</time>
             </div>
         </div>
-            <!-- -------- -->
-            <div class="article-links">
-                <div class="categorises">
-                    <div class="border-top"></div>
-                    <div class="border-right"></div>
-                    <div class="border-left"></div>
-                    <div class="border-bottom"></div>
-                    <div class="category-container">
-                        <h2>CHUYÊN MỤC</h2>
-                        <a href="#">NHỮNG CÂU CHUYỆN TỪ ĐỒN ĐIỀN (3)</a>
-                        <a href="#">LACÀPH LAB SERIES (2)</a>
-                        <a href="#">CÂU CHUYỆN THƯƠNG HIỆU (1)</a>
-                    </div>
+        <div class="kp_allnoidung">
+            <div class="kp_noidung1">
+                <p class="kp_dongdau">Hạt cà phê xứng tầm Specialty của Việt Nam đầu tiên tại Lacàph</p>
+                <p></p>
+                <p>Lacàph luôn tự hào là cầu nối “dẫn dắt” những trí óc tò mò khám phá hành trình hương vị cà phê Việt Nam và cái nôi đã nuôi dưỡng một nền văn hóa chia sẻ và thưởng thức.</p>
+                <p>Vì vậy chúng tôi tự hào ra mắt dòng blend mới nhất - một sản phẩm cà phê chất lượng đặc sản đầu tiên của Lacàph, Lũy Blend. Lacàph tự tin rằng Lũy Blend là một “sứ giả” xứng đáng có thể đại diện cho tiềm năng hương vị cà phê Việt Nam trên cán cân thế giới.</p>
+                <p>
+                    <img src="images/cauc-muah/khampha2.jpg" alt="">
+                </p>
+                <p class="kp_indam">Lũy Blend - hạt cà phê thấm nhuần tinh thần Việt Nam </p>
+                <p>Màu sắc cá tính dân tộc </p>
+                <p>“...Cây tre hiền lành,</p>
+                <p>Mà giặc khiếp kinh.</p>
+                <p>Nhìn tre giặc sợ,</p>
+                <p>Thấp thỏm, giật mình [...]</p>
+                <p>Tre thù quân giặc,</p>
+                <p>Tre yêu xóm làng.</p>
+                <p>Tre mọc thành hàng,</p>
+                <p>Chở che bao bọc...” </p>
+                <p style="margin-bottom: 60px;">(Ca dao Việt Nam) </p>
+                <p style="margin-bottom: 60px;">Lacàph xây dựng ý tưởng chủ đạo của Lũy dựa trên hình ảnh Lũy tre. Từ kho tàng dân gian cùng dòng lịch sử gian nan, con người Việt Nam đã tạo dấu ấn tích cực trong ánh nhìn của bạn bè năm châu qua tinh thần đoàn kết và ý chí bền bỉ. Đó chính là nét đẹp dân tộc mà chúng tôi muốn truyền tải - đồng thời là tố chất được tìm thấy ở tre: thống nhất, tương trợ, và ý khí. Cây tre còn là hình ảnh gắn liền với đời sống của người Việt Nam, vốn là một đất nước dĩ nông vi bản.</p>
+                <p class="kp_indam">Từ lũy tre đến Lũy Blend by Lacàph </p>
+                <p style="margin-bottom: 60px;">Từ “thống nhất”, Lacàph phối hợp hai giống cà phê từ ba nông trại ở ba mảnh đất trồng cà phê trứ danh trải dài từ Bắc chí Nam. Từ “tương trợ”, Lacàph thiết kế tỉ lệ để có thể tận dụng ưu điểm của Robusta Sẻ để tương trợ cho Catimor, mang lại  một trải nghiệm hương vị đặc sắc trọn vẹn. Lacàph thiết kế hồ sơ rang của Lũy để bạn có thể cảm thụ Lũy dù là với hình thức yêu thích nào. Trên tất cả, câu chuyện của Lũy chính là câu chuyện của những người nông dân tiên phong làm cà phê chất lượng mà chúng tôi đặc biệt tự hào khi được làm việc cùng. </p>
+                <p style="margin-bottom: 60px;">Lacàph muốn thông qua Lũy dẫn dắt người yêu cà phê và cả người tò mò hành trình khám phá giá trị văn hóa, cái đẹp thuần khiết từ tình yêu của những con người tham gia tạo nên dòng hương vị đặc sản này. Đó là anh Marian và câu chuyện thay đổi chất lượng sống cho người dân ở Lang Biang; đó là chị Ngọc và hoài bão với Fine Robusta; đó là hợp tác xã Ara-Tay mang hy vọng bảo bọc từng trái cà. Họ là những người hùng thầm lặng, chăm chỉ ươm mầm khát vọng, để một ngày rạng danh cà phê quê hương. </p>
+                <p class="kp_indam">Sợi chỉ muôn màu dệt trên tấm thảm lịch sử </p>
+                <p>Đối với Lacàph, Lũy dệt vào màu sắc mới trên tấm thảm lịch sử của giai đoạn phát triển hết sức sôi nổi của cà phê Việt Nam. Đồng thời, Lũy Blend gửi gắm tham vọng của Lacàph ở vai trò là người kể chuyện cà phê và văn hóa Việt Nam.</p>
+                <p>Cà phê Việt Nam là một viên ngọc thô sáng giá, với nhiều cơ hội khai thác màu mỡ còn chờ được khai phá. Vì vậy Lacàph tin rằng, đây là thời điểm thích hợp để những “hương vị” tiềm năng xứng đáng được lan tỏa.</p>
+                <p style="margin-bottom: 60px;">Mời bạn đến khám phá hương vị của Lũy, đặc biệt chỉ có tại các địa chỉ của Lacàph ở 220 Nguyễn Công Trứ và 151 Đồng Khởi, thành phố Hồ Chí Minh!</p>
+                <div class="kp_ngaylam">
+                    <i class="fa-solid fa-calendar-days" style="color:#4e358a;"></i>
+                    <time datetime="2023-05-12T10:08:00+07:00" itemprop="dateCreated" style="font-family: Open-Sans;">Được viết: 12/05/2023</time>
                 </div>
-                
-                <div class="newest-articles">
-                    <h2>BÀI VIẾT MỚI NHẤT</h2>
-                    <div class="articles">
-                        <div class="swiper-wrapper">
-                            <div class="article swiper-slide swiper-slide-prev" data-swiper-slide-index="0">
-                                <a href="#"><img src="./images/wholesale/article-1.webp" alt=""></a>
-                                <p class="tag">LACÀPH LAB SERIES</p>
-                                <h3><a href="#">LACÀPH LAB SERIES 2</a></h3>
-                                <p>Chuỗi hành trình khám phá Lacàph Lab Series chính thức trở lại với sản phẩm cà phê Robusta Sẻ nguyên trái từ nông trại của Anh Phú lên men với bia Tiramisu Stout của Heart of Darkess.</p>
-                                <div class="btn-wrap">
-                                    <a class="readmore-link" href="#">
-                                        Khám Phá
-                                    </a>
-                                    <hr>
-                                </div>
-                            </div>
-                            <div class="article swiper-slide" data-swiper-slide-index="1">
-                                <a href="#"><img src="./images/wholesale/article-2.webp" alt=""></a>
-                                <p class="tag">LACÀPH LAB SERIES</p>
-                                <h3><a href="#">Bia Fermented Coffee</a></h3>
-                                <p>Với dòng sản phẩm đầu tiên thuộc Lacàph Lab Series I, chúng tôi hợp tác với Heart of Darkness Brewery mang đến cho bạn một loại cà phê được lên men với hỗn hợp BiA thủ công all-malt craft lager. Đồng hành cùng sự kết hợp này là Anh Ngọc, người đã nuôi trồng nên những hạt Arabica ngon nhất Việt Nam. Kết quả cho ra một dòng cà phê độc đáo mang hương vị hài hoà và khó phai của vải, mơ và đào.</p>
-                                <div class="btn-wrap">
-                                    <a class="readmore-link" href="#">
-                                        Khám Phá
-                                    </a>
-                                    <hr>
-                                </div>
-                            </div>
-                            <div class="article swiper-slide swiper-slide-next" data-swiper-slide-index="2">
-                                <a href="#"><img src="./images/wholesale/article-3.webp" alt=""></a>
-                                <p class="tag">LACÀPH LAB SERIES</p>
-                                <h3><a href="#">Nông dân Ngọc & Ba Thế hệ Canh tác Cà phê</a></h3>
-                                <p>Gia đình của Anh Ngọc đã làm nông nghiệp và trồng cà phê hơn 80 năm. Chúng tôi sử dụng Arabica Bourbon & Cascara của anh để tạo ra Lacàph Espresso Blend và Cold Steeped Cascara.</p>
-                                <div class="btn-wrap">
-                                    <a class="readmore-link" href="#">
-                                        Khám Phá
-                                    </a>
-                                    <hr>
-                                </div>
-                            </div>
+            </div>
+                <!-- -------- -->
+                <div class="article-links">
+                    <div class="categorises">
+                        <div class="border-top"></div>
+                        <div class="border-right"></div>
+                        <div class="border-left"></div>
+                        <div class="border-bottom"></div>
+                        <div class="category-container">
+                            <h2>CHUYÊN MỤC</h2>
+                            <a href="#">NHỮNG CÂU CHUYỆN TỪ ĐỒN ĐIỀN (3)</a>
+                            <a href="#">LACÀPH LAB SERIES (2)</a>
+                            <a href="#">CÂU CHUYỆN THƯƠNG HIỆU (1)</a>
                         </div>
                     </div>
                     
-    
-                </div>
-    
-                <!-- Include Swiper library and styles -->
-                <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-                <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-                <script>
-                    // Function to initialize Swiper based on screen width
-                    function initSwiper() {
-                        let screenWidth = window.innerWidth;
+                    <div class="newest-articles">
+                        <h2>BÀI VIẾT MỚI NHẤT</h2>
+                        <div class="articles">
+                            <div class="swiper-wrapper">
+                                <div class="article swiper-slide swiper-slide-prev" data-swiper-slide-index="0">
+                                    <a href="#"><img src="./images/wholesale/article-1.webp" alt=""></a>
+                                    <p class="tag">LACÀPH LAB SERIES</p>
+                                    <h3><a href="#">LACÀPH LAB SERIES 2</a></h3>
+                                    <p>Chuỗi hành trình khám phá Lacàph Lab Series chính thức trở lại với sản phẩm cà phê Robusta Sẻ nguyên trái từ nông trại của Anh Phú lên men với bia Tiramisu Stout của Heart of Darkess.</p>
+                                    <div class="btn-wrap">
+                                        <a class="readmore-link" href="#">
+                                            Khám Phá
+                                        </a>
+                                        <hr>
+                                    </div>
+                                </div>
+                                <div class="article swiper-slide" data-swiper-slide-index="1">
+                                    <a href="#"><img src="./images/wholesale/article-2.webp" alt=""></a>
+                                    <p class="tag">LACÀPH LAB SERIES</p>
+                                    <h3><a href="#">Bia Fermented Coffee</a></h3>
+                                    <p>Với dòng sản phẩm đầu tiên thuộc Lacàph Lab Series I, chúng tôi hợp tác với Heart of Darkness Brewery mang đến cho bạn một loại cà phê được lên men với hỗn hợp BiA thủ công all-malt craft lager. Đồng hành cùng sự kết hợp này là Anh Ngọc, người đã nuôi trồng nên những hạt Arabica ngon nhất Việt Nam. Kết quả cho ra một dòng cà phê độc đáo mang hương vị hài hoà và khó phai của vải, mơ và đào.</p>
+                                    <div class="btn-wrap">
+                                        <a class="readmore-link" href="#">
+                                            Khám Phá
+                                        </a>
+                                        <hr>
+                                    </div>
+                                </div>
+                                <div class="article swiper-slide swiper-slide-next" data-swiper-slide-index="2">
+                                    <a href="#"><img src="./images/wholesale/article-3.webp" alt=""></a>
+                                    <p class="tag">LACÀPH LAB SERIES</p>
+                                    <h3><a href="#">Nông dân Ngọc & Ba Thế hệ Canh tác Cà phê</a></h3>
+                                    <p>Gia đình của Anh Ngọc đã làm nông nghiệp và trồng cà phê hơn 80 năm. Chúng tôi sử dụng Arabica Bourbon & Cascara của anh để tạo ra Lacàph Espresso Blend và Cold Steeped Cascara.</p>
+                                    <div class="btn-wrap">
+                                        <a class="readmore-link" href="#">
+                                            Khám Phá
+                                        </a>
+                                        <hr>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         
-                        if (screenWidth <= 700) {
-                            // Initialize Swiper for small screens
-                            var swiper = new Swiper('.articles', {
-                                slidesPerView: 1,
-                                spaceBetween: 10
-                            });
-                        } else {
-                            // Initialize Swiper for larger screens
-                            var swiper = new Swiper('.articles', {
-                                slidesPerView: 3,
-                                spaceBetween: 10
-                            });
+        
+                    </div>
+        
+                    <!-- Include Swiper library and styles -->
+                    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+                    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+                    <script>
+                        // Function to initialize Swiper based on screen width
+                        function initSwiper() {
+                            let screenWidth = window.innerWidth;
+                            
+                            if (screenWidth <= 700) {
+                                // Initialize Swiper for small screens
+                                var swiper = new Swiper('.articles', {
+                                    slidesPerView: 1,
+                                    spaceBetween: 10
+                                });
+                            } else {
+                                // Initialize Swiper for larger screens
+                                var swiper = new Swiper('.articles', {
+                                    slidesPerView: 3,
+                                    spaceBetween: 10
+                                });
+                            }
                         }
-                    }
-                
-                    // Initialize Swiper when the DOM is ready
-                    document.addEventListener('DOMContentLoaded', initSwiper);
-                
-                    // Reinitialize Swiper on window resize
-                    window.addEventListener('resize', initSwiper);
-                </script>
-                
-    
+                    
+                        // Initialize Swiper when the DOM is ready
+                        document.addEventListener('DOMContentLoaded', initSwiper);
+                    
+                        // Reinitialize Swiper on window resize
+                        window.addEventListener('resize', initSwiper);
+                    </script>
+                    
+        
+                    </div>
                 </div>
+                
             </div>
-            
         </div>
-    </div>
+    </main>
+    
 </body>
 </html>

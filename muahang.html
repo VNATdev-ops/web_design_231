@@ -4,301 +4,452 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lacàph | Mua hàng</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./css/default.css">
+    <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/muahang.css">
 </head>
 <body>
-    <div class="anhmuahang">
-        <h1>MUA HÀNG</h1>
-    </div>
-    <div class="phan2mh">
-        <div class="noidungtrong_phan2mh">
-            <div class="nd2_bentrong">
-                <h2 class="nd2_dongchu1"><a href="#">SẢN PHẨM ĐẶC TRƯNG</a></h2>
-                <div class="noidung2_tatca">
-                    <div class="noidung2_ndchinh" >
-                        <div class="nd2_hinhanh">
-                            <img src="images/cauc-muah/97af60e50b954daaa2609baa41ff9e87_w1920_h1080.png" alt="">
+    <header>
+        <div class="header-wrap">
+            <div class="row" id="top-nav">
+                <div class="pop-up-checkbox">
+                    <input id="menu-toggle" type="checkbox">
+                    <label for="menu-toggle" onclick="togglePopup()">
+                        <div class='menu-button-container'>
+                            <div class="menu-button"></div>
+                            <div class="menu-button"></div>
+                            <div class="menu-button"></div>
                         </div>
-                        <h2 class="nd2_dongdan1">
-                            <a href="#">PHIN BLEND DRIP BAGS </a>
-                        </h2>
-                        <div class="nd2_dongchu">
-                            <p>Lacàph Phin Blend Drip Bags là sản phẩm cà phê hoàn hảo ở bất cứ nơi đâu khi bạn không có các dụng cụ pha chế cần thiết. Cải tiến màng lọc không mùi cùng bột cà phê xay mịn từ Lacàph Phin Blend, sản phẩm nhanh chóng mang lại cho bạn tách cà phê thơm ngon.</p>
-                        </div>
-                        <div class="summit-button">
-                            <button type="submit">KHÁM PHÁ</button>
-                        </div>
-                    </div>
-                    <div class="noidung2_ndchinh" >
-                        <div class="nd2_hinhanh">
-                            <img src="images/cauc-muah/mh-1-2.png" alt="">
-                        </div>
-                        <h2 class="nd2_dongdan1">
-                            <a"href="#">LACÀPH COFFEE BLOSSOM HONEY</a>
-                        </h2>
-                        <div class="nd2_dongchu">
-                            <p>Được tạo ra từ mật hoa cà phê trồng trên các đồn điền Tây Nguyên, tỉnh Lâm Đồng. Các nông hộ đối tác của chúng tôi đặt tổ ong sâu trong vườn cà phê của họ. Đàn ong bay đến nhiều lần trên mỗi bông hoa cho đến khi thu được giọt mật cuối cùng. Mật ong Hoa Cà phê Lacàph 100% hoàn toàn tự nhiên, giàu chất chống oxy hóa và dinh dưỡng.</p>
-                        </div>
-                        <div class="summit-button">
-                            <button type="submit">KHÁM PHÁ</button>
-                        </div>
-                    </div>
-                    <div class="noidung2_ndchinh" >
-                        <div class="nd2_hinhanh">
-                            <img src="images/cauc-muah/mh-1-3.png" alt="">
-                        </div>
-                        <h2 class="nd2_dongdan1">
-                            <a href="#">LACÀPH SIGNATURE COLD BREW</a>
-                        </h2>
-                        <div class="nd2_dongchu">
-                            <p>Sản xuất từ những hạt cà phê Arabica chất lượng được rang một cách tỉ mỉ làm tăng hương vị sô cô la đậm đà, sau đó cà phê được chúng tôi ủ lạnh hơn 18 tiếng đồng hồ để tạo ra một sản phẩm cà phê đóng chai cực kỳ tươi ngon.</p>
-                        </div>
-                        <div class="summit-button">
-                            <button type="submit">KHÁM PHÁ</button>
-                        </div>
-                    </div>
-                    <div class="noidung2_ndchinh" >
-                        <div class="nd2_hinhanh">
-                            <img src="images/cauc-muah/mh-1-4.png" alt="">
-                        </div>
-                        <h2 class="nd2_dongdan1">
-                            <a href="#">LACÀPH PHIN BLEND</a>
-                        </h2>
-                        <div class="nd2_dongchu">
-                            <p>Sản xuất từ những hạt Robusta chất lượng ở vùng đất đỏ bazan tỉnh Đắk Nông kết hợp với tỉ lệ nhỏ hạt Arabica tạo ra hương vị đậm đà. Hạt Robusta được sơ chế theo phương pháp bán ướt giúp tăng vị ngọt và tạo thêm nhiều lớp hương vị. Lacàph Phin Blend là một loại cà phê hướng đến sự cân bằng, hơi hướng hiện đại hơn so với các loại cà phê phin truyền thống.</p>
-                        </div>
-                        <div class="summit-button">
-                            <button type="submit">KHÁM PHÁ</button>
-                        </div>
-                    </div>
-                    <div class="noidung2_ndchinh" >
-                        <div class="nd2_hinhanh">
-                            <img src="images/cauc-muah/mh-1-5.png" alt="">
-                        </div>
-                        <h2 class="nd2_dongdan1">
-                            <a href="#">LACÀPH FILTER BLEND</a>
-                        </h2>
-                        <div class="nd2_dongchu">
-                            <p>Sản xuất từ những hạt Arabica Red Bourbon chất lượng thu hoạch bằng tay từ vườn cà phê của anh Hadjim, nằm ở miền Trung Tây Nguyên. Những hạt cà phê được sơ chế ướt (Fully - Washed) sau đó sẽ vận chuyển đến xưởng rang Lacàph để kết hợp cùng Arabica từ nông hộ khác. Lacàph Filter Blend là một loại cà phê có sự kết hợp nhịp nhàng giữa vị chua và ngọt dịu êm.</p>
-                        </div>
-                        <div class="summit-button">
-                            <button type="submit">KHÁM PHÁ</button>
-                        </div>
-                    </div>
-                    <div class="noidung2_ndchinh" >
-                        <div class="nd2_hinhanh">
-                            <img src="images/cauc-muah/mh-1-6.png" alt="">
-                        </div>
-                        <h2 class="nd2_dongdan1">
-                            <a href="#">LACÀPH ESPRESSO BLEND</a>
-                        </h2>
-                        <div class="nd2_dongchu">
-                            <p>Sản xuất từ hạt Arabica và hạt Robusta giúp lưu giữ nhiều lớp mùi vị. Cà phê từ nông trường tiên phong trong lĩnh vực canh tác Arabica vùng Tây Nguyên được thu hoạch, chọn lọc bằng tay trước khi được sơ chế bằng phương pháp khô tự nhiên, phơi và đóng gói. Lacàph Espresso Blend là một loại cà phê mượt mà, tròn vị, kết hợp hoàn hảo giữa vị chua nhẹ và vị ngọt thanh.</p>
-                        </div>
-                        <div class="summit-button">
-                            <button type="submit">KHÁM PHÁ</button>
-                        </div>
-                    </div>
+                    </label>
+                </div>
+                <div class="logo">
+                    <a href="#"><img src="images/logo.svg" alt=""></a>
+                </div>
+                <div class="chucnang">
+                    <a href="#"><img src="images/vi_vn.svg" alt=""></a>
+                    <span class="timkiem-button"><i class="fa-solid fa-magnifying-glass" style="color: #4e358a;"></i></span>
+                    <a href="#"><i class="fa-solid fa-user" style="color: #4e358a;"></i></a>
+                    <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #4e358a;"></i></a>
                 </div>
             </div>
-            <div class="dongkhampha_cc">
-                <div class="dongkhampha_1">
-                    <a href="#">XEM TẤT CẢ</a>
-                </div>
-                <hr>
-            </div>
-<!-- ---------------------------------------- -->
-            <div class="nd2_bentrong">
-                <h2 class="nd2_dongchu1"><a href="#">HỘP QUÀ</a></h2>
-                <div class="noidung2_tatca">
-                    <div class="noidung2_ndchinh" >
-                        <div class="nd2_hinhanh">
-                            <img src="images/cauc-muah/mh-2-1.png" alt="">
-                        </div>
-                        <h2 class="nd2_dongdan1">
-                            <a href="#">LACÀPH PHIN BREWER GIFT BOX </a>
-                        </h2>
-                        <div class="nd2_dongchu">
-                            <p>Hộp quà Phin Cà Phê Lacàph là một quà tặng ý nghĩa, mang những thông điệp đậm nét văn hoá cà phê Việt Nam. Phin cà phê Lacàph không chỉ là một vật dụng pha chế thông thường khi lưu giữ hình dáng vốn có của phin truyền thống mà được cải tiến với tấm lọc kim loại cho ly cà phê phin mượt mà hơn.</p>
-                        </div>
-                        <div class="summit-button">
-                            <button type="submit">KHÁM PHÁ</button>
-                        </div>
-                    </div>
-                    <div class="noidung2_ndchinh" >
-                        <div class="nd2_hinhanh">
-                            <img src="images/cauc-muah/mh-2-2.png" alt="">
-                        </div>
-                        <h2 class="nd2_dongdan1">
-                            <a"href="#">LACÀPH PHIN BLEND GIFT BOX</a>
-                        </h2>
-                        <div class="nd2_dongchu">
-                            <p>Hộp quà Lacàph Phin Blend là một quà tặng ý nghĩa, mang những thông điệp đậm nét văn hoá cà phê Việt Nam. Từ những hạt Robusta chất lượng nhất của Đắk Lắk, chúng tôi kết hợp với một tỉ lệ nhỏ hạt Arabica tạo ra một loại cà phê hướng đến sự cân bằng, có hơi hướng hiện đại.</p>
-                        </div>
-                        <div class="summit-button">
-                            <button type="submit">KHÁM PHÁ</button>
-                        </div>
-                    </div>
-                    <div class="noidung2_ndchinh" >
-                        <div class="nd2_hinhanh">
-                            <img src="images/cauc-muah/mh-2-3.png" alt="">
-                        </div>
-                        <h2 class="nd2_dongdan1">
-                            <a href="#">LACÀPH FILTER BLEND GIFT BOX</a>
-                        </h2>
-                        <div class="nd2_dongchu">
-                            <p>Hộp quà Lacàph Filter Blend là một quà tặng ý nghĩa, một món quà mang tính thẩm mỹ cao thích hợp cho mọi sự kiện và dịp đặc biệt. Từ những hạt Arabica chất lượng của miền Trung Tây Nguyên kết hợp với 2 loại hạt cà phê khác tạo nên một loại cà phê kết hợp nhịp nhàng giữa vị chua và ngọt dịu êm.</p>
-                        </div>
-                        <div class="summit-button">
-                            <button type="submit">KHÁM PHÁ</button>
-                        </div>
-                    </div>
-                    <div class="noidung2_ndchinh" >
-                        <div class="nd2_hinhanh">
-                            <img src="images/cauc-muah/mh-2-4.png" alt="">
-                        </div>
-                        <h2 class="nd2_dongdan1">
-                            <a href="#">LACÀPH ESPRESSO BLEND GIFT BOX</a>
-                        </h2>
-                        <div class="nd2_dongchu">
-                            <p>Hộp quà Lacàph Espresso Blend là một quà tặng ý nghĩa, một món quà mang tính thẩm mỹ cao thích hợp cho mọi sự kiện và dịp đặc biệt. Chúng tôi kết hợp những hạt Arabica và Robusta chất lượng của Tây Nguyên để tạo nên một loại cà phê mang nhiều tầng hương vị, mượt mà giữa vị chua và ngọt đan xen.</p>
-                        </div>
-                        <div class="summit-button">
-                            <button type="submit">KHÁM PHÁ</button>
-                        </div>
-                    </div>
-                    <div class="noidung2_ndchinh" >
-                        <div class="nd2_hinhanh">
-                            <img src="images/cauc-muah/mh-2-5.png" alt="">
-                        </div>
-                        <h2 class="nd2_dongdan1">
-                            <a href="#">LACÀPH CASCARA TEA GIFT BOX</a>
-                        </h2>
-                        <div class="nd2_dongchu">
-                            <p>Hộp quà Trà Cascara Lacàph là là một gợi ý quà tặng ý nghĩa cho bạn, một món quà mang tính thẩm mỹ cao thích hợp cho mọi sự kiện và dịp đặc biệt. Từ vỏ những quả cà phê Arabica chín, trải qua quá trình lên men và phơi khô, Trà Cascara Lacàph có vị ngọt tự nhiên với dư vị tinh tế của mật ong và trái cây.</p>
-                        </div>
-                        <div class="summit-button">
-                            <button type="submit">KHÁM PHÁ</button>
-                        </div>
-                    </div>
+
+            <div class="row hide" id="thanh-tim-kiem">
+                <div class="timkiem">
+                    <input type="search" id="" placeholder="Nhập nội dung bạn cần tìm tại đây">
+                    <span><i class="fa-solid fa-magnifying-glass" style="color: white;"></i></span>
                 </div>
             </div>
-            <div class="dongkhampha_cc">
-                <div class="dongkhampha_1">
-                    <a href="#">XEM TẤT CẢ</a>
-                </div>
-                <hr>
+
+            <div class="row" id="menu">
+                <nav>
+                    <ul>
+                        <li><a href="#">Về chúng tôi</a></li>
+                        <li><a href="#">Mua hàng</a></li>
+                        <li><a href="#">Câu chuyện</a></li>
+                        <li><a href="#">Lacàph Bar</a></li>
+                        <li><a href="#">Lacàph Space</a></li>
+                        <li><a href="#">Sách</a></li>
+                        <li><a href="#">Wholesale</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                    </ul>
+                </nav>
             </div>
-            <!-- ----------------- -->
-            <div class="nd2_bentrong">
-                <h2 class="nd2_dongchu1"><a href="#">THIẾT BỊ</a></h2>
-                <div class="noidung2_tatca">
-                    <div class="noidung2_ndchinh" >
-                        <div class="nd2_hinhanh">
-                            <img src="images/cauc-muah/mh-3-1.png" alt="">
+
+            <div class="pop-up-header">
+                <div class="header-container" >
+                    <div class="button-nav">
+                        <div class="close-button" onclick="closePopup()">
+                            <button><img src="./images/close-button.png" alt=""></button>
                         </div>
-                        <h2 class="nd2_dongdan1">
-                            <a href="#">LACÀPH PHIN BREWER</a>
-                        </h2>
-                        <div class="nd2_dongchu">
-                            <p>Phin cà phê Lacàph không chỉ là một vật dụng pha chế thông thường khi lưu giữ hình dáng vốn có của phin truyền thống mà được cải tiến với tấm lọc kim loại cho ly cà phê phin mượt mà hơn.</p>
-                        </div>
-                        <div class="summit-button">
-                            <button type="submit">KHÁM PHÁ</button>
+                        <div class="chucnang">
+                            <a href="#"><i class="fa-solid fa-user" style="color: #ffffff;"></i></a>
+                            <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #ffffff;"></i></a>
                         </div>
                     </div>
-                    <div class="noidung2_ndchinh" >
-                        <div class="nd2_hinhanh">
-                            <img src="images/cauc-muah/mh-3-2.png" alt="">
-                        </div>
-                        <h2 class="nd2_dongdan1">
-                            <a href="#">AEROPRESS FILTER</a>
-                        </h2>
-                        <div class="nd2_dongchu">
-                            <p>Được làm bằng kim loại không gỉ, rất dễ vệ sinh và cất trữ, Lacàph tin rằng miếng lọc kim loại AeroPress sẽ trở thành một người bạn đồng hành quen thuộc, giúp bạn luôn có những cốc cà phê thật ngon và chuẩn vị trong những chuyến đi xa.</p>
-                        </div>
-                        <div class="summit-button">
-                            <button type="submit">KHÁM PHÁ</button>
-                        </div>
+                    <div class="timkiem">
+                        <input type="search" id="" placeholder="Nhập nội dung bạn cần tìm tại đây">
+                        <span><i class="fa-solid fa-magnifying-glass" style="color: white;"></i></span>
                     </div>
                 </div>
-            </div>
-            <div class="dongkhampha_cc">
-                <div class="dongkhampha_1">
-                    <a href="#">XEM TẤT CẢ</a>
-                </div>
-                <hr>
-            </div>
-            <!-- ------------------- -->
-            <div class="nd2_bentrong">
-                <h2 class="nd2_dongchu1"><a href="#">SẢN PHẨM KHÁC</a></h2>
-                <div class="noidung2_tatca">
-                    <div class="noidung2_ndchinh" >
-                        <div class="nd2_hinhanh">
-                            <img src="images/cauc-muah/mh-4-1.png"alt="">
-                        </div>
-                        <h2 class="nd2_dongdan1">
-                            <a href="#">LACÀPH VIETNAMESE PHIN COFFEE SET</a>
-                        </h2>
-                        <div class="nd2_dongchu">
-                            <p>Hương vị của Phin Blend được thể hiện trọn vẹn nhất khi kết hợp cùng Microfilter Phin Brewer: Chiếc Phin pha cà phê sử dụng lỗ lọc siêu mịn hỗ trợ ổn định chất lượng và nâng cao chiết xuất. Qua lỗ lọc của Microfilter, hương vị của Signature Phin Blend vừa tròn vừa cân bằng. Thơm nồng hương sô-cô-la đen mượt mà hạt phỉ cùng vị chua trái cây nhẹ, Signature Phin Blend chính là một cốc đậm vị “quốc dân” thêm vài thìa “đương đại”, cho bạn cảm hứng khởi đầu một ngày dài.</p>
-                        </div>
-                        <div class="summit-button">
-                            <button type="submit">KHÁM PHÁ</button>
-                        </div>
-                    </div>
-                    <div class="noidung2_ndchinh" >
-                        <div class="nd2_hinhanh">
-                            <img src="images/cauc-muah/mh-4-2.jpg" alt="">
-                        </div>
-                        <h2 class="nd2_dongdan1">
-                            <a href="#">ĐẶC ĐEN ĐẮNG</a>
-                        </h2>
-                        <div class="nd2_dongchu">
-                            <p>Coffee is deeply rooted in the culture of Việt Nam, an intrinsic part of the country’s history and society for over a hundred years. But have you ever wondered how Việt Nam became a global coffee powerhouse, the role coffee played in President Hồ Chí Minh’s rise to power, or how a small brown bean lifted thousands out of poverty and created a coffee culture unlike any other?</p>
-                        </div>
-                        <div class="summit-button">
-                            <button type="submit">KHÁM PHÁ</button>
-                        </div>
-                    </div>
-                    <div class="noidung2_ndchinh" >
-                        <div class="nd2_hinhanh">
-                            <img src="images/cauc-muah/mh-4-3.png" alt="">
-                        </div>
-                        <h2 class="nd2_dongdan1">
-                            <a href="#">LACÀPH TOTE BAG</a>
-                        </h2>
-                        <div class="nd2_dongchu">
-                            <p>Túi vải Lacàph với thiết kế hoa cà phê nở rộ là một sản phẩm cần thiết cho ngày dài năng động, túi có thể chứa mọi vật dụng: một chiếc bình giữ nhiệt, một chiếc laptop hay đơn giản là những vật dụng cá nhân của bạn.</p>
-                        </div>
-                        <div class="summit-button">
-                            <button type="submit">KHÁM PHÁ</button>
-                        </div>
-                    </div>
-                    <div class="noidung2_ndchinh" >
-                        <div class="nd2_hinhanh">
-                            <img src="images/cauc-muah/mh-4-4.png" alt="">
-                        </div>
-                        <h2 class="nd2_dongdan1">
-                            <a href="#">LACÀPH TUMBLER</a>
-                        </h2>
-                        <div class="nd2_dongchu">
-                            <p>Bình Giữ Nhiệt Lacàph là một sản phẩm cần thiết giúp lưu giữ tốt hương vị cà phê và các thức uống khác. Cùng Lacàph giảm thiểu việc sử dụng ly nhựa mỗi ngày bằng cách mang theo Bình Giữ Nhiệt Lacàph khi đi ra ngoài.</p>
-                        </div>
-                        <div class="summit-button">
-                            <button type="submit">KHÁM PHÁ</button>
-                        </div>
-                    </div>
+                
+                <div class="menu">
+                    <nav>
+                        <ul>
+                            <li><a href="#">Về chúng tôi</a></li>
+                            <li><a href="#">Mua hàng</a></li>
+                            <li><a href="#">Câu chuyện</a></li>
+                            <li><a href="#">Lacàph Bar</a></li>
+                            <li><a href="#">Lacàph Space</a></li>
+                            <li><a href="#">Sách</a></li>
+                            <li><a href="#">Wholesale</a></li>
+                            <li><a href="#">Liên hệ</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
-            <div class="dongkhampha_cc">
-                <div class="dongkhampha_1">
-                    <a href="#">XEM TẤT CẢ</a>
+
+            
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                var openButton = document.querySelector('.timkiem-button');
+                var timkiemBar = document.querySelector('#thanh-tim-kiem');
+                var menu = document.querySelector('#menu');
+                var headWrap = document.querySelector('.header-wrap');
+                var topSize = document.querySelector('#top-nav');
+                var prevScrollPos = window.pageYOffset;
+                var buffer = 10; // Adjust the buffer as needed
+
+                function updateScroll() {
+                    let screenWidth = window.innerWidth;
+                    var currentScrollPos = window.pageYOffset;
+
+                    
+                    if (window.innerWidth > 1200) {
+                        if (timkiemBar && currentScrollPos < buffer * 2) {
+                            return;
+                        }
+
+                        // Check the scroll direction and toggle the 'hide' class for the menu
+                        if (currentScrollPos > prevScrollPos + buffer) {
+                            menu.classList.add('hide');
+                            topSize.style.height = '50px';
+                            headWrap.style.padding = '3px 0';
+                        } else if (currentScrollPos < prevScrollPos - buffer) {
+                            menu.classList.remove('hide');
+                            topSize.style.height = '60px';
+                            headWrap.style.padding = '10px 0';
+                        }
+
+                        // Update the scroll position
+                        prevScrollPos = currentScrollPos;
+                    }
+                }
+                    
+
+                function toggleSearchBar() {
+                    if (timkiemBar.classList.contains("hide")) {
+                        timkiemBar.classList.remove('hide');
+                    } else {
+                        timkiemBar.classList.add('hide');
+                    }
+                }
+
+                // Check screen width before attaching event listeners
+                    window.addEventListener('scroll', updateScroll);
+                    openButton.addEventListener('click', toggleSearchBar);
+            });
+
+
+
+                //pop-up header
+                var popupContent = document.querySelector('.pop-up-header');
+
+                function togglePopup() {
+                    popupContent.style.left = '0';
+                }
+
+                function closePopup() {
+                    popupContent.style.left = '-100%';
+                }
+            </script>
+        </div>
+    </header>
+
+    <main>
+        <div class="anhmuahang">
+            <h1>MUA HÀNG</h1>
+        </div>
+        <div class="phan2mh">
+            <div class="noidungtrong_phan2mh">
+                <div class="nd2_bentrong">
+                    <h2 class="nd2_dongchu1"><a href="#">SẢN PHẨM ĐẶC TRƯNG</a></h2>
+                    <div class="noidung2_tatca">
+                        <div class="noidung2_ndchinh" >
+                            <div class="nd2_hinhanh">
+                                <img src="images/cauc-muah/97af60e50b954daaa2609baa41ff9e87_w1920_h1080.png" alt="">
+                            </div>
+                            <h2 class="nd2_dongdan1">
+                                <a href="#">PHIN BLEND DRIP BAGS </a>
+                            </h2>
+                            <div class="nd2_dongchu">
+                                <p>Lacàph Phin Blend Drip Bags là sản phẩm cà phê hoàn hảo ở bất cứ nơi đâu khi bạn không có các dụng cụ pha chế cần thiết. Cải tiến màng lọc không mùi cùng bột cà phê xay mịn từ Lacàph Phin Blend, sản phẩm nhanh chóng mang lại cho bạn tách cà phê thơm ngon.</p>
+                            </div>
+                            <div class="summit-button">
+                                <button type="submit">KHÁM PHÁ</button>
+                            </div>
+                        </div>
+                        <div class="noidung2_ndchinh" >
+                            <div class="nd2_hinhanh">
+                                <img src="images/cauc-muah/mh-1-2.png" alt="">
+                            </div>
+                            <h2 class="nd2_dongdan1">
+                                <a"href="#">LACÀPH COFFEE BLOSSOM HONEY</a>
+                            </h2>
+                            <div class="nd2_dongchu">
+                                <p>Được tạo ra từ mật hoa cà phê trồng trên các đồn điền Tây Nguyên, tỉnh Lâm Đồng. Các nông hộ đối tác của chúng tôi đặt tổ ong sâu trong vườn cà phê của họ. Đàn ong bay đến nhiều lần trên mỗi bông hoa cho đến khi thu được giọt mật cuối cùng. Mật ong Hoa Cà phê Lacàph 100% hoàn toàn tự nhiên, giàu chất chống oxy hóa và dinh dưỡng.</p>
+                            </div>
+                            <div class="summit-button">
+                                <button type="submit">KHÁM PHÁ</button>
+                            </div>
+                        </div>
+                        <div class="noidung2_ndchinh" >
+                            <div class="nd2_hinhanh">
+                                <img src="images/cauc-muah/mh-1-3.png" alt="">
+                            </div>
+                            <h2 class="nd2_dongdan1">
+                                <a href="#">LACÀPH SIGNATURE COLD BREW</a>
+                            </h2>
+                            <div class="nd2_dongchu">
+                                <p>Sản xuất từ những hạt cà phê Arabica chất lượng được rang một cách tỉ mỉ làm tăng hương vị sô cô la đậm đà, sau đó cà phê được chúng tôi ủ lạnh hơn 18 tiếng đồng hồ để tạo ra một sản phẩm cà phê đóng chai cực kỳ tươi ngon.</p>
+                            </div>
+                            <div class="summit-button">
+                                <button type="submit">KHÁM PHÁ</button>
+                            </div>
+                        </div>
+                        <div class="noidung2_ndchinh" >
+                            <div class="nd2_hinhanh">
+                                <img src="images/cauc-muah/mh-1-4.png" alt="">
+                            </div>
+                            <h2 class="nd2_dongdan1">
+                                <a href="#">LACÀPH PHIN BLEND</a>
+                            </h2>
+                            <div class="nd2_dongchu">
+                                <p>Sản xuất từ những hạt Robusta chất lượng ở vùng đất đỏ bazan tỉnh Đắk Nông kết hợp với tỉ lệ nhỏ hạt Arabica tạo ra hương vị đậm đà. Hạt Robusta được sơ chế theo phương pháp bán ướt giúp tăng vị ngọt và tạo thêm nhiều lớp hương vị. Lacàph Phin Blend là một loại cà phê hướng đến sự cân bằng, hơi hướng hiện đại hơn so với các loại cà phê phin truyền thống.</p>
+                            </div>
+                            <div class="summit-button">
+                                <button type="submit">KHÁM PHÁ</button>
+                            </div>
+                        </div>
+                        <div class="noidung2_ndchinh" >
+                            <div class="nd2_hinhanh">
+                                <img src="images/cauc-muah/mh-1-5.png" alt="">
+                            </div>
+                            <h2 class="nd2_dongdan1">
+                                <a href="#">LACÀPH FILTER BLEND</a>
+                            </h2>
+                            <div class="nd2_dongchu">
+                                <p>Sản xuất từ những hạt Arabica Red Bourbon chất lượng thu hoạch bằng tay từ vườn cà phê của anh Hadjim, nằm ở miền Trung Tây Nguyên. Những hạt cà phê được sơ chế ướt (Fully - Washed) sau đó sẽ vận chuyển đến xưởng rang Lacàph để kết hợp cùng Arabica từ nông hộ khác. Lacàph Filter Blend là một loại cà phê có sự kết hợp nhịp nhàng giữa vị chua và ngọt dịu êm.</p>
+                            </div>
+                            <div class="summit-button">
+                                <button type="submit">KHÁM PHÁ</button>
+                            </div>
+                        </div>
+                        <div class="noidung2_ndchinh" >
+                            <div class="nd2_hinhanh">
+                                <img src="images/cauc-muah/mh-1-6.png" alt="">
+                            </div>
+                            <h2 class="nd2_dongdan1">
+                                <a href="#">LACÀPH ESPRESSO BLEND</a>
+                            </h2>
+                            <div class="nd2_dongchu">
+                                <p>Sản xuất từ hạt Arabica và hạt Robusta giúp lưu giữ nhiều lớp mùi vị. Cà phê từ nông trường tiên phong trong lĩnh vực canh tác Arabica vùng Tây Nguyên được thu hoạch, chọn lọc bằng tay trước khi được sơ chế bằng phương pháp khô tự nhiên, phơi và đóng gói. Lacàph Espresso Blend là một loại cà phê mượt mà, tròn vị, kết hợp hoàn hảo giữa vị chua nhẹ và vị ngọt thanh.</p>
+                            </div>
+                            <div class="summit-button">
+                                <button type="submit">KHÁM PHÁ</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <hr>
+                <div class="dongkhampha_cc">
+                    <div class="dongkhampha_1">
+                        <a href="#">XEM TẤT CẢ</a>
+                    </div>
+                    <hr>
+                </div>
+    <!-- ---------------------------------------- -->
+                <div class="nd2_bentrong">
+                    <h2 class="nd2_dongchu1"><a href="#">HỘP QUÀ</a></h2>
+                    <div class="noidung2_tatca">
+                        <div class="noidung2_ndchinh" >
+                            <div class="nd2_hinhanh">
+                                <img src="images/cauc-muah/mh-2-1.png" alt="">
+                            </div>
+                            <h2 class="nd2_dongdan1">
+                                <a href="#">LACÀPH PHIN BREWER GIFT BOX </a>
+                            </h2>
+                            <div class="nd2_dongchu">
+                                <p>Hộp quà Phin Cà Phê Lacàph là một quà tặng ý nghĩa, mang những thông điệp đậm nét văn hoá cà phê Việt Nam. Phin cà phê Lacàph không chỉ là một vật dụng pha chế thông thường khi lưu giữ hình dáng vốn có của phin truyền thống mà được cải tiến với tấm lọc kim loại cho ly cà phê phin mượt mà hơn.</p>
+                            </div>
+                            <div class="summit-button">
+                                <button type="submit">KHÁM PHÁ</button>
+                            </div>
+                        </div>
+                        <div class="noidung2_ndchinh" >
+                            <div class="nd2_hinhanh">
+                                <img src="images/cauc-muah/mh-2-2.png" alt="">
+                            </div>
+                            <h2 class="nd2_dongdan1">
+                                <a"href="#">LACÀPH PHIN BLEND GIFT BOX</a>
+                            </h2>
+                            <div class="nd2_dongchu">
+                                <p>Hộp quà Lacàph Phin Blend là một quà tặng ý nghĩa, mang những thông điệp đậm nét văn hoá cà phê Việt Nam. Từ những hạt Robusta chất lượng nhất của Đắk Lắk, chúng tôi kết hợp với một tỉ lệ nhỏ hạt Arabica tạo ra một loại cà phê hướng đến sự cân bằng, có hơi hướng hiện đại.</p>
+                            </div>
+                            <div class="summit-button">
+                                <button type="submit">KHÁM PHÁ</button>
+                            </div>
+                        </div>
+                        <div class="noidung2_ndchinh" >
+                            <div class="nd2_hinhanh">
+                                <img src="images/cauc-muah/mh-2-3.png" alt="">
+                            </div>
+                            <h2 class="nd2_dongdan1">
+                                <a href="#">LACÀPH FILTER BLEND GIFT BOX</a>
+                            </h2>
+                            <div class="nd2_dongchu">
+                                <p>Hộp quà Lacàph Filter Blend là một quà tặng ý nghĩa, một món quà mang tính thẩm mỹ cao thích hợp cho mọi sự kiện và dịp đặc biệt. Từ những hạt Arabica chất lượng của miền Trung Tây Nguyên kết hợp với 2 loại hạt cà phê khác tạo nên một loại cà phê kết hợp nhịp nhàng giữa vị chua và ngọt dịu êm.</p>
+                            </div>
+                            <div class="summit-button">
+                                <button type="submit">KHÁM PHÁ</button>
+                            </div>
+                        </div>
+                        <div class="noidung2_ndchinh" >
+                            <div class="nd2_hinhanh">
+                                <img src="images/cauc-muah/mh-2-4.png" alt="">
+                            </div>
+                            <h2 class="nd2_dongdan1">
+                                <a href="#">LACÀPH ESPRESSO BLEND GIFT BOX</a>
+                            </h2>
+                            <div class="nd2_dongchu">
+                                <p>Hộp quà Lacàph Espresso Blend là một quà tặng ý nghĩa, một món quà mang tính thẩm mỹ cao thích hợp cho mọi sự kiện và dịp đặc biệt. Chúng tôi kết hợp những hạt Arabica và Robusta chất lượng của Tây Nguyên để tạo nên một loại cà phê mang nhiều tầng hương vị, mượt mà giữa vị chua và ngọt đan xen.</p>
+                            </div>
+                            <div class="summit-button">
+                                <button type="submit">KHÁM PHÁ</button>
+                            </div>
+                        </div>
+                        <div class="noidung2_ndchinh" >
+                            <div class="nd2_hinhanh">
+                                <img src="images/cauc-muah/mh-2-5.png" alt="">
+                            </div>
+                            <h2 class="nd2_dongdan1">
+                                <a href="#">LACÀPH CASCARA TEA GIFT BOX</a>
+                            </h2>
+                            <div class="nd2_dongchu">
+                                <p>Hộp quà Trà Cascara Lacàph là là một gợi ý quà tặng ý nghĩa cho bạn, một món quà mang tính thẩm mỹ cao thích hợp cho mọi sự kiện và dịp đặc biệt. Từ vỏ những quả cà phê Arabica chín, trải qua quá trình lên men và phơi khô, Trà Cascara Lacàph có vị ngọt tự nhiên với dư vị tinh tế của mật ong và trái cây.</p>
+                            </div>
+                            <div class="summit-button">
+                                <button type="submit">KHÁM PHÁ</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dongkhampha_cc">
+                    <div class="dongkhampha_1">
+                        <a href="#">XEM TẤT CẢ</a>
+                    </div>
+                    <hr>
+                </div>
+                <!-- ----------------- -->
+                <div class="nd2_bentrong">
+                    <h2 class="nd2_dongchu1"><a href="#">THIẾT BỊ</a></h2>
+                    <div class="noidung2_tatca">
+                        <div class="noidung2_ndchinh" >
+                            <div class="nd2_hinhanh">
+                                <img src="images/cauc-muah/mh-3-1.png" alt="">
+                            </div>
+                            <h2 class="nd2_dongdan1">
+                                <a href="#">LACÀPH PHIN BREWER</a>
+                            </h2>
+                            <div class="nd2_dongchu">
+                                <p>Phin cà phê Lacàph không chỉ là một vật dụng pha chế thông thường khi lưu giữ hình dáng vốn có của phin truyền thống mà được cải tiến với tấm lọc kim loại cho ly cà phê phin mượt mà hơn.</p>
+                            </div>
+                            <div class="summit-button">
+                                <button type="submit">KHÁM PHÁ</button>
+                            </div>
+                        </div>
+                        <div class="noidung2_ndchinh" >
+                            <div class="nd2_hinhanh">
+                                <img src="images/cauc-muah/mh-3-2.png" alt="">
+                            </div>
+                            <h2 class="nd2_dongdan1">
+                                <a href="#">AEROPRESS FILTER</a>
+                            </h2>
+                            <div class="nd2_dongchu">
+                                <p>Được làm bằng kim loại không gỉ, rất dễ vệ sinh và cất trữ, Lacàph tin rằng miếng lọc kim loại AeroPress sẽ trở thành một người bạn đồng hành quen thuộc, giúp bạn luôn có những cốc cà phê thật ngon và chuẩn vị trong những chuyến đi xa.</p>
+                            </div>
+                            <div class="summit-button">
+                                <button type="submit">KHÁM PHÁ</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dongkhampha_cc">
+                    <div class="dongkhampha_1">
+                        <a href="#">XEM TẤT CẢ</a>
+                    </div>
+                    <hr>
+                </div>
+                <!-- ------------------- -->
+                <div class="nd2_bentrong">
+                    <h2 class="nd2_dongchu1"><a href="#">SẢN PHẨM KHÁC</a></h2>
+                    <div class="noidung2_tatca">
+                        <div class="noidung2_ndchinh" >
+                            <div class="nd2_hinhanh">
+                                <img src="images/cauc-muah/mh-4-1.png"alt="">
+                            </div>
+                            <h2 class="nd2_dongdan1">
+                                <a href="#">LACÀPH VIETNAMESE PHIN COFFEE SET</a>
+                            </h2>
+                            <div class="nd2_dongchu">
+                                <p>Hương vị của Phin Blend được thể hiện trọn vẹn nhất khi kết hợp cùng Microfilter Phin Brewer: Chiếc Phin pha cà phê sử dụng lỗ lọc siêu mịn hỗ trợ ổn định chất lượng và nâng cao chiết xuất. Qua lỗ lọc của Microfilter, hương vị của Signature Phin Blend vừa tròn vừa cân bằng. Thơm nồng hương sô-cô-la đen mượt mà hạt phỉ cùng vị chua trái cây nhẹ, Signature Phin Blend chính là một cốc đậm vị “quốc dân” thêm vài thìa “đương đại”, cho bạn cảm hứng khởi đầu một ngày dài.</p>
+                            </div>
+                            <div class="summit-button">
+                                <button type="submit">KHÁM PHÁ</button>
+                            </div>
+                        </div>
+                        <div class="noidung2_ndchinh" >
+                            <div class="nd2_hinhanh">
+                                <img src="images/cauc-muah/mh-4-2.jpg" alt="">
+                            </div>
+                            <h2 class="nd2_dongdan1">
+                                <a href="#">ĐẶC ĐEN ĐẮNG</a>
+                            </h2>
+                            <div class="nd2_dongchu">
+                                <p>Coffee is deeply rooted in the culture of Việt Nam, an intrinsic part of the country’s history and society for over a hundred years. But have you ever wondered how Việt Nam became a global coffee powerhouse, the role coffee played in President Hồ Chí Minh’s rise to power, or how a small brown bean lifted thousands out of poverty and created a coffee culture unlike any other?</p>
+                            </div>
+                            <div class="summit-button">
+                                <button type="submit">KHÁM PHÁ</button>
+                            </div>
+                        </div>
+                        <div class="noidung2_ndchinh" >
+                            <div class="nd2_hinhanh">
+                                <img src="images/cauc-muah/mh-4-3.png" alt="">
+                            </div>
+                            <h2 class="nd2_dongdan1">
+                                <a href="#">LACÀPH TOTE BAG</a>
+                            </h2>
+                            <div class="nd2_dongchu">
+                                <p>Túi vải Lacàph với thiết kế hoa cà phê nở rộ là một sản phẩm cần thiết cho ngày dài năng động, túi có thể chứa mọi vật dụng: một chiếc bình giữ nhiệt, một chiếc laptop hay đơn giản là những vật dụng cá nhân của bạn.</p>
+                            </div>
+                            <div class="summit-button">
+                                <button type="submit">KHÁM PHÁ</button>
+                            </div>
+                        </div>
+                        <div class="noidung2_ndchinh" >
+                            <div class="nd2_hinhanh">
+                                <img src="images/cauc-muah/mh-4-4.png" alt="">
+                            </div>
+                            <h2 class="nd2_dongdan1">
+                                <a href="#">LACÀPH TUMBLER</a>
+                            </h2>
+                            <div class="nd2_dongchu">
+                                <p>Bình Giữ Nhiệt Lacàph là một sản phẩm cần thiết giúp lưu giữ tốt hương vị cà phê và các thức uống khác. Cùng Lacàph giảm thiểu việc sử dụng ly nhựa mỗi ngày bằng cách mang theo Bình Giữ Nhiệt Lacàph khi đi ra ngoài.</p>
+                            </div>
+                            <div class="summit-button">
+                                <button type="submit">KHÁM PHÁ</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dongkhampha_cc">
+                    <div class="dongkhampha_1">
+                        <a href="#">XEM TẤT CẢ</a>
+                    </div>
+                    <hr>
+                </div>
             </div>
         </div>
-    </div>
+    </main>
+    
 </body>
 </html>

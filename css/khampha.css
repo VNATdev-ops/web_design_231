@@ -98,7 +98,7 @@ p img{
     flex-direction: column;
     margin: 30px 50px;
 }
-a{
+main a{
     text-decoration: none;  
     font-size: 1rem;
     font-weight: 500;

@@ -5,10 +5,158 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lacàph | Mua Hàng</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="./css/default.css">
+    <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/hang.css">
 </head>
 <body>
+    <header>
+        <div class="header-wrap">
+            <div class="row" id="top-nav">
+                <div class="pop-up-checkbox">
+                    <input id="menu-toggle" type="checkbox">
+                    <label for="menu-toggle" onclick="openPopupMenu()">
+                        <div class='menu-button-container'>
+                            <div class="menu-button"></div>
+                            <div class="menu-button"></div>
+                            <div class="menu-button"></div>
+                        </div>
+                    </label>
+                </div>
+                <div class="logo">
+                    <a href="#"><img src="images/logo.svg" alt=""></a>
+                </div>
+                <div class="chucnang">
+                    <a href="#"><img src="images/vi_vn.svg" alt=""></a>
+                    <span class="timkiem-button"><i class="fa-solid fa-magnifying-glass" style="color: #4e358a;"></i></span>
+                    <a href="#"><i class="fa-solid fa-user" style="color: #4e358a;"></i></a>
+                    <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #4e358a;"></i></a>
+                </div>
+            </div>
+
+            <div class="row hide" id="thanh-tim-kiem">
+                <div class="timkiem">
+                    <input type="search" id="" placeholder="Nhập nội dung bạn cần tìm tại đây">
+                    <span><i class="fa-solid fa-magnifying-glass" style="color: white;"></i></span>
+                </div>
+            </div>
+
+            <div class="row" id="menu">
+                <nav>
+                    <ul>
+                        <li><a href="#">Về chúng tôi</a></li>
+                        <li><a href="#">Mua hàng</a></li>
+                        <li><a href="#">Câu chuyện</a></li>
+                        <li><a href="#">Lacàph Bar</a></li>
+                        <li><a href="#">Lacàph Space</a></li>
+                        <li><a href="#">Sách</a></li>
+                        <li><a href="#">Wholesale</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="pop-up-header">
+                <div class="header-container" >
+                    <div class="button-nav">
+                        <div class="close-button" onclick="closePopupMenu()">
+                            <button><img src="./images/close-button.png" alt=""></button>
+                        </div>
+                        <div class="chucnang">
+                            <a href="#"><i class="fa-solid fa-user" style="color: #ffffff;"></i></a>
+                            <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #ffffff;"></i></a>
+                        </div>
+                    </div>
+                    <div class="timkiem">
+                        <input type="search" id="" placeholder="Nhập nội dung bạn cần tìm tại đây">
+                        <span><i class="fa-solid fa-magnifying-glass" style="color: white;"></i></span>
+                    </div>
+                </div>
+                
+                <div class="menu">
+                    <nav>
+                        <ul>
+                            <li><a href="#">Về chúng tôi</a></li>
+                            <li><a href="#">Mua hàng</a></li>
+                            <li><a href="#">Câu chuyện</a></li>
+                            <li><a href="#">Lacàph Bar</a></li>
+                            <li><a href="#">Lacàph Space</a></li>
+                            <li><a href="#">Sách</a></li>
+                            <li><a href="#">Wholesale</a></li>
+                            <li><a href="#">Liên hệ</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                var openButton = document.querySelector('.timkiem-button');
+                var timkiemBar = document.querySelector('#thanh-tim-kiem');
+                var menu = document.querySelector('#menu');
+                var headWrap = document.querySelector('.header-wrap');
+                var topSize = document.querySelector('#top-nav');
+                var prevScrollPos = window.pageYOffset;
+                var buffer = 10; // Adjust the buffer as needed
+
+                function updateScroll() {
+                    let screenWidth = window.innerWidth;
+                    var currentScrollPos = window.pageYOffset;
+
+                    
+                    if (window.innerWidth > 1200) {
+                        if (timkiemBar && currentScrollPos < buffer * 2) {
+                            return;
+                        }
+
+                        // Check the scroll direction and toggle the 'hide' class for the menu
+                        if (currentScrollPos > prevScrollPos + buffer) {
+                            menu.classList.add('hide');
+                            topSize.style.height = '50px';
+                            headWrap.style.padding = '3px 0';
+                        } else if (currentScrollPos < prevScrollPos - buffer) {
+                            menu.classList.remove('hide');
+                            topSize.style.height = '60px';
+                            headWrap.style.padding = '10px 0';
+                        }
+
+                        // Update the scroll position
+                        prevScrollPos = currentScrollPos;
+                    }
+                }
+                    
+
+                function toggleSearchBar() {
+                    if (timkiemBar.classList.contains("hide")) {
+                        timkiemBar.classList.remove('hide');
+                    } else {
+                        timkiemBar.classList.add('hide');
+                    }
+                }
+
+                // Check screen width before attaching event listeners
+                    window.addEventListener('scroll', updateScroll);
+                    openButton.addEventListener('click', toggleSearchBar);
+            });
+
+
+
+                //pop-up header
+                var popupMenu = document.querySelector('.pop-up-header');
+
+                function openPopupMenu() {
+                    popupMenu.style.left = '0';
+                }
+
+                function closePopupMenu() {
+                    popupMenu.style.left = '-100%';
+                }
+            </script>
+        </div>
+    </header>
+
     <div class="dongdautrang">
         <div class="h_dongchu">
             <p>Miễn phí giao hàng toàn quốc cho các đơn hàng từ 1 triệu đồng trở lên (Đã bao gồm VAT).
@@ -26,6 +174,7 @@
             </div>
         </div>
     </div>
+
     <main>
         <section class="dac-den-dang">
             <div class="slideshow">

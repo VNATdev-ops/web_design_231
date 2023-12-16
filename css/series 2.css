@@ -1,14 +1,4 @@
-@font-face {
-    font-family: 'Josefin Sans';
-    src: url('./font/Josefin_Sans/JosefinSans-VariableFont_wght.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Open-Sans';
-    src: url('./font/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf') format('truetype');
-}
 *{
-    
     font-family: Open-Sans;
 }
 body{
@@ -68,7 +58,7 @@ body{
     .container_1{
         margin: 30px 10%;
     }
-    img{
+    main img{
         width: 70%; 
         height: 5cm;
     }
@@ -79,13 +69,13 @@ body{
     .container_1{
         margin: 10px 5%;
     }
-    img{
+    main img{
         width: 100%; 
         height: 7cm;
         
     }
 }
-img{
+main img{
     width: 33%; 
     float: left;
     
@@ -215,7 +205,7 @@ h2{
     font-family: Josefin Sans,sans-serif;
     text-transform: uppercase;
 }
-a{
+main a{
     text-decoration: none;  
     font-size: 1rem;
     font-weight: 500;

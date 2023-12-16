@@ -1,7 +1,7 @@
 *{
     margin: 0;
 }
-body{
+main{
     font-family: Open-Sans;
     font-size: 1rem;
     font-weight: 400;
@@ -209,7 +209,7 @@ textarea:focus{
 .space img, .bar img{
     width: 100%;
 }
-.row{
+main .row{
     display: flex;
     align-items: center;
     padding: 10px 0;
@@ -235,7 +235,7 @@ textarea:focus{
 }
 .button hr{
     width: 20%;
-    height: 2px;
+    height: 3px;
     margin-top: 15px;
     background-color: #4e358a;
     margin-left: 0;

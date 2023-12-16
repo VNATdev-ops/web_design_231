@@ -4,239 +4,389 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lacàph | Câu Chuyện</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="./css/default.css">
+    <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/cauchuyen.css">
 </head>
 <body>
-    <div class="anhcauchuỵen">
-        <h1>CÂU CHUYỆN</h1>
-    </div>
-    <div class="phan2cc">
-        <div class="noidung_phan2cc">
-            <div class="noidung">
-                <div class="anhnoidung2_phan2cc">
-                    <img src="images/cauc-muah/Untitled00126150_1.jpg" alt="">
+    <header>
+        <div class="header-wrap">
+            <div class="row" id="top-nav">
+                <div class="pop-up-checkbox">
+                    <input id="menu-toggle" type="checkbox">
+                    <label for="menu-toggle" onclick="togglePopup()">
+                        <div class='menu-button-container'>
+                            <div class="menu-button"></div>
+                            <div class="menu-button"></div>
+                            <div class="menu-button"></div>
+                        </div>
+                    </label>
                 </div>
-                <div class="dongdanvecc">
-                    <a href="#">CÂU CHUYỆN</a>
+                <div class="logo">
+                    <a href="#"><img src="images/logo.svg" alt=""></a>
                 </div>
-                <div class="noidungtruycap">
-                    <h2 class="tennd">
-                        <a href="#">LUỸ BLEND - HẠT CÀ PHÊ THẤM NHUẦN TINH THẦN VIỆT NAM</a>
-                    </h2>
-                </div>
-                <div class="dongchu_cc">
-                    <p>Hạt cà phê xứng tầm Specialty của Việt Nam đầu tiên tại Lacàph</p>
-                </div>
-                <div class="dongkhampha_cc">
-                    <div class="dongkhampha_1">
-                        <a href="#">Khám Phá</a>
-                    </div>
-                    <hr>
+                <div class="chucnang">
+                    <a href="#"><img src="images/vi_vn.svg" alt=""></a>
+                    <span class="timkiem-button"><i class="fa-solid fa-magnifying-glass" style="color: #4e358a;"></i></span>
+                    <a href="#"><i class="fa-solid fa-user" style="color: #4e358a;"></i></a>
+                    <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #4e358a;"></i></a>
                 </div>
             </div>
-            <div class="noidung">
-                <div class="anhnoidung2_phan2cc">
-                    <img src="images/cauc-muah/VCS_bìa.jpg" alt="">
-                </div>
-                <div class="dongdanvecc">
-                    <a href="#">CÂU CHUYỆN</a>
-                </div>
-                <div class="noidungtruycap">
-                    <h2 class="tennd">
-                        <a href="#">Sứ mệnh chia sẻ câu chuyện cà phê và văn hóa Việt Nam với Coffee Experiences</a>
-                    </h2>
-                </div>
-                <div class="dongchu_cc">
-                    <p>Để lan tỏa cà phê Việt Nam, những lớp học Coffee Experiences là cách Lacàph chia sẻ tâm huyết của mình đối với một sứ mệnh tràn đầy niềm tự hào dân tộc.</p>
-                </div>
-                <div class="dongkhampha_cc">
-                    <div class="dongkhampha_1">
-                        <a href="#">Khám Phá</a>
-                    </div>
-                    <hr>
+
+            <div class="row hide" id="thanh-tim-kiem">
+                <div class="timkiem">
+                    <input type="search" id="" placeholder="Nhập nội dung bạn cần tìm tại đây">
+                    <span><i class="fa-solid fa-magnifying-glass" style="color: white;"></i></span>
                 </div>
             </div>
-            <div class="noidung">
-                <div class="anhnoidung2_phan2cc">
-                    <img src="images/cauc-muah/DSCF7602-Enhanced-NR-compressed.jpg" alt="">
-                </div>
-                <div class="dongdanvecc">
-                    <a href="#">CÂU CHUYỆN</a>
-                </div>
-                <div class="noidungtruycap">
-                    <h2 class="tennd">
-                        <a href="#">KHÁM PHÁ CÀ PHÊ TRỨNG - MỘT THỨC UỐNG ĐỘC ĐÁO CỦA VIỆT NAM</a>
-                    </h2>
-                </div>
-                <div class="dongchu_cc">
-                    <p>MÓN CÀ PHÊ TRỨNG TRỨ DANH CỦA VIỆT NAM</p>
-                </div>
-                <div class="dongkhampha_cc">
-                    <div class="dongkhampha_1">
-                        <a href="#">Khám Phá</a>
+
+            <div class="row" id="menu">
+                <nav>
+                    <ul>
+                        <li><a href="#">Về chúng tôi</a></li>
+                        <li><a href="#">Mua hàng</a></li>
+                        <li><a href="#">Câu chuyện</a></li>
+                        <li><a href="#">Lacàph Bar</a></li>
+                        <li><a href="#">Lacàph Space</a></li>
+                        <li><a href="#">Sách</a></li>
+                        <li><a href="#">Wholesale</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="pop-up-header">
+                <div class="header-container" >
+                    <div class="button-nav">
+                        <div class="close-button" onclick="closePopup()">
+                            <button><img src="./images/close-button.png" alt=""></button>
+                        </div>
+                        <div class="chucnang">
+                            <a href="#"><i class="fa-solid fa-user" style="color: #ffffff;"></i></a>
+                            <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #ffffff;"></i></a>
+                        </div>
                     </div>
-                    <hr>
+                    <div class="timkiem">
+                        <input type="search" id="" placeholder="Nhập nội dung bạn cần tìm tại đây">
+                        <span><i class="fa-solid fa-magnifying-glass" style="color: white;"></i></span>
+                    </div>
+                </div>
+                
+                <div class="menu">
+                    <nav>
+                        <ul>
+                            <li><a href="#">Về chúng tôi</a></li>
+                            <li><a href="#">Mua hàng</a></li>
+                            <li><a href="#">Câu chuyện</a></li>
+                            <li><a href="#">Lacàph Bar</a></li>
+                            <li><a href="#">Lacàph Space</a></li>
+                            <li><a href="#">Sách</a></li>
+                            <li><a href="#">Wholesale</a></li>
+                            <li><a href="#">Liên hệ</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
-            <div class="noidung">
-                <div class="anhnoidung2_phan2cc">
-                    <img src="images/cauc-muah/hinh_nen_gift_box.jpg" alt="">
-                </div>
-                <div class="dongdanvecc">
-                    <a href="#">CÂU CHUYỆN</a>
-                </div>
-                <div class="noidungtruycap">
-                    <h2 class="tennd">
-                        <a href="#">HỘP QUÀ TẾT LACÀPH 2022 - EYE OF THE TIGER</a>
-                    </h2>
-                </div>
-                <div class="dongchu_quatet_cc">
-                    <p>"Rising up, back on street
-                    <br>Did my time, took my chances
-                    </p>
-                </div>
-                <div class="dongkhampha_cc">
-                    <div class="dongkhampha_1">
-                        <a href="#">Khám Phá</a>
-                    </div>
-                    <hr>
-                </div>
-            </div>
-            <div class="noidung">
-                <div class="anhnoidung2_phan2cc">
-                    <img src="images/cauc-muah/bích-01-2.jpg" alt="">
-                </div>
-                <div class="dongdanvecc">
-                    <a href="#">NHỮNG CÂU CHUYỆN TỪ ĐỒN ĐIỀN </a>
-                </div>
-                <div class="noidungtruycap">
-                    <h2 class="tennd">
-                        <a href="#">THƯƠNG NHÂN BÍCH & NGƯỜI PHỤ NỮ LÀM VIỆT VỚI CÀ PHÊ</a>
-                    </h2>
-                </div>
-                <div class="dongchu_cc">
-                    <p>Chị Bích làm việc với các hộ nông dân địa phương để cải thiện chất lượng và nâng cao giá trị hạt cà phê của họ. Chúng tôi sử dụng hạt Arabica Catimor của chị để tạo ra Lacàph Filter Blend & Cold Brew.</p>
-                </div>
-                <div class="dongkhampha_cc">
-                    <div class="dongkhampha_1">
-                        <a href="#">Khám Phá</a>
-                    </div>
-                    <hr>
-                </div>
-            </div>
-            <div class="noidung">
-                <div class="anhnoidung2_phan2cc">
-                    <img src="images/cauc-muah/ngọc-01.jpg" alt="">
-                </div>
-                <div class="dongdanvecc">
-                    <a href="#">NHỮNG CÂU CHUYỆN TỪ ĐỒN ĐIỀN</a>
-                </div>
-                <div class="noidungtruycap">
-                    <h2 class="tennd">
-                        <a href="#">NÔNG DÂN NGỌC & BA THẾ HỆ CANH TÁC CÀ PHÊ</a>
-                    </h2>
-                </div>
-                <div class="dongchu_cc">
-                    <p>Gia đình của Anh Ngọc đã làm nông nghiệp và trồng cà phê hơn 80 năm. Chúng tôi sử dụng Arabica Bourbon & Cascara của anh để tạo ra Lacàph Espresso Blend và Cold Steeped Cascara.</p>
-                </div>
-                <div class="dongkhampha_cc">
-                    <div class="dongkhampha_1">
-                        <a href="#">Khám Phá</a>
-                    </div>
-                    <hr>
-                </div>
-            </div>
-            <div class="noidung">
-                <div class="anhnoidung2_phan2cc">
-                    <img src="images/cauc-muah/phú-01.jpg" alt="">
-                </div>
-                <div class="dongdanvecc">
-                    <a href="#">NHỮNG CÂU CHUYỆN TỪ ĐỒN ĐIỀN</a>
-                </div>
-                <div class="noidungtruycap">
-                    <h2 class="tennd">
-                        <a href="#">NÔNG DÂN PHÚ & ROBUSTA VIỆT NAM HẢO HẠNG</a>
-                    </h2>
-                </div>
-                <div class="dongchu_cc">
-                    <p>Phú đã thay đổi cách canh tác cà phê Robusta của mình và giờ đây hạt cà phê của anh là một trong những loại ngon nhất ở Việt Nam. Chúng tôi sử dụng Robusta của anh để tạo ra Lacàph Espresso & Phin blends. Nhờ sự can đảm và niềm tin vững chắc, Phú hiện đã trồng được một số loại Robusta ngon nhất trên toàn Việt Nam. Mọi việc ban đầu diễn ra không suôn sẻ nhưng với sự chăm chỉ và quyết tâm, cuối cùng anh đã đạt được ước mơ của mình.</p>
-                </div>
-                <div class="dongkhampha_cc">
-                    <div class="dongkhampha_1">
-                        <a href="#">Khám Phá</a>
-                    </div>
-                    <hr>
-                </div>
-            </div>
-            <div class="noidung">
-                <div class="anhnoidung2_phan2cc">
-                    <img src="images/cauc-muah/LS2_WebBanner-02.jpg" alt="">
-                </div>
-                <div class="dongdanvecc">
-                    <a href="#">LACÀPH LAB SERIES </a>
-                </div>
-                <div class="noidungtruycap">
-                    <h2 class="tennd">
-                        <a href="#">LACÀPH LAB SERIES 2</a>
-                    </h2>
-                </div>
-                <div class="dongchu_cc">
-                    <p>Chuỗi hành trình khám phá Lacàph Lab Series chính thức trở lại với sản phẩm cà phê Robusta Sẻ nguyên trái từ nông trại của Anh Phú lên men với bia Tiramisu Stout của Heart of Darkess.</p>
-                </div>
-                <div class="dongkhampha_cc">
-                    <div class="dongkhampha_1">
-                        <a href="#">Khám Phá</a>
-                    </div>
-                    <hr>
-                </div>
-            </div>
-            <div class="noidung">
-                <div class="anhnoidung2_phan2cc">
-                    <img src="images/cauc-muah/hod2-01.jpg" alt="">
-                </div>
-                <div class="dongdanvecc">
-                    <a href="#">BIA FERMENTED COFFEE</a>
-                </div>
-                <div class="noidungtruycap">
-                    <h2 class="tennd">
-                        <a href="#">BIA FERMENTED COFFEE</a>
-                    </h2>
-                </div>
-                <div class="dongchu_cc">
-                    <p>Với dòng sản phẩm đầu tiên thuộc Lacàph Lab Series I, chúng tôi hợp tác với Heart of Darkness Brewery mang đến cho bạn một loại cà phê được lên men với hỗn hợp BiA thủ công all-malt craft lager. Đồng hành cùng sự kết hợp này là Anh Ngọc, người đã nuôi trồng nên những hạt Arabica ngon nhất Việt Nam. Kết quả cho ra một dòng cà phê độc đáo mang hương vị hài hoà và khó phai của vải, mơ và đào.</p>
-                </div>
-                <div class="dongkhampha_cc">
-                    <div class="dongkhampha_1">
-                        <a href="#">Khám Phá</a>
-                    </div>
-                    <hr>
-                </div>
-            </div>
-            <div class="noidung">
-                <div class="anhnoidung2_phan2cc">
-                    <img src="images/cauc-muah/brand-01.jpg" alt="">
-                </div>
-                <div class="dongdanvecc">
-                    <a href="#">CÂU CHUYỆN THƯƠNG HIỆU</a>
-                </div>
-                <div class="noidungtruycap">
-                    <h2 class="tennd">
-                        <a href="#">COFFEES FOR THE CURIOUS</a>
-                    </h2>
-                </div>
-                <div class="dongchu_cc">
-                    <p>Cùng chúng tôi tìm hiểu về những anh hùng thầm lặng, sứ mệnh, tầm nhìn và tham gia vào cuộc hành trình chia sẻ Cà phê Việt và Văn hoá Việt với những người hiếu kì ở khắp mọi nơi.</p>
-                </div>
-                <div class="dongkhampha_cc">
-                    <div class="dongkhampha_1">
-                        <a href="#">Khám Phá</a>
-                    </div>
-                    <hr>
-                </div>
-            </div>
-        
+
+            
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                var openButton = document.querySelector('.timkiem-button');
+                var timkiemBar = document.querySelector('#thanh-tim-kiem');
+                var menu = document.querySelector('#menu');
+                var headWrap = document.querySelector('.header-wrap');
+                var topSize = document.querySelector('#top-nav');
+                var prevScrollPos = window.pageYOffset;
+                var buffer = 10; // Adjust the buffer as needed
+
+                function updateScroll() {
+                    let screenWidth = window.innerWidth;
+                    var currentScrollPos = window.pageYOffset;
+
+                    
+                    if (window.innerWidth > 1200) {
+                        if (timkiemBar && currentScrollPos < buffer * 2) {
+                            return;
+                        }
+
+                        // Check the scroll direction and toggle the 'hide' class for the menu
+                        if (currentScrollPos > prevScrollPos + buffer) {
+                            menu.classList.add('hide');
+                            topSize.style.height = '50px';
+                            headWrap.style.padding = '3px 0';
+                        } else if (currentScrollPos < prevScrollPos - buffer) {
+                            menu.classList.remove('hide');
+                            topSize.style.height = '60px';
+                            headWrap.style.padding = '10px 0';
+                        }
+
+                        // Update the scroll position
+                        prevScrollPos = currentScrollPos;
+                    }
+                }
+                    
+
+                function toggleSearchBar() {
+                    if (timkiemBar.classList.contains("hide")) {
+                        timkiemBar.classList.remove('hide');
+                    } else {
+                        timkiemBar.classList.add('hide');
+                    }
+                }
+
+                // Check screen width before attaching event listeners
+                    window.addEventListener('scroll', updateScroll);
+                    openButton.addEventListener('click', toggleSearchBar);
+            });
+
+
+
+                //pop-up header
+                var popupContent = document.querySelector('.pop-up-header');
+
+                function togglePopup() {
+                    popupContent.style.left = '0';
+                }
+
+                function closePopup() {
+                    popupContent.style.left = '-100%';
+                }
+            </script>
         </div>
-    </div>
+    </header>
+    <main>
+        <div class="anhcauchuỵen">
+            <h1>CÂU CHUYỆN</h1>
+        </div>
+        <div class="phan2cc">
+            <div class="noidung_phan2cc">
+                <div class="noidung">
+                    <div class="anhnoidung2_phan2cc">
+                        <img src="images/cauc-muah/Untitled00126150_1.jpg" alt="">
+                    </div>
+                    <div class="dongdanvecc">
+                        <a href="#">CÂU CHUYỆN</a>
+                    </div>
+                    <div class="noidungtruycap">
+                        <h2 class="tennd">
+                            <a href="#">LUỸ BLEND - HẠT CÀ PHÊ THẤM NHUẦN TINH THẦN VIỆT NAM</a>
+                        </h2>
+                    </div>
+                    <div class="dongchu_cc">
+                        <p>Hạt cà phê xứng tầm Specialty của Việt Nam đầu tiên tại Lacàph</p>
+                    </div>
+                    <div class="dongkhampha_cc">
+                        <div class="dongkhampha_1">
+                            <a href="#">Khám Phá</a>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+                <div class="noidung">
+                    <div class="anhnoidung2_phan2cc">
+                        <img src="images/cauc-muah/VCS_bìa.jpg" alt="">
+                    </div>
+                    <div class="dongdanvecc">
+                        <a href="#">CÂU CHUYỆN</a>
+                    </div>
+                    <div class="noidungtruycap">
+                        <h2 class="tennd">
+                            <a href="#">Sứ mệnh chia sẻ câu chuyện cà phê và văn hóa Việt Nam với Coffee Experiences</a>
+                        </h2>
+                    </div>
+                    <div class="dongchu_cc">
+                        <p>Để lan tỏa cà phê Việt Nam, những lớp học Coffee Experiences là cách Lacàph chia sẻ tâm huyết của mình đối với một sứ mệnh tràn đầy niềm tự hào dân tộc.</p>
+                    </div>
+                    <div class="dongkhampha_cc">
+                        <div class="dongkhampha_1">
+                            <a href="#">Khám Phá</a>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+                <div class="noidung">
+                    <div class="anhnoidung2_phan2cc">
+                        <img src="images/cauc-muah/DSCF7602-Enhanced-NR-compressed.jpg" alt="">
+                    </div>
+                    <div class="dongdanvecc">
+                        <a href="#">CÂU CHUYỆN</a>
+                    </div>
+                    <div class="noidungtruycap">
+                        <h2 class="tennd">
+                            <a href="#">KHÁM PHÁ CÀ PHÊ TRỨNG - MỘT THỨC UỐNG ĐỘC ĐÁO CỦA VIỆT NAM</a>
+                        </h2>
+                    </div>
+                    <div class="dongchu_cc">
+                        <p>MÓN CÀ PHÊ TRỨNG TRỨ DANH CỦA VIỆT NAM</p>
+                    </div>
+                    <div class="dongkhampha_cc">
+                        <div class="dongkhampha_1">
+                            <a href="#">Khám Phá</a>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+                <div class="noidung">
+                    <div class="anhnoidung2_phan2cc">
+                        <img src="images/cauc-muah/hinh_nen_gift_box.jpg" alt="">
+                    </div>
+                    <div class="dongdanvecc">
+                        <a href="#">CÂU CHUYỆN</a>
+                    </div>
+                    <div class="noidungtruycap">
+                        <h2 class="tennd">
+                            <a href="#">HỘP QUÀ TẾT LACÀPH 2022 - EYE OF THE TIGER</a>
+                        </h2>
+                    </div>
+                    <div class="dongchu_quatet_cc">
+                        <p>"Rising up, back on street
+                        <br>Did my time, took my chances
+                        </p>
+                    </div>
+                    <div class="dongkhampha_cc">
+                        <div class="dongkhampha_1">
+                            <a href="#">Khám Phá</a>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+                <div class="noidung">
+                    <div class="anhnoidung2_phan2cc">
+                        <img src="images/cauc-muah/bích-01-2.jpg" alt="">
+                    </div>
+                    <div class="dongdanvecc">
+                        <a href="#">NHỮNG CÂU CHUYỆN TỪ ĐỒN ĐIỀN </a>
+                    </div>
+                    <div class="noidungtruycap">
+                        <h2 class="tennd">
+                            <a href="#">THƯƠNG NHÂN BÍCH & NGƯỜI PHỤ NỮ LÀM VIỆT VỚI CÀ PHÊ</a>
+                        </h2>
+                    </div>
+                    <div class="dongchu_cc">
+                        <p>Chị Bích làm việc với các hộ nông dân địa phương để cải thiện chất lượng và nâng cao giá trị hạt cà phê của họ. Chúng tôi sử dụng hạt Arabica Catimor của chị để tạo ra Lacàph Filter Blend & Cold Brew.</p>
+                    </div>
+                    <div class="dongkhampha_cc">
+                        <div class="dongkhampha_1">
+                            <a href="#">Khám Phá</a>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+                <div class="noidung">
+                    <div class="anhnoidung2_phan2cc">
+                        <img src="images/cauc-muah/ngọc-01.jpg" alt="">
+                    </div>
+                    <div class="dongdanvecc">
+                        <a href="#">NHỮNG CÂU CHUYỆN TỪ ĐỒN ĐIỀN</a>
+                    </div>
+                    <div class="noidungtruycap">
+                        <h2 class="tennd">
+                            <a href="#">NÔNG DÂN NGỌC & BA THẾ HỆ CANH TÁC CÀ PHÊ</a>
+                        </h2>
+                    </div>
+                    <div class="dongchu_cc">
+                        <p>Gia đình của Anh Ngọc đã làm nông nghiệp và trồng cà phê hơn 80 năm. Chúng tôi sử dụng Arabica Bourbon & Cascara của anh để tạo ra Lacàph Espresso Blend và Cold Steeped Cascara.</p>
+                    </div>
+                    <div class="dongkhampha_cc">
+                        <div class="dongkhampha_1">
+                            <a href="#">Khám Phá</a>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+                <div class="noidung">
+                    <div class="anhnoidung2_phan2cc">
+                        <img src="images/cauc-muah/phú-01.jpg" alt="">
+                    </div>
+                    <div class="dongdanvecc">
+                        <a href="#">NHỮNG CÂU CHUYỆN TỪ ĐỒN ĐIỀN</a>
+                    </div>
+                    <div class="noidungtruycap">
+                        <h2 class="tennd">
+                            <a href="#">NÔNG DÂN PHÚ & ROBUSTA VIỆT NAM HẢO HẠNG</a>
+                        </h2>
+                    </div>
+                    <div class="dongchu_cc">
+                        <p>Phú đã thay đổi cách canh tác cà phê Robusta của mình và giờ đây hạt cà phê của anh là một trong những loại ngon nhất ở Việt Nam. Chúng tôi sử dụng Robusta của anh để tạo ra Lacàph Espresso & Phin blends. Nhờ sự can đảm và niềm tin vững chắc, Phú hiện đã trồng được một số loại Robusta ngon nhất trên toàn Việt Nam. Mọi việc ban đầu diễn ra không suôn sẻ nhưng với sự chăm chỉ và quyết tâm, cuối cùng anh đã đạt được ước mơ của mình.</p>
+                    </div>
+                    <div class="dongkhampha_cc">
+                        <div class="dongkhampha_1">
+                            <a href="#">Khám Phá</a>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+                <div class="noidung">
+                    <div class="anhnoidung2_phan2cc">
+                        <img src="images/cauc-muah/LS2_WebBanner-02.jpg" alt="">
+                    </div>
+                    <div class="dongdanvecc">
+                        <a href="#">LACÀPH LAB SERIES </a>
+                    </div>
+                    <div class="noidungtruycap">
+                        <h2 class="tennd">
+                            <a href="#">LACÀPH LAB SERIES 2</a>
+                        </h2>
+                    </div>
+                    <div class="dongchu_cc">
+                        <p>Chuỗi hành trình khám phá Lacàph Lab Series chính thức trở lại với sản phẩm cà phê Robusta Sẻ nguyên trái từ nông trại của Anh Phú lên men với bia Tiramisu Stout của Heart of Darkess.</p>
+                    </div>
+                    <div class="dongkhampha_cc">
+                        <div class="dongkhampha_1">
+                            <a href="#">Khám Phá</a>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+                <div class="noidung">
+                    <div class="anhnoidung2_phan2cc">
+                        <img src="images/cauc-muah/hod2-01.jpg" alt="">
+                    </div>
+                    <div class="dongdanvecc">
+                        <a href="#">BIA FERMENTED COFFEE</a>
+                    </div>
+                    <div class="noidungtruycap">
+                        <h2 class="tennd">
+                            <a href="#">BIA FERMENTED COFFEE</a>
+                        </h2>
+                    </div>
+                    <div class="dongchu_cc">
+                        <p>Với dòng sản phẩm đầu tiên thuộc Lacàph Lab Series I, chúng tôi hợp tác với Heart of Darkness Brewery mang đến cho bạn một loại cà phê được lên men với hỗn hợp BiA thủ công all-malt craft lager. Đồng hành cùng sự kết hợp này là Anh Ngọc, người đã nuôi trồng nên những hạt Arabica ngon nhất Việt Nam. Kết quả cho ra một dòng cà phê độc đáo mang hương vị hài hoà và khó phai của vải, mơ và đào.</p>
+                    </div>
+                    <div class="dongkhampha_cc">
+                        <div class="dongkhampha_1">
+                            <a href="#">Khám Phá</a>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+                <div class="noidung">
+                    <div class="anhnoidung2_phan2cc">
+                        <img src="images/cauc-muah/brand-01.jpg" alt="">
+                    </div>
+                    <div class="dongdanvecc">
+                        <a href="#">CÂU CHUYỆN THƯƠNG HIỆU</a>
+                    </div>
+                    <div class="noidungtruycap">
+                        <h2 class="tennd">
+                            <a href="#">COFFEES FOR THE CURIOUS</a>
+                        </h2>
+                    </div>
+                    <div class="dongchu_cc">
+                        <p>Cùng chúng tôi tìm hiểu về những anh hùng thầm lặng, sứ mệnh, tầm nhìn và tham gia vào cuộc hành trình chia sẻ Cà phê Việt và Văn hoá Việt với những người hiếu kì ở khắp mọi nơi.</p>
+                    </div>
+                    <div class="dongkhampha_cc">
+                        <div class="dongkhampha_1">
+                            <a href="#">Khám Phá</a>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </main>
+    
 </body>
 </html>
