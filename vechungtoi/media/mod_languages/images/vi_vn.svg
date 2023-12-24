@@ -1,0 +1,12 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 86" width="129" height="86">
+	<title>vi_vn-svg-svg</title>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #4d3f98 } 
+	</style>
+	<g id="Layer_2">
+		<g id="Layer_1-2">
+			<path id="Layer" fill-rule="evenodd" class="shp0" d="M130 87L0 87L0 0L130 0L130 87ZM72.72 46.93L85.19 37.75L69.77 37.75L65.01 22.98L60.23 37.75L44.81 37.75L57.29 46.93L52.52 61.67L65.01 52.55L77.48 61.67L72.72 46.93Z" />
+		</g>
+	</g>
+</svg>
