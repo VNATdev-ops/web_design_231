@@ -133,28 +133,27 @@
                         }
                     }
 
-                    // Function to resize menu based on screen width
+                    //Menu size
                     function updateMenuSize() {
-                        let screenWidth = window.innerWidth;
-                        let menu = document.querySelector('#menu');
+                                let screenWidth = window.innerWidth;
+                                let menu = document.querySelector('#menu');
 
-                        if (screenWidth <= 1200) {
-                            menu.classList.add('mobile-view'); // Add a class for mobile view
-                        } else {
-                            menu.classList.remove('mobile-view');
-                        }
-                    }
+                                if (screenWidth <= 1200) {
+                                    menu.style.width = '100%'; 
+                                } else {
+                                    menu.style.width = 'auto'; 
+                                }
+                            }
+
+                    updateMenuSize();
+                    window.addEventListener('resize', updateMenuSize);
 
                     // Check screen width before attaching event listeners
                     window.addEventListener('scroll', updateScroll);
                     openButton.addEventListener('click', toggleSearchBar);
 
-                    // Call the function on page load
-                    updateMenuSize();
-
-                    // Call the function on window resize
-                    window.addEventListener('resize', updateMenuSize);
-
+                });
+                
                     //pop-up header
                     var popupContent = document.querySelector('.pop-up-header');
 
@@ -165,7 +164,6 @@
                     function closePopup() {
                         popupContent.style.left = '-100%';
                     }
-                });
 
             </script>
         </div>

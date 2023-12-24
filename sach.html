@@ -93,66 +93,80 @@
             
             <script>
                 document.addEventListener('DOMContentLoaded', function () {
-                var openButton = document.querySelector('.timkiem-button');
-                var timkiemBar = document.querySelector('#thanh-tim-kiem');
-                var menu = document.querySelector('#menu');
-                var headWrap = document.querySelector('.header-wrap');
-                var topSize = document.querySelector('#top-nav');
-                var prevScrollPos = window.pageYOffset;
-                var buffer = 10; // Adjust the buffer as needed
+                    var openButton = document.querySelector('.timkiem-button');
+                    var timkiemBar = document.querySelector('#thanh-tim-kiem');
+                    var menu = document.querySelector('#menu');
+                    var headWrap = document.querySelector('.header-wrap');
+                    var topSize = document.querySelector('#top-nav');
+                    var prevScrollPos = window.pageYOffset;
+                    var buffer = 10; // Adjust the buffer as needed
 
-                function updateScroll() {
-                    let screenWidth = window.innerWidth;
-                    var currentScrollPos = window.pageYOffset;
+                    function updateScroll() {
+                        let screenWidth = window.innerWidth;
+                        var currentScrollPos = window.pageYOffset;
 
-                    
-                    if (window.innerWidth > 1200) {
-                        if (timkiemBar && currentScrollPos < buffer * 2) {
-                            return;
+                        
+                        if (window.innerWidth > 1200) {
+                            if (timkiemBar && currentScrollPos < buffer * 2) {
+                                return;
+                            }
+
+                            // Check the scroll direction and toggle the 'hide' class for the menu
+                            if (currentScrollPos > prevScrollPos + buffer) {
+                                menu.classList.add('hide');
+                                topSize.style.height = '50px';
+                                headWrap.style.padding = '3px 0';
+                            } else if (currentScrollPos < prevScrollPos - buffer) {
+                                menu.classList.remove('hide');
+                                topSize.style.height = '60px';
+                                headWrap.style.padding = '10px 0';
+                            }
+
+                            // Update the scroll position
+                            prevScrollPos = currentScrollPos;
                         }
+                    }
+                        
 
-                        // Check the scroll direction and toggle the 'hide' class for the menu
-                        if (currentScrollPos > prevScrollPos + buffer) {
-                            menu.classList.add('hide');
-                            topSize.style.height = '50px';
-                            headWrap.style.padding = '3px 0';
-                        } else if (currentScrollPos < prevScrollPos - buffer) {
-                            menu.classList.remove('hide');
-                            topSize.style.height = '60px';
-                            headWrap.style.padding = '10px 0';
+                    function toggleSearchBar() {
+                        if (timkiemBar.classList.contains("hide")) {
+                            timkiemBar.classList.remove('hide');
+                        } else {
+                            timkiemBar.classList.add('hide');
                         }
-
-                        // Update the scroll position
-                        prevScrollPos = currentScrollPos;
                     }
-                }
-                    
 
-                function toggleSearchBar() {
-                    if (timkiemBar.classList.contains("hide")) {
-                        timkiemBar.classList.remove('hide');
-                    } else {
-                        timkiemBar.classList.add('hide');
+                    // Check screen width before attaching event listeners
+                        window.addEventListener('scroll', updateScroll);
+                        openButton.addEventListener('click', toggleSearchBar);
+
+                    //Menu size
+                    function updateMenuSize() {
+                                    let screenWidth = window.innerWidth;
+                                    let menu = document.querySelector('#menu');
+
+                                    if (screenWidth <= 1200) {
+                                        menu.style.width = '100%'; 
+                                    } else {
+                                        menu.style.width = 'auto'; 
+                                    }
+                                }
+
+                        updateMenuSize();
+                        window.addEventListener('resize', updateMenuSize);
+
+                    });
+
+                    //pop-up header
+                    var popupMenu = document.querySelector('.pop-up-header');
+
+                    function openPopupMenu() {
+                        popupMenu.style.left = '0';
                     }
-                }
 
-                // Check screen width before attaching event listeners
-                    window.addEventListener('scroll', updateScroll);
-                    openButton.addEventListener('click', toggleSearchBar);
-            });
-
-
-
-                //pop-up header
-                var popupMenu = document.querySelector('.pop-up-header');
-
-                function openPopupMenu() {
-                    popupMenu.style.left = '0';
-                }
-
-                function closePopupMenu() {
-                    popupMenu.style.left = '-100%';
-                }
+                    function closePopupMenu() {
+                        popupMenu.style.left = '-100%';
+                    }
             </script>
         </div>
     </header>
