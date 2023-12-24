@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lacàph | Coffees for the curious</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -11,205 +11,171 @@
     <link rel="stylesheet" href="./css/default.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.7.0/remixicon.css">
-    <link rel="stylesheet" href="./css/header-tuan.css">
+    <link rel="stylesheet" href="./css/header-tuan2.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./css/default.css">
 </head>
 <body>
+  <header>
+    <div class="header-wrap">
+        <div class="row-tuan" id="top-nav">
+            <div class="pop-up-checkbox">
+                <input id="menu-toggle" type="checkbox">
+                <label for="menu-toggle" onclick="togglePopup()">
+                    <div class='menu-button-container'>
+                        <div class="menu-button"></div>
+                        <div class="menu-button"></div>
+                        <div class="menu-button"></div>
+                    </div>
+                </label>
+            </div>
+            <div class="logo">
+                <a href="#"><img src="images/logo.svg" alt=""></a>
+            </div>
+            <div class="chucnang">
+                <a href="#"><img src="images/vi_vn.svg" alt=""></a>
+                <span class="timkiem-button"><i class="fa-solid fa-magnifying-glass" style="color: #4e358a;"></i></span>
+                <a href="#"><i class="fa-solid fa-user" style="color: #4e358a;"></i></a>
+                <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #4e358a;"></i></a>
+            </div>
+        </div>
 
+        <div class="row-tuan hide" id="thanh-tim-kiem">
+            <div class="timkiem">
+                <input type="search" id="" placeholder="Nhập nội dung bạn cần tìm tại đây">
+                <span><i class="fa-solid fa-magnifying-glass" style="color: white;"></i></span>
+            </div>
+        </div>
 
-  <!-- header  -->
-  <div class="container container-tuan " style="background-color: #fffced;"> 
-    <div class="row">
-      <div class="col">
-        <div class="header-wrap">
-          <div class="row-tuan" id="top-nav-tuan">
-              <div class="pop-up-checkbox-tuan">
-                  <input id="menu-toggle-tuan" type="checkbox">
-                  <label for="menu-toggle-tuan" onclick="togglePopup()">
-                      <div class='menu-button-container'>
-                          <div class="menu-button"></div>
-                          <div class="menu-button"></div>
-                          <div class="menu-button"></div>
-                      </div>
-                  </label>
-              </div>
-              <div class="logo-tuan">
-                  <a href="#"><img src="images/logo.svg" alt=""></a>
-              </div>
-              <div class="chucnang">
-                  <a href="#"><img src="images/vi_vn.svg" alt=""></a>
-                  <span class="timkiem-button"><i class="fa-solid fa-magnifying-glass" style="color: #4e358a;"></i></span>
-                  <a href="#"><i class="fa-solid fa-user" style="color: #4e358a;"></i></a>
-                  <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #4e358a;"></i></a>
-              </div>
-          </div>
-    
-          <div class="row-tuan hide" id="thanh-tim-kiem">
-              <div class="timkiem">
-                  <input type="search" id="" placeholder="Nhập nội dung bạn cần tìm tại đây">
-                  <span><i class="fa-solid fa-magnifying-glass" style="color: white;"></i></span>
-              </div>
-          </div>
-    
-          <div class="row-tuan" id="menu">
-              <nav>
-                  <ul>
-                      <li><a href="#">Về chúng tôi</a></li>
-                      <li><a href="#">Mua hàng</a></li>
-                      <li><a href="#">Câu chuyện</a></li>
-                      <li><a href="#">Lacàph Bar</a></li>
-                      <li><a href="#">Lacàph Space</a></li>
-                      <li><a href="#">Sách</a></li>
-                      <li><a href="#">Wholesale</a></li>
-                      <li><a href="#">Liên hệ</a></li>
-                  </ul>
-              </nav>
-          </div>
-    
-          <div class="pop-up-header">
-              <div class="header-container" >
-                  <div class="button-nav">
-                      <div class="close-button" onclick="closePopup()">
-                          <button><img src="./images/close-button.png" alt=""></button>
-                      </div>
-                      <div class="chucnang">
-                          <a href="#"><i class="fa-solid fa-user" style="color: #ffffff;"></i></a>
-                          <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #ffffff;"></i></a>
-                      </div>
-                  </div>
-                  <div class="timkiem">
-                      <input type="search" id="" placeholder="Nhập nội dung bạn cần tìm tại đây">
-                      <span><i class="fa-solid fa-magnifying-glass" style="color: white;"></i></span>
-                  </div>
-              </div>
-              
-              <div class="menu">
-                  <nav>
-                      <ul>
-                          <li><a href="#">Về chúng tôi</a></li>
-                          <li><a href="#">Mua hàng</a></li>
-                          <li><a href="#">Câu chuyện</a></li>
-                          <li><a href="#">Lacàph Bar</a></li>
-                          <li><a href="#">Lacàph Space</a></li>
-                          <li><a href="#">Sách</a></li>
-                          <li><a href="#">Wholesale</a></li>
-                          <li><a href="#">Liên hệ</a></li>
-                      </ul>
-                  </nav>
-              </div>
-          </div>
-    
-          
-          <script>
-              document.addEventListener('DOMContentLoaded', function () {
-                  var openButton = document.querySelector('.timkiem-button');
-                  var timkiemBar = document.querySelector('#thanh-tim-kiem');
-                  var menu = document.querySelector('#menu');
-                  var headWrap = document.querySelector('.header-wrap');
-                  var topSize = document.querySelector('#top-nav-tuan');
-                  var prevScrollPos = window.pageYOffset;
-                  var buffer = 10; // Adjust the buffer as needed
-    
-                  function updateScroll() {
-                      let screenWidth = window.innerWidth;
-                      var currentScrollPos = window.pageYOffset;
-    
-                      if (screenWidth > 1200) {
-                          if (timkiemBar && currentScrollPos < buffer * 2) {
-                              return;
-                          }
-    
-                          // Check the scroll direction and toggle the 'hide' class for the menu
-                          if (currentScrollPos > prevScrollPos + buffer) {
-                              menu.classList.add('hide');
-                              topSize.style.height = '50px';
-                              headWrap.style.padding = '3px 0';
-                          } else if (currentScrollPos < prevScrollPos - buffer) {
-                              menu.classList.remove('hide');
-                              topSize.style.height = '60px';
-                              headWrap.style.padding = '10px 0';
-                          }
-    
-                          // Update the scroll position
-                          prevScrollPos = currentScrollPos;
-                      }
-                  }
-    
-                  function toggleSearchBar() {
-                      if (timkiemBar.classList.contains("hide")) {
-                          timkiemBar.classList.remove('hide');
-                      } else {
-                          timkiemBar.classList.add('hide');
-                      }
-                  }
-    
-                  // Function to resize menu based on screen width
-                  function updateMenuSize() {
-                      let screenWidth = window.innerWidth;
-                      let menu = document.querySelector('#menu');
-    
-                      if (screenWidth <= 1200) {
-                          menu.classList.add('mobile-view'); // Add a class for mobile view
-                      } else {
-                          menu.classList.remove('mobile-view');
-                      }
-                  }
-    
-                  // Check screen width before attaching event listeners
-                  window.addEventListener('scroll', updateScroll);
-                  openButton.addEventListener('click', toggleSearchBar);
-    
-                  // Call the function on page load
-                  updateMenuSize();
-    
-                  // Call the function on window resize
-                  window.addEventListener('resize', updateMenuSize);
-    
-                  //pop-up header
-                  var popupContent = document.querySelector('.pop-up-header');
-    
-                  function togglePopup() {
-                      popupContent.style.left = '0';
-                  }
-    
-                  function closePopup() {
-                      popupContent.style.left = '-100%';
-                  }
-              });
-    
-          </script>
-      </div>
+        <div class="row-tuan" id="menu">
+            <nav>
+                <ul>
+                    <li><a href="#">Về chúng tôi</a></li>
+                    <li><a href="#">Mua hàng</a></li>
+                    <li><a href="#">Câu chuyện</a></li>
+                    <li><a href="#">Lacàph Bar</a></li>
+                    <li><a href="#">Lacàph Space</a></li>
+                    <li><a href="#">Sách</a></li>
+                    <li><a href="#">Wholesale</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                </ul>
+            </nav>
+        </div>
 
-      </div>
+        <div class="pop-up-header">
+            <div class="header-container" >
+                <div class="button-nav">
+                    <div class="close-button" onclick="closePopup()">
+                        <button><img src="./images/close-button.png" alt=""></button>
+                    </div>
+                    <div class="chucnang">
+                        <a href="#"><i class="fa-solid fa-user" style="color: #ffffff;"></i></a>
+                        <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #ffffff;"></i></a>
+                    </div>
+                </div>
+                <div class="timkiem">
+                    <input type="search" id="" placeholder="Nhập nội dung bạn cần tìm tại đây">
+                    <span><i class="fa-solid fa-magnifying-glass" style="color: white;"></i></span>
+                </div>
+            </div>
+            
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="#">Về chúng tôi</a></li>
+                        <li><a href="#">Mua hàng</a></li>
+                        <li><a href="#">Câu chuyện</a></li>
+                        <li><a href="#">Lacàph Bar</a></li>
+                        <li><a href="#">Lacàph Space</a></li>
+                        <li><a href="#">Sách</a></li>
+                        <li><a href="#">Wholesale</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var openButton = document.querySelector('.timkiem-button');
+                var timkiemBar = document.querySelector('#thanh-tim-kiem');
+                var menu = document.querySelector('#menu');
+                var headWrap = document.querySelector('.header-wrap');
+                var topSize = document.querySelector('#top-nav');
+                var prevScrollPos = window.pageYOffset;
+                var buffer = 10; // Adjust the buffer as needed
+
+                function updateScroll() {
+                    let screenWidth = window.innerWidth;
+                    var currentScrollPos = window.pageYOffset;
+
+                    if (screenWidth > 1200) {
+                        if (timkiemBar && currentScrollPos < buffer * 2) {
+                            return;
+                        }
+
+                        // Check the scroll direction and toggle the 'hide' class for the menu
+                        if (currentScrollPos > prevScrollPos + buffer) {
+                            menu.classList.add('hide');
+                            topSize.style.height = '50px';
+                            headWrap.style.padding = '3px 0';
+                        } else if (currentScrollPos < prevScrollPos - buffer) {
+                            menu.classList.remove('hide');
+                            topSize.style.height = '60px';
+                            headWrap.style.padding = '10px 0';
+                        }
+
+                        // Update the scroll position
+                        prevScrollPos = currentScrollPos;
+                    }
+                }
+
+                function toggleSearchBar() {
+                    if (timkiemBar.classList.contains("hide")) {
+                        timkiemBar.classList.remove('hide');
+                    } else {
+                        timkiemBar.classList.add('hide');
+                    }
+                }
+
+                //Menu size
+                function updateMenuSize() {
+                    let screenWidth = window.innerWidth;
+                    let menu = document.querySelector('#menu');
+
+                    if (screenWidth <= 1200) {
+                        menu.style.width = '100%'; 
+                    } else {
+                        menu.style.width = 'auto'; 
+                    }
+                }
+
+                updateMenuSize();
+                window.addEventListener('resize', updateMenuSize);
+
+                // Check screen width before attaching event listeners
+                window.addEventListener('scroll', updateScroll);
+                openButton.addEventListener('click', toggleSearchBar);
+            });
+
+                //pop-up header
+                var popupContent = document.querySelector('.pop-up-header');
+
+                function togglePopup() {
+                    popupContent.style.left = '0';
+                }
+
+                function closePopup() {
+                    popupContent.style.left = '-100%';
+                }
+
+        </script>
     </div>
-
-  </div>
+</header>
  <div class="container">
       <div class="row">
         <div class="col">
-
-          <!-- <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false" data-bs-interval="false">
-            <div class="carousel-inner">
-              <div class="carousel-item">
-                <img src="images.tuan/1.webp" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="images.tuan/baner_web.webp" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="images.tuan/1.webp" class="d-block w-100" alt="...">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div> -->
 
           <div id="carouselExampleIndicators" class="carousel slide">
             <div class="carousel-indicators">
@@ -219,13 +185,14 @@
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="images.tuan/1.webp" class="d-block w-100" alt="...">
+                <img src="images.tuan/1.webp" class="d-block w-100 object-fit-none border rounded" alt="...">
+
               </div>
               <div class="carousel-item">
                 <img src="images.tuan/baner_web.webp" class="d-block w-100" alt="...">
               </div>
               <div class="carousel-item">
-                <img src="images.tuan/1.webp" class="d-block w-100" alt="...">
+                <img src="images.tuan/maxresdefault.webp" class="d-block w-100" alt="...">
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -354,6 +321,172 @@
             <div class="border-bottom"></div>
             <div class="product-swiper">
                 <h2 style="padding: 0 10px;">SẢN PHẨM CỦA CHÚNG TÔI</h2>
+                <!-- Swiper container with product slides -->
+                <div class="swiper-container">
+                  <div class="swiper-wrapper">
+                      <!-- Product 1 -->
+                      <div class="mod_redshop_product swiper-slide swiper-slide-active" data-swiper-slide-index="0" onclick="togglePopup(1)">
+                          <!-- Product content for slide 1 -->
+                          <div class="mod_redshop_products_image">
+                              <img src="./images/sach/product/cold-brew-1.png" alt="">
+                          </div>
+                          <h3 class="mod_redshop_products_title">Lacàph Signature Cold Brew</h3>
+                      </div>
+
+                      <!-- Product 2 -->
+                      <div class="mod_redshop_product swiper-slide swiper-slide-next" data-swiper-slide-index="1" onclick="togglePopup(2)">
+                          <!-- Product content for slide 2 -->
+                          <div class="mod_redshop_products_image">
+                              <img src="./images/sach/product/products-02.png" alt="">
+                          </div>
+                          <h3 class="mod_redshop_products_title">Lacàph Espresso Blend</h3>
+                      </div>
+
+                      <!-- Product 3 -->
+                      <div class="mod_redshop_product swiper-slide" data-swiper-slide-index="2" onclick="togglePopup(3)">
+                          <!-- Product content for slide 3 -->
+                          <div class="mod_redshop_products_image">
+                              <img src="./images/sach/product/products-01.png" alt="">
+                          </div>
+                          <h3 class="mod_redshop_products_title">Lacàph Filter Blend</h3>
+                      </div>
+
+                      <!-- Product 4 -->
+                      <div class="mod_redshop_product swiper-slide swiper-slide-prev" data-swiper-slide-index="3" onclick="togglePopup(4)">
+                          <!-- Product content for slide 4 -->
+                          <div class="mod_redshop_products_image">
+                              <img src="./images/sach/product/products-03.png" alt="">
+                          </div>
+                          <h3 class="mod_redshop_products_title">Lacàph Phin Blend</h3>
+                      </div>
+
+
+                  </div>
+
+                  <!-- Pagination -->
+                  <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
+                      <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+                      <span class="swiper-pagination-bullet"></span>
+                      <span class="swiper-pagination-bullet"></span>
+                      <span class="swiper-pagination-bullet"></span>
+                  </div>
+                  
+                  <!-- Navigation buttons -->
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+              </div>
+              
+              <div class="pop-up-window">
+                  <div class="product-popup-content" >
+                      <i class="fa-solid fa-xmark" style="color: #ffffff; font-size: 50px; cursor: pointer; position:absolute; top:30px; right: 30px; " onclick="closePopup()"></i>
+                      <div class="mod_redshop_products_title">
+                          <h3></h3>
+                      </div>
+                      <div class="mod_redshop_products_desc">
+                          <p></p>
+                      </div>
+                      <div class="product-price-wrap">
+                          <div class="mod_redshop_products_price"></div>
+                      </div>
+                      <div class="btn-wrap">
+                          <div class="mod_redshop_products_readmore" onclick="closePopup()">
+                              <a class="readmore-link" href="#">
+                                  Khám Phá
+                              </a>
+                          </div>
+                          <hr>
+                      </div>
+                  </div>
+              </div>
+              
+
+              <!-- JavaScript -->
+              <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+              <script>
+                  // Initialize Swiper
+                  var swiper = new Swiper('.swiper-container', {
+                      slidesPerView: 1,
+                      spaceBetween: 10,
+                      navigation: {
+                          nextEl: '.swiper-button-next',
+                          prevEl: '.swiper-button-prev',
+                      },
+                      pagination: {
+                          el: '.swiper-pagination',
+                          clickable: true,
+                      },
+                      loop: true, //infinite scrolling
+                  });
+
+                  // toggle the left position of the pop-up content
+                  var popupContent = document.querySelector('.pop-up-window');
+                  var currentProductIndex = 0; // Track the current product index
+
+                  swiper.on('slideChange', function () {
+                      popupContent.style.left = '-100%';
+                  });
+
+                  // Function to toggle the pop-up content visibility
+                  function togglePopup(productIndex) {
+                      currentProductIndex = productIndex;
+                      popupContent.style.left = '0';
+                      var productDetails = getProductDetails(currentProductIndex);
+                      renderPopupContent(productDetails);
+                  }
+
+                  function renderPopupContent(productDetails) {
+                      var productTitle = document.querySelector('.mod_redshop_products_title h3');
+                      var productDescription = document.querySelector('.mod_redshop_products_desc p');
+                      var productPrice = document.querySelector('.mod_redshop_products_price');
+
+                      productTitle.textContent = productDetails.title;
+                      productDescription.textContent = productDetails.description;
+                      productPrice.textContent = productDetails.price;
+                  }
+
+                  // function getProductDetails(productIndex) {
+                  //     var productDetails = {
+                  //         1: { 
+                  //             title: 'Lacàph Signature Cold Brew', 
+                  //             description: 'Sản xuất từ những hạt cà phê Arabica chất lượng được rang một cách tỉ mỉ làm tăng hương vị sô cô la đậm đà, sau đó cà phê được chúng tôi ủ lạnh hơn 18 tiếng đồng hồ để tạo ra một sản phẩm cà phê đóng chai cực kỳ tươi ngon.', 
+                  //             price: '90.000 VND' },
+                  //         2: { 
+                  //             title: 'Lacàph Espresso Blend', 
+                  //             description: 'Sản xuất từ hạt Arabica và hạt Robusta giúp lưu giữ nhiều lớp mùi vị. Cà phê từ nông trường tiên phong trong lĩnh vực canh tác Arabica vùng Tây Nguyên được thu hoạch, chọn lọc bằng tay trước khi được sơ chế bằng phương pháp khô tự nhiên, phơi và đóng gói. Lacàph Espresso Blend là một loại cà phê mượt mà, tròn vị, kết hợp hoàn hảo giữa vị chua nhẹ và vị ngọt thanh.', 
+                  //             price: '190.000 VND' },
+                  //         3: { 
+                  //             title: 'Lacàph Filter Blend', 
+                  //             description: 'Sản xuất từ những hạt Arabica Red Bourbon chất lượng thu hoạch bằng tay từ vườn cà phê của anh Hadjim, nằm ở miền Trung Tây Nguyên. Những hạt cà phê được sơ chế ướt (Fully - Washed) sau đó sẽ vận chuyển đến xưởng rang Lacàph để kết hợp cùng Arabica từ nông hộ khác. Lacàph Filter Blend là một loại cà phê có sự kết hợp nhịp nhàng giữa vị chua và ngọt dịu êm.', 
+                  //             price: '200.000 VND' },
+                  //         4: { 
+                  //             title: 'Lacàph Phin Blend', 
+                  //             description: 'Sản xuất từ những hạt Robusta chất lượng ở vùng đất đỏ bazan tỉnh Đắk Nông kết hợp với tỉ lệ nhỏ hạt Arabica tạo ra hương vị đậm đà. Hạt Robusta được sơ chế theo phương pháp bán ướt giúp tăng vị ngọt và tạo thêm nhiều lớp hương vị. Lacàph Phin Blend là một loại cà phê hướng đến sự cân bằng, hơi hướng hiện đại hơn so với các loại cà phê phin truyền thống.', 
+                  //             price: '180.000 VND' }
+                  //     };
+
+                  //     return productDetails[productIndex];
+                  // }
+
+                  function showPreviousProduct() {
+                      if (currentProductIndex > 1) {
+                          currentProductIndex--;
+                          var productDetails = getProductDetails(currentProductIndex);
+                          renderPopupContent(productDetails);
+                      }
+                  }
+
+                  function showNextProduct() {
+                      if (currentProductIndex < 4) {
+                          currentProductIndex++;
+                          var productDetails = getProductDetails(currentProductIndex);
+                          renderPopupContent(productDetails);
+                      }
+                  }
+
+                  function closePopup() {
+                      popupContent.style.left = '-100%';
+                  }
+              </script> 
             </div>
           </section>
           

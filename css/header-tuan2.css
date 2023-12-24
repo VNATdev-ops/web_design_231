@@ -3,20 +3,18 @@
     scroll-behavior: smooth;
     box-sizing: border-box;
 }
-.container-tuan {
+header {
     position: sticky;
     width: 100%;
     top: 0;
-    /* background-color: #fffced; */
-    /* box-shadow: 15px 5px 15px #88888839; */
+    background-color: #fffced;
+    box-shadow: 4px 4px #88888839;
     display: block;
     z-index: 9999;
 }
 
-
-
 .header-wrap {
-    /* width: 82%; */
+    width: 82%;
     display: flex;
     flex-direction: column;
     transition: all 0.3s ease;
@@ -24,7 +22,7 @@
     margin: 0px auto;
 }
 
-.container .row-tuan {
+header .row-tuan {
     height: auto;
     display: flex;
     justify-content: space-between;
@@ -34,22 +32,22 @@
     transition: max-height 0.4s ease;
 }
 
-.container .row-tuan.hide {
+header .row-tuan.hide {
     max-height: 0;
     overflow: hidden;
 }
 
-#top-nav-tuan{
+#top-nav{
     height: 60px;
     transition: all 0.4s ease;
     display: flex;
     align-items: center;
 }
-.logo-tuan{
+.logo{
     height: 100%;
     padding: 6px 0;
 }
-.logo-tuan img {
+.logo img {
     height: 100%;
 }
 
@@ -148,14 +146,14 @@ nav ul li a {
     color: #4e358a;
 }
 
-.pop-up-checkbox-tuan {
+.pop-up-checkbox {
     display: none;
     align-items: center;
     cursor: pointer;
     position: relative;
 }
 
-#menu-toggle-tuan + .menu-button-container {
+#menu-toggle + .menu-button-container {
     position: absolute;
     user-select: none;
     cursor: pointer;
@@ -163,7 +161,7 @@ nav ul li a {
     align-items: center;
 }
 
-#menu-toggle-tuan {
+#menu-toggle {
     display: none;
 }
 
@@ -244,7 +242,7 @@ nav ul li a {
 }
 
 @media screen and (max-width: 1200px){
-    .container{
+    header{
         height: auto;
         width: auto;
     }
@@ -255,15 +253,15 @@ nav ul li a {
         transition: all 0.3s ease;
         padding: 4px 15px;
     }
-    #top-nav-tuan{
+    #top-nav{
         height: auto;
     }
-    .pop-up-checkbox-tuan{
+    .pop-up-checkbox{
         display: block;
         flex: 1;
         justify-content: flex-start;
     } 
-    .logo-tuan {
+    .logo {
         flex: 1; 
         text-align: center; 
     }
