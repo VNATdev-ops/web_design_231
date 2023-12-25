@@ -62,28 +62,7 @@ a{
 .chuanoidung{
     padding: 0 60px;
 }
-@media screen and (max-width: 1000px ){
-    .chuanoidung{
-        padding: 0 30px;
-    }
-    .noidung2_tatca{
-        
-    }
-    .noidung2_ndchinh{
-        width: 40%;
-       
-    }
-}
-@media screen and (max-width: 700px ){
-    .chuanoidung{
-        padding: 0 10px;
-    }
-    .noidung2_ndchinh{
-        width: 60%;
-       
-    }
-   
-}
+
 .noidung1 h2{
     font-family: Josefin Sans,sans-serif;
     font-weight: 700;
@@ -107,7 +86,16 @@ a{
 }
 .noidung2_ndchinh{
     width: 30%;
-    padding: 50px 1.5% 0 1.5%;
+    margin: 50px 1.5% 0 1.5%;
+}
+@media screen and (max-width: 1000px){
+    .chuanoidung{
+        padding: 0 30px;
+    }
+    .noidung2_ndchinh{
+        width: 44%;
+        margin: 50px 3% 0 3%;
+    }
 }
 
 .nd2_hinhanh img{
