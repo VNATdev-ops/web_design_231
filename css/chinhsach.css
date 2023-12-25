@@ -20,19 +20,20 @@ h1{
     text-transform: uppercase;
 }
 h2{
-    text-align: center;
+    text-align: left;
+    padding: 10px 0;
     margin-top: 30px;
-    font-size: 2.25rem;
+    font-size: 2rem;
     color: #4e358a;
     font-family: Josefin Sans,sans-serif;
     text-transform: uppercase;
 }
-h3{
-    font-size: 1.5rem;
-    line-height: 3rem;
-    color: #4e358a;
-    font-family: Josefin Sans,sans-serif;
-    text-transform: uppercase;
+p{
+    line-height: 1.5rem;
+}
+main ul li{
+    padding-bottom: 10px;
+    line-height: 1.5rem;
 }
 .banner {
     position: relative; 
@@ -61,7 +62,7 @@ h3{
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url(../images/wholesale/banner.webp);
+    background-image: url(../images/chinhsach/banner.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -87,34 +88,14 @@ h3{
     margin: 50px 10%;
 }
 
-.ls-product{
-    text-align: center;
-
-}
-.ls-product a{
-    font-family: Josefin Sans,sans-serif;
-    text-transform: uppercase;
-    font-size: 1rem;
-    font-weight: 700;
-    line-height: 3rem;
-}
-.contact-us{
-    text-align: center;
-}
-.contact-us a{
-    font-family: Josefin Sans,sans-serif;
-    text-transform: uppercase;
-    font-size: 1rem;
-    font-weight: 700;
-    line-height: 3rem;
-}
-
 .article-links{
     display: flex;
     flex-direction: column;
     margin: 30px 50px;
 }
-
+.article-links h2{
+    text-align: center;
+}
 .categorises{
     margin-top: 30px;
     display: grid;

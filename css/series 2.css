@@ -54,13 +54,21 @@ body{
 .container_1{
     margin: 50px 20%;
 }
+.photo{
+    width: 100%;
+    height: auto;
+}
+.photo img{
+    width: auto;
+    height:10cm;
+}
 @media screen and (max-width: 1000px) {
     .container_1{
         margin: 30px 10%;
     }
-    main img{
+    .photo img{
         width: 70%; 
-        height: 5cm;
+        height: auto;
     }
     
    
@@ -69,13 +77,13 @@ body{
     .container_1{
         margin: 10px 5%;
     }
-    main img{
+    .photo img{
         width: 100%; 
-        height: 7cm;
+        height: auto;
         
     }
 }
-main img{
+.photo img{
     width: 33%; 
     float: left;
     
