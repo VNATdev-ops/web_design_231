@@ -88,15 +88,6 @@ a{
     width: 30%;
     margin: 50px 1.5% 0 1.5%;
 }
-@media screen and (max-width: 1000px){
-    .chuanoidung{
-        padding: 0 30px;
-    }
-    .noidung2_ndchinh{
-        width: 44%;
-        margin: 50px 3% 0 3%;
-    }
-}
 
 .nd2_hinhanh img{
     width: 100%;
@@ -150,11 +141,10 @@ a{
     color: #fff;
 }
 .contact-form{
-    
     margin-top: 50px;
     display: grid;
     grid-template-rows:  [border-top-start] 30px [border-left-start] 350px [border-bottom-start] 30px;
-    grid-template-columns: [border-left] 30px [form] 95% [border-right] 30px;
+    grid-template-columns: [border-left] 30px [form] auto [border-right] 30px;
     grid-template-areas: 
         "top top top"
         "left form right"
@@ -244,4 +234,21 @@ textarea:focus{
     font-size: 190%;
     font-weight: 700;
     padding-bottom: 15px;
+}
+
+@media screen and (max-width: 1000px){
+    .chuanoidung{
+        padding: 0 30px;
+    }
+    .noidung2_ndchinh{
+        width: 42%;
+        margin: 50px 3% 0 3%;
+    }
+    .contact-form{
+        position: absolute;
+        left: 0;
+    }
+    .form{
+        padding: 30px 5%;
+    }
 }
