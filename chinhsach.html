@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lacàph | Lacàph lab Series 2 | Lacàph lab Series | Câu Chuyện </title>
+    <title>Lacàph | KHÁCH HÀNG DOANH NGHIỆP</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="./css/default.css">
     <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/series 2.css">
+    <link rel="stylesheet" href="./css/chinhsach.css">
 </head>
 <body>
     <header>
@@ -104,8 +104,7 @@
                         let screenWidth = window.innerWidth;
                         var currentScrollPos = window.pageYOffset;
 
-                        
-                        if (window.innerWidth > 1200) {
+                        if (screenWidth > 1200) {
                             if (timkiemBar && currentScrollPos < buffer * 2) {
                                 return;
                             }
@@ -125,7 +124,6 @@
                             prevScrollPos = currentScrollPos;
                         }
                     }
-                        
 
                     function toggleSearchBar() {
                         if (timkiemBar.classList.contains("hide")) {
@@ -135,24 +133,24 @@
                         }
                     }
 
-                    // Check screen width before attaching event listeners
-                        window.addEventListener('scroll', updateScroll);
-                        openButton.addEventListener('click', toggleSearchBar);
-
                     //Menu size
                     function updateMenuSize() {
-                                    let screenWidth = window.innerWidth;
-                                    let menu = document.querySelector('#menu');
+                                let screenWidth = window.innerWidth;
+                                let menu = document.querySelector('#menu');
 
-                                    if (screenWidth <= 1200) {
-                                        menu.style.width = '100%'; 
-                                    } else {
-                                        menu.style.width = 'auto'; 
-                                    }
+                                if (screenWidth <= 1200) {
+                                    menu.style.width = '100%'; 
+                                } else {
+                                    menu.style.width = 'auto'; 
                                 }
+                            }
 
                     updateMenuSize();
-                    window.addEventListener('resize', updateMenuSize);   
+                    window.addEventListener('resize', updateMenuSize);
+
+                    // Check screen width before attaching event listeners
+                    window.addEventListener('scroll', updateScroll);
+                    openButton.addEventListener('click', toggleSearchBar);
                 });
 
                     //pop-up header
@@ -165,54 +163,164 @@
                     function closePopup() {
                         popupContent.style.left = '-100%';
                     }
+
             </script>
         </div>
     </header>
 
     <main>
         <div class="banner">
-            <p>LACÀPH LAB SERIES </p>
-            <h1>LACÀPH LAB SERIES 2</h1>
+            <h1>CHÍNH SÁCH CỬA HÀNG</h1>
         </div>
-        <div clas="container">
-            <div class="container_1">
-                <div class="page-body">
-                    <p>Chuỗi hành trình khám phá Lacàph Lab Series chính thức trở lại với sản phẩm cà phê Robusta Sẻ nguyên trái từ nông trại của Anh Phú lên men với bia Tiramisu Stout của Heart of Darkess.
-                    </p>
-                    <p>Quá trình sơ chế mật ong (honey) với sự tham gia thử nghiệm với bia đã đẩy lên những tầng hương vị phức tạp khó lòng thấy rõ ở những hạt Robusta thông thường. Kết quả từ sự kết hợp độc đáo này là một loại cà phê Robusta có vị chua dễ chịu, vị ngọt như sô-cô-la đen và cacao ngòi Việt Nam cùng hương thơm phảng phất như rượu vang và chiết xuất hạnh nhân.</p>
-                    <img src="images/LS2/LS2_Flyer_1485x21-03.jpg" alt="" style="width: 100%;">
-                    <p>Với Lacàph Lab Series 2, chúng tôi hợp tác cùng Anh Phú, nơi canh tác những loại Robusta chất lượng và ngon nhất Việt Nam cũng là nông hộ đối tác của chúng tôi từ những ngày đầu thành lập công ty.
-                    </p>
-                    <img src="images/LS2/LS2-Phu.png" alt="">
-                    <p>Đây cũng là lần đầu tiên Anh Phú thử nghiệm lên men cà phê với bia thủ công. Theo anh, đây là một loại bia có hương vị tốt, với mỗi bao cà phê 50kg anh sẽ dùng 1 lon bia sau đó đổ đầy nước vào, cột chặt miệng bao lại và để cà phê len men tự nhiên trong vòng 48 tiếng.</p>
-                    
-                    <p>Sau khi lên men, cà phê được mang đi tách vỏ, giữ lại lớp vỏ thóc và mang đi phơi dưới ánh nắng mặt trời đến khi đạt độ ẩm 12-13%. Quá trình phơi cũng được chia làm 2 giai đoạn. Khoảng hai ngày đầu, Anh Phú trải lớp mỏng cho cà phê khô nhanh để kết thúc hoàn toàn quá trình lên men, sau đó vun thành những lớp dày hơn và tiếp tụ phơi trong vòng 12 ngày. Cà phê sau đó được "nghỉ ngơi" trong kho 4 tháng, đến tháng 5/2022 cũng là lúc cà phê đạt đỉnh hương, Anh Phú đã sàng lọc lại bằng tay một lần nữa và gửi về xưởng rang Lacàph Roastery tại Sài Gòn.</p>
-                    
-                    <p>Tuy nhiên, không chỉ dừng lại ở việc thử nghiệm trên hạt cà phê Việt Nam, Lacàph còn mong muốn chia sẻ về văn hoá Việt Nam thông qua nghệ thuật khi lần đầu tiên, chúng tôi kết hợp với nghệ sĩ Khim Đặng trong vai trò nghệ sĩ sáng tác hình ảnh chủ đạo cho bộ sản phẩm Lab Series 2.</p>
-                   
-                        <img src="images/LS2/LS2-khim.png" alt="">
-                         <p>Khim Đặng đã có thời gian hơn 11 năm học hành về nghệ thuật trước khi thực hành nghệ thuật. Gọi Khim là một nghệ sĩ chế tác, chỉ đạo nghệ thuật hay đơn giản là một người không ngừng tìm hiểu và sáng tác nghệ thuật đều được. </p>
-                         
-                        <p> Nội dung là yếu tố quan trọng làm nên sự khác biệt của người nghệ sĩ, và chất liệu cuộc sống, con người, xã hội,… chính là nguồn cảm hứng bản địa vô tận cho các tác phẩm của Khim. Anh xem mỗi tác phẩm của mình như một phần lưu trữ lại những suy nghĩ và ý tưởng được kết hợp tức thời trong quá trình tạo tác. Cũng vì vậy, mà chuỗi tác phẩm và sản phẩm mang dấu ấn của Khim luôn để lại những cột mốc cảm xúc nhất định cho người thưởng thức.</p>
-                    
-                    <p>“Chúng ta có ngôn ngữ riêng, có nền văn hoá đặc thù. Chúng ta làm mọi thứ bằng niềm tự hào dòng máu Việt”. Với Khim, đó chính là lợi thế lớn nhất của nghệ sĩ Việt. Vì vậy, cùng nhau, chúng tôi tôn vinh văn hoá cà phê Việt qua tác phẩm “Dòng” mà Khim sáng tác riêng cho Lacàph Lab Series.</p>
-                    <img src="images/LS2/LS2-dongchay.jpg" alt="" style="width: 100%">
-                    <p>Nói về ý nghĩa của cái tên "Dòng", Khim Đặng chia sẻ ý tưởng về "dòng" trong "dòng chảy", thể hiện sự lặp đi lặp lại theo chu kỳ. Tác phẩm “Dòng” giúp lưu trữ và tái hiện dòng chảy của cả quá trình sản xuất cà phê, từ bước canh tác đến khi có thành phẩm để khách hàng thưởng thức. Bộ sản phẩm cà phê cùng bộ sưu tập Lacàph Lab Series 2 tham gia vào “dòng chảy” này như một nét chấm phá mang lại sự mới mẻ cho một quá trình lặp đi lặp lại đã hình thành từ lâu.</p>
-                        <img src="images/LS2/LS2-dong.jpeg" alt="" style="width: 50%; margin-right: 10px;">
-                        <p>Bên cạnh nhãn sản phẩm cà phê, những biểu tượng của tác phẩm sau đó được chúng tôi ứng dụng thiết kế trong bộ sưu tập bao gồm tranh in khổ lớn, áo thun, bưu thiếp, bình giữ nhiệt, khăn Bandana và các sản phẩm đi kèm khác.</p>
-                        <p> Tất cả các sản phẩm được sản xuất với số lượng giới hạn, riêng tranh khổ lớn "Dòng" kích thước 100x100cm sẽ chỉ sản xuất 5 bản và được kí tên, đánh số trực tiếp bởi nghệ sĩ Khim Đặng.
-                        </p>
-                    <p>Khám phá và sở hữu bộ sưu tập với những phát hành giới hạn <a href="/xemtatca.html">tại đây.</a></p>
-                    <div class="kp_ngaylam">
-                        <i class="fa-solid fa-calendar-days" style="color:#4e358a;"></i>
-                        <time datetime="2023-05-12T10:08:00+07:00" itemprop="dateCreated">Được viết: 02/06/2022</time>
-                    </div>
 
-                </div>
-            </div>
+        <div class="container">
+            <section id="cs-doitra">
+                <h2>CHÍNH SÁCH ĐỔI TRẢ</h2>
+                <p>
+                    Điều quan trọng nhất với chúng tôi là sự hài lòng của bạn với sản phẩm của Lacàph. 
+                    Nếu bạn cảm thấy bất cứ sản phẩm nào không đáp ứng mong đợi của bạn, hãy liên hệ 
+                    với chúng tôi trong vòng 7 ngày kể từ khi nhận sản phẩm. Chúng tôi sẽ nhanh chóng 
+                    tư vấn đổi hàng và việc này không phát sinh bất cứ chi phí nào từ phía bạn.
+                    <br><br>
+                    Vui lòng liên hệ với Bộ phận Hỗ trợ & Chăm sóc Khách hàng của chúng tôi bằng cách 
+                    điền vào biểu mẫu này hoặc gọi vào số +84 (0) 86 672 1202 (Thứ Hai – Thứ Bảy; 10: 00–17: 00).
+                </p>
+            </section>
+
+            <section id="cs-vanchuyen">
+                <h2>CHÍNH SÁCH VẬN CHUYỂN</h2>
+                <p>
+                    Lacàph luôn hướng đến việc cung cấp trải nghiệm mua sắm nhanh chóng và tiện lợi 
+                    ngay cả khi bạn mua hàng trực tuyến.
+                    <br><br>
+                    Đối với đơn hàng đặt trong khung giờ từ 10:00 – 17:00 Thứ Hai đến Thứ Bảy, trong phạm vi 
+                    Tp. Hồ Chí Minh, đối tác Lalamove của chúng tôi sẽ giao hàng đến bạn trong vòng vài giờ đồng hồ.
+                    <br><br>
+                    Đối với đơn hàng ngoài Tp. Hồ Chí Minh, thời gian giao hàng có thể lâu hơn và được 
+                    vận chuyển bởi đơn vị chuyển phát nhanh EMS Việt Nam. Tùy vào địa chỉ nhận hàng, phí vận chuyển 
+                    được tính theo phí của đơn vị giao hàng.
+                    <br><br>
+                    Bạn cũng có thể đến Lacàph Space tại số 220 Nguyễn Công Trứ, Phường Nguyễn Thái Bình, Quận 1, 
+                    Tp. Hồ Chí Minh trong khung giờ từ 10:00–17:00 Thứ 2 đến Thứ 7 để nhận hàng trực tiếp.
+                </p>
+            </section>
+
+            <section id="cs-thanhtoan">
+                <h2>PHƯƠNG THỨC THANH TOÁN</h2>
+                <p>
+                    Lacàph hỗ trợ 4 phương thức thanh toán sau:
+                    <br><br>
+                    <ul>
+                        <li>Thanh toán đảm bảo qua cổng thanh toán Paypal</li>
+                        <li>Thanh toán qua thẻ ATM, Visa, Mastercard</li>
+                        <li>Thanh toán chuyển khoản</li>
+                        <li>Thanh toán khi nhận hàng (vui lòng bấm chọn 
+                            “Thanh toán khi nhận hàng” nếu bạn ưu tiên phương thức 
+                            này và thông báo cho Bộ phận Hỗ trợ & Chăm sóc Khách hàng 
+                            qua số +84 (0)86 672 1202 trong khung giờ từ 10:00 – 17:00 Thứ Hai đến Thứ Bảy).</li>
+                    </ul>
+                </p>
+                <br>
+                <p>
+                    <p>
+                        Dưới đây là thông tin tài khoản của chúng tôi nếu bạn chọn phương thức chuyển khoản:
+                    </p>
+                    <br>
+                    <p style="padding: 5px 0 5px 10px; font-style: italic;">
+                        Ngân hàng: Vietcombank – Chi nhánh Hồ Chí Minh
+                        <br><br>
+                        Chủ tài khoản: Cong ty TNHH Collective
+                        <br><br>
+                        Số tài khoản:  0071001352164
+                        <br><br>
+                    </p>
+                    <p>
+                        Vui lòng liên hệ với chúng tôi nếu bạn cần bất cứ sự hỗ trợ nào liên quan 
+                        đến việc thanh toán qua +84 (0)86 672 1202 trong khung giờ từ 10:00 – 17:00 
+                        Thứ Hai đến Thứ Bảy.
+                    </p>
+                </p>
+            </section>
+
+            <section id="cs-baomat">
+                <h2>CHÍNH SÁCH BẢO MẬT</h2>
+                <p>
+                    Lacàph tôn trọng quyền riêng tư của khách hàng và cam kết sẽ bảo mật những thông tin 
+                    cá nhân của bạn. Chính sách bảo mật này cung cấp cho bạn thông tin về việc chúng tôi 
+                    sử dụng và chia sẻ những thông tin về bạn mà chúng tôi có thể thu thập được. Chính 
+                    sách này áp dụng cho những trang web, các ứng dụng di động, hoặc dịch vụ trực tuyến 
+                    khác dưới tên thương hiệu Lacàph.
+                    <br><br>
+                    Khi đăng nhập vào website của chúng tôi, bạn có thể sẽ được yêu cầu cung cấp 
+                    các thông tin như: Họ và Tên, địa chỉ (nhà riêng hoặc văn phòng), địa chỉ email 
+                    (công ty hoặc cá nhân), số điện thoại (di động, nhà riêng hoặc văn phòng), các 
+                    chi tiết thẻ tín dụng (là loại và số thẻ tín dụng, mã CVC, ngày tháng hết hạn, 
+                    tên chủ thẻ) để hỗ trợ tiến hành các giao dịch của bạn.
+                    <br><br>
+                    Chúng tôi thu thập thông tin về bạn thông qua các chức năng trực tuyến trên trang web, 
+                    đăng ký tài khoản, đặt hàng, đăng ký nhận thông tin trên trang web của chúng tôi.
+                    <br><br>
+                    Mục đích của việc thu thập thông tin khách hàng là để cung cấp sản phẩm và hỗ trợ 
+                    dịch vụ cho khách hàng, và để truyền tải thông tin sản phẩm, hoạt động cũng như các 
+                    chương trình khuyến mãi đặc biệt khi được sự đồng ý và cho phép của bạn.
+                </p>
+                <p>
+                    Phạm vi sử dụng thông tin cá nhân khách hàng:
+                    <br><br>
+                    Chúng tôi sử dụng thông tin này để cung cấp, quản lý và cải tiến sản phẩm và 
+                    dịch vụ của chúng tôi nhằm phục vụ khách hàng tốt hơn; cung cấp các thông tin về 
+                    sản phẩm và chương trình khuyến mãi mà bạn quan tâm, và hỗ trợ, xử lý các giao dịch 
+                    liên quan đến sản phẩm và dịch vụ một cách nhanh chóng.
+                </p>
+                
+                <p>
+                    Thời gian lưu trữ thông tin khách hàng:
+                    <br><br>
+                    Không có thời hạn giới hạn cho việc lưu trữ dữ liệu. Khách hàng có thể 
+                    liên hệ để yêu cầu xóa thông tin bất cứ lúc nào thông qua Bộ phận Hỗ trợ & 
+                    Chăm sóc Khách hàng: +84 (0)86 672 1202 trong khung giờ từ 10:00 – 17:00 Thứ Hai 
+                    đến Thứ Bảy.
+                </p>
+                
+                <p>
+                    Tiếp cận thông tin khách hàng:
+                    <br><br>
+                    Khi sử dụng dịch vụ của chúng tôi, khách hàng đồng ý rằng các tổ chức 
+                    và cá nhân sau đây có quyền được tiếp cận thông tin khách hàng: Ban quản 
+                    trị Công ty và đội ngũ nhân viên được cho phép quyền tiếp cận, các bên 
+                    thứ ba có dịch vụ tích hợp với website của chúng tôi như cổng thanh toán, 
+                    cơ quan nhà nước có thẩm quyền trong trường hợp có yêu cầu theo quy định 
+                    nhà nước 
+                </p>
+                
+                <p>
+                    Dưới đây là thông tin Công ty chịu trách nhiệm thu thập và quản lý thông tin cá nhân của khách hàng:
+                    <br><br>
+                    Công ty TNHH Collective
+                    <br><br>
+                    Địa chỉ: 220A Nguyễn Công Trứ, Phường Nguyễn Thái Bình, Quận 1, Tp. Hồ Chí Minh
+                    <br><br>
+                    Điện thoại:  +84 (0) 86 672 1202
+                    <br><br>
+                    Email:  <a href="mailto:">hello@lacaph.com</a>
+                </p>
+                <p>
+                    Phương tiện và công cụ đế khách hàng có thể tiếp cận và chỉnh sữa thông tin cá nhân:
+                    <br><br>
+                    Lacàph lưu trữ và xử lý tất cả thông tin cá nhân của khách hàng 
+                    theo đúng quy định của pháp luật. Nếu bạn có bất kỳ câu hỏi hay 
+                    yêu cầu nào về hoạt động tiếp cận, chỉnh sữa hay xóa bỏ dữ liệu 
+                    thông tin cá nhân của mình, vui lòng liên hệ với Bộ phận Hỗ trợ & 
+                    Chăm sóc khách hàng qua số điện thoại: +84 (0) 86 672 1202 trong 
+                    khung giờ từ 10: 00 – 17:00 Thứ Hai đến Thứ Bảy.
+                </p>
+            </section>
+            
+            <br>
+            <p><i class="fa-regular fa-calendar-days" style="color: #4e358a;"></i><span style="padding-left: 10px;">Được viết: 30/07/2021</span></p>
         </div>
-        <!-- --------- -->
-         <div class="article-links">
+
+        <div class="article-links">
             <div class="categorises">
                 <div class="border-top"></div>
                 <div class="border-right"></div>
@@ -268,8 +376,6 @@
                         </div>
                     </div>
                 </div>
-                
-
             </div>
 
             <!-- Include Swiper library and styles -->
@@ -301,7 +407,7 @@
                 // Reinitialize Swiper on window resize
                 window.addEventListener('resize', initSwiper);
             </script>
-
         </div>
+    </main>
 </body>
 </html>
