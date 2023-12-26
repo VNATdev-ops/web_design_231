@@ -2,7 +2,6 @@ body, h1, h2, p, a {
     margin: 0;
     padding: 0;
 }
-
 body {
     font-family: 'Josefin Sans', sans-serif;
     background-color: #fffced;
@@ -101,7 +100,6 @@ p {
 
 .dongdanvecc a {
     text-decoration: none;
-    font-size: 18px;
     color: #4e358a;
     display: block;
     margin-bottom: 8px;
@@ -111,7 +109,7 @@ p {
     text-transform: uppercase;
     font-weight: 700;
     line-height: 2.5rem;
-    font-size: 1.75rem;
+    font-size: 1.25rem;
     color: #4e358a;
     overflow: hidden;
     display: -webkit-box;
@@ -123,8 +121,6 @@ p {
 .tennd a {
     text-decoration: none;
     color: #4e358a;
-    font-size: 90%;
-    font-weight: 600;
 }
 
 .noidungtruycap {
@@ -146,9 +142,8 @@ p {
 .dongchu_cc p {
     width: 100%;
     margin-bottom: 16px;
-    font-size: 100%;
     line-height: 25px;
-    font-weight: 100;
+    font-family: Open-Sans;
 }
 
 .dongkhampha_cc {

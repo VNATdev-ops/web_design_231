@@ -18,6 +18,7 @@ h2{
 }
 p{
     font-size: 1rem;
+    margin: 0;
 }
 a{
     text-decoration: none;
@@ -132,7 +133,7 @@ form{
 .input-field input{
     background-color: transparent;
     border: none;
-    border-bottom: #4e358a 2px solid;
+    border-bottom: #4e358a 1.5px solid;
     height: 30px;
     width: 100%;
     font-family: Open-Sans;
@@ -151,7 +152,7 @@ form{
 .input-field textarea{
     background-color: transparent;
     border: none;
-    border-bottom: #4e358a 2px solid;
+    border-bottom: #4e358a 1.5px solid;
     height: 80px;
     width: 100%;
     resize: none;
@@ -223,7 +224,7 @@ main .row{
     width: max-content;
 }
 .open-button, .close-button{
-    height: 40px;
+    height: 30px;
     background-color: transparent;
     border: none;
     color: #4e358a;   
@@ -232,6 +233,7 @@ main .row{
     font-size: 1rem;
     font-weight: 700;
     margin: 0;
+    padding: 0;
 }
 .button hr{
     width: 20%;
@@ -263,6 +265,9 @@ main .row{
     }
     .contact-form{
         margin: 10px -50px;
+    }
+    .form{
+        padding: 30px 5%;
     }
     .place{
         flex-direction: column;

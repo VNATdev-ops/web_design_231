@@ -9,14 +9,17 @@ body {
 }
 p {
     font-family: 'Open-Sans', sans-serif;
+    margin-bottom: 25px;
+    line-height: 1.5rem;
 }
 .banner {
     position: relative; 
-    height: 350px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0 40px;
 }
 
 .banner::before {
@@ -55,7 +58,8 @@ p {
 }
 .banner h1{
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 2.25rem;
+    line-height: 3rem;
     padding-top: 10px;
     text-align: center;
 }
@@ -80,19 +84,21 @@ p {
     color: #18212a;
     margin-bottom: 60px;
 }
-p{
-    margin-bottom: 25px;
-    height: auto;
-    font-weight: 100;
-    line-height: 1.5;
-    color: #18212a;
-}
-p img{
-    justify-content: center;
+.image{
     width: 600px;
     height: 600px;
-    margin: 60px auto;
-    /* display: block; */
+    margin: 50px auto;
+}
+.image img{
+    width: 100%;
+    object-fit: cover;
+}
+@media screen and (max-width:700px) {
+    .image{
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+    }
 }
 .kp_indam{
     font-weight: 700;
@@ -236,7 +242,6 @@ h2{
 @media screen and (max-width: 1000px) {
     .kp_noidung1{
         width: 75%;
-        
     }
     p img{
         width: 550px;
@@ -252,7 +257,7 @@ h2{
 }
 @media screen and (max-width: 700px) {
     .kp_noidung1{
-        width: 90%;
+        width: 80%;
         
     }
     p img{

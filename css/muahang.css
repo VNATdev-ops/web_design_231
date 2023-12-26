@@ -14,6 +14,26 @@ a{
 p {
     font-family: 'Open-Sans', sans-serif;
 }
+.top-banner{
+    width: 100%;
+    height: 55px;
+    background-color: #4e358a;
+    color: #fff;
+    margin-bottom: 50px;
+    padding: 0 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.top-banner p{
+    text-align: center;
+}
+@media screen and (max-width: 750px) {
+    .top-banner{
+        height: 80px;
+    }
+}
+
 .anhmuahang {
     position: relative; 
     height: 10cm;
@@ -76,36 +96,37 @@ p {
     text-transform: uppercase;
     font-weight: 700;
     height: 80px;
-    font-size: 1.75rem;
+    font-size: 2rem;
     color: #4e358a;
 }
 .noidung2_tatca{
     display: flex;
-    justify-content: left;
     flex-wrap: wrap;
 }
 .noidung2_ndchinh{
     width: 30%; /*luu y 1000 45%*/
     height: auto;
-    padding: 20px 1.5%;
+    margin: 20px 1.5%;
     display: flex;
     flex-direction: column;
 }
 @media screen and (max-width: 1000px){
-    .noidung2_ndchinh{
-        width: 45%;
-    }
     .noidungtrong_phan2mh{
         margin: 40px 70px;
+    }
+    .noidung2_ndchinh{
+        width: 45%;
+        margin: 20px 2.5%;
     }
     
 }
 @media screen and (max-width: 700px){
-    .noidung2_ndchinh{
-        width: 45%;
-    }
     .noidungtrong_phan2mh{
-        margin: 0 0 0 20px;
+        margin: 0 30px;
+    }
+    .noidung2_ndchinh{
+        width: 42%;
+        margin: 20px 4%;
     }
     
 }

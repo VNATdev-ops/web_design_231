@@ -239,6 +239,9 @@ nav ul li a {
     color: #fff;
     font-size: 1.2rem;
 }
+.pop-up-header li a:focus{
+    color: #ffc261;
+}
 
 @media screen and (max-width: 1200px){
     header{
