@@ -19,7 +19,7 @@
         <div class="row-tuan" id="top-nav">
             <div class="pop-up-checkbox">
                 <input id="menu-toggle" type="checkbox">
-                <label for="menu-toggle" onclick="togglePopup()">
+                <label for="menu-toggle" onclick="openPopupMenu()">
                     <div class='menu-button-container'>
                         <div class="menu-button"></div>
                         <div class="menu-button"></div>
@@ -63,7 +63,7 @@
         <div class="pop-up-header">
             <div class="header-container" >
                 <div class="button-nav">
-                    <div class="close-button" onclick="closePopup()">
+                    <div class="close-button" onclick="closePopupMenu()">
                         <button><img src="./images/close-button.png" alt=""></button>
                     </div>
                     <div class="chucnang">
@@ -108,7 +108,8 @@
                     let screenWidth = window.innerWidth;
                     var currentScrollPos = window.pageYOffset;
 
-                    if (screenWidth > 1200) {
+                    
+                    if (window.innerWidth > 1200) {
                         if (timkiemBar && currentScrollPos < buffer * 2) {
                             return;
                         }
@@ -128,6 +129,7 @@
                         prevScrollPos = currentScrollPos;
                     }
                 }
+                    
 
                 function toggleSearchBar() {
                     if (timkiemBar.classList.contains("hide")) {
@@ -137,37 +139,37 @@
                     }
                 }
 
+                // Check screen width before attaching event listeners
+                    window.addEventListener('scroll', updateScroll);
+                    openButton.addEventListener('click', toggleSearchBar);
+
                 //Menu size
                 function updateMenuSize() {
-                    let screenWidth = window.innerWidth;
-                    let menu = document.querySelector('#menu');
+                                let screenWidth = window.innerWidth;
+                                let menu = document.querySelector('#menu');
 
-                    if (screenWidth <= 1200) {
-                        menu.style.width = '100%'; 
-                    } else {
-                        menu.style.width = 'auto'; 
-                    }
-                }
+                                if (screenWidth <= 1200) {
+                                    menu.style.width = '100%'; 
+                                } else {
+                                    menu.style.width = 'auto'; 
+                                }
+                            }
 
-                updateMenuSize();
-                window.addEventListener('resize', updateMenuSize);
+                    updateMenuSize();
+                    window.addEventListener('resize', updateMenuSize);
 
-                // Check screen width before attaching event listeners
-                window.addEventListener('scroll', updateScroll);
-                openButton.addEventListener('click', toggleSearchBar);
-            });
+                });
 
                 //pop-up header
-                var popupContent = document.querySelector('.pop-up-header');
+                var popupMenu = document.querySelector('.pop-up-header');
 
-                function togglePopup() {
-                    popupContent.style.left = '0';
+                function openPopupMenu() {
+                    popupMenu.style.left = '0';
                 }
 
-                function closePopup() {
-                    popupContent.style.left = '-100%';
+                function closePopupMenu() {
+                    popupMenu.style.left = '-100%';
                 }
-
         </script>
     </div>
 </header>
