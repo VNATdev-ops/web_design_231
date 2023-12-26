@@ -171,6 +171,16 @@
         </div>
     </header>
     
+    <div class="duongdan">
+        <div class="link-container">
+            <a href="#">MUA HÀNG</a> 
+            <i class="fa-solid fa-angle-right" style="color: #ffffff; padding: 0 10px;"></i>
+            <a href="#">SẢN PHẨM KHÁC</a> 
+            <i class="fa-solid fa-angle-right" style="color: #ffffff; padding: 0 10px;"></i>
+            ĐẶC ĐEN ĐẮNG
+        </div>
+    </div>
+
     <main>
         <section class="dac-den-dang">
             <div class="slideshow">
@@ -366,9 +376,10 @@
                             <span class="swiper-pagination-bullet"></span>
                         </div>
                         
-                        <!-- Navigation buttons -->
+                        <!-- Navigation buttons 
                         <div class="swiper-button-next"></div>
                         <div class="swiper-button-prev"></div>
+                        -->
                     </div>
                     
                     <div class="pop-up-window">
@@ -480,8 +491,31 @@
                 </div>
             
         </section>
-
     </main>
+
+    <div class="buying-button">
+        <button><i class="fa-solid fa-basket-shopping" style="color: #ffffff; padding-right: 7px; font-size: 17px;"></i>CHỌN MUA</button>
+        <button>MUA NGAY</button>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var buyingButton = document.querySelector('.buying-button');
+    
+            function toggleButtonVisibility() {
+                if (window.innerWidth < 1000) {
+                    buyingButton.classList.remove('hide');
+                } else {
+                    buyingButton.classList.add('hide');
+                }
+            }
+    
+            toggleButtonVisibility();
+            window.addEventListener('resize', toggleButtonVisibility);
+        });
+    </script>
+    
+
     <footer></footer>
 </body>
 </html>

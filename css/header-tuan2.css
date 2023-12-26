@@ -22,7 +22,7 @@ header {
     margin: 0px auto;
 }
 
-header .row-tuan {
+header .row {
     height: auto;
     display: flex;
     justify-content: space-between;
@@ -32,7 +32,7 @@ header .row-tuan {
     transition: max-height 0.4s ease;
 }
 
-header .row-tuan.hide {
+header .row.hide {
     max-height: 0;
     overflow: hidden;
 }
@@ -45,7 +45,8 @@ header .row-tuan.hide {
 }
 .logo{
     height: 100%;
-    padding: 7px 0;}
+    padding: 7px 0;
+}
 .logo img {
     height: 100%;
 }
@@ -123,7 +124,7 @@ header .row-tuan.hide {
 }
 
 nav {
-    padding: 18px 0 5px 0;
+    padding: 20px 0 10px 0;
     width: 100%;
     overflow: visible;
 }
@@ -145,6 +146,7 @@ nav ul li a {
     font-weight: 700;
     color: #4e358a;
 }
+
 .pop-up-checkbox {
     display: none;
     align-items: center;
@@ -191,53 +193,51 @@ nav ul li a {
     height: 100%;
     overflow-y: scroll;
     transition: left .5s ease;
-    padding: 10px 20px;
+    padding: 8px 18px;
     background-color: #4e358a;
     background-image: url(../images/header/bg-img.png),url(../images/header/bg-img\(2\).png);
     background-position: calc(100% - 15px) calc(100% - 60px),100% calc(50% - 80px);
-    background-size: 135px 262.5px, 187.5px 297px;
+    background-size: 88px 176px, 140px 210px;
     background-repeat: no-repeat;
     overflow: hidden;
 }
+
 .pop-up-header button{
     background-color: transparent;
     border: none;
-}
-.pop-up-header .timkiem{
-    border-bottom: #fff 1px solid;
-}
-.pop-up-header .timkiem input{
-    padding: 15px 0;
-}
-.pop-up-header .timkiem input::placeholder{
-    font-size: 1.25rem;
-}
-.pop-up-header button{
-    background-color: transparent;
-    border: none;
-    height: 30px;
+    height: 25px;
     cursor: pointer;
+}
+.pop-up-header .button-nav {
+    display: flex;
+    align-items: center;
 }
 .pop-up-header button img{
     height: 100%;
     object-fit: cover;
 }
-.pop-up-header .button-nav {
-    display: flex;
-    align-items: center;
+.pop-up-header .timkiem{
+    border-bottom: #fff 1px solid;
+}
+.pop-up-header .timkiem input{
     padding: 10px 0;
+}
+.pop-up-header .timkiem input::placeholder{
+    font-size: 1rem;
+}
+.pop-up-header nav{
+    padding: 0;
 }
 .pop-up-header ul{
     display: flex;
     flex-direction: column;
-    padding-top: 10px;
 }
 .pop-up-header li{
-    padding: 20px 0;
+    padding-top: 34px;
 }
 .pop-up-header li a{
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 @media screen and (max-width: 1200px){
