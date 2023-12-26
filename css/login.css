@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+}
+
+.form{
+    background-color: transparent;
+    grid-area: form;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 10%;
+    color: #4e358a;
+    
+}
+.contact-form{
+    max-width: 600px;
+    margin: 0 auto;
+    padding-top: 56px
+}
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+.form-control-tuan {
+    font-family: Open Sans,sans-serif;
+    height: 100px;
+    padding: 0;
+    color: #000;
+    margin-bottom: 25px;
+    border: 0;
+    border-bottom: 1px solid #4e358a;
+    width: 100%;
+    background-color: transparent;
+    border-radius: 0
+}
+.input-field{
+    padding: 10px 0;
+    width: 100%;
+}
+.input-field a {
+    text-decoration: none;
+    color: #4e358a;
+}
+.input-field a:hover{
+    text-decoration: underline;
+}
+.input-field a:focus{
+    text-decoration: underline;
+}
+.input-field input{
+    background-color: transparent;
+    border: none;
+    border-bottom: #4e358a 2px solid;
+    height: 50px;
+    width: 100%;
+    font-family: Open-Sans;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #18212a;
+    cursor: pointer;
+}
+.input-field input::placeholder,
+.input-field textarea::placeholder {
+    color: #4e358a;
+    font-family: Open-Sans;
+    font-size: 1rem;
+    font-weight: 400;
+}
+.input-field textarea{
+    background-color: transparent;
+    border: none;
+    border-bottom: #4e358a 2px solid;
+    height: 80px;
+    width: 100%;
+    resize: none;
+    display: flex;
+    font-family: Open-Sans;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #18212a;
+    cursor: pointer;
+}
+input:focus,
+textarea:focus{
+    outline: none;
+}
+.summit-button{
+    margin-top: 30px;
+}
+.summit-button button{
+    justify-content: center;
+    align-items: center;
+    width: 165px;
+    height: 50px;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: rgb(78, 53, 138);
+    background-color: transparent;
+    background-image: url(../images/button.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: inline-flex;
+    padding: 3px 20px 0px 0px;
+    background-position: 50% center;
+    border-width: 0px;
+    transition: opacity 0.2s ease 0s;
+    cursor: pointer;
+}
+.summit-button button:hover{
+    background-image: url(../images/button-focus.png);
+    color: #f4dcbb;
+}
