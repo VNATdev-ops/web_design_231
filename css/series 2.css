@@ -151,6 +151,7 @@ body{
 }
 .newest-articles h2{
    padding-bottom: 20px;
+   text-align: center;
 }
 .articles{
     display: flex;
