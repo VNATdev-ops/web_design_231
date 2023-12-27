@@ -5,9 +5,104 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lacàph | Về chúng tôi</title>
-    <link href="templates/lacaph/css/vechungtoi.css" rel="stylesheet">
+    <link href="templates/lacaph//css/vechungtoi.css" rel="stylesheet">
 
     <script type="application/json" class="joomla-script-options new"></script>
+
+    <script>
+        (function (w) {
+            "use strict";
+            
+            // Check if loadCSS is defined, if not define a placeholder function.
+            if (!w.loadCSS) {
+                w.loadCSS = function () { };
+            }
+            
+            // Object to hold rel=preload functions and support test.
+            var rp = loadCSS.relpreload = {};
+            
+            // Support test for rel=preload.
+            rp.support = (function () {
+                var ret;
+                try {
+                    ret = w.document.createElement("link").relList.supports("preload");
+                } catch (e) {
+                    ret = false;
+                }
+                return function () {
+                    return ret;
+                };
+            })();
+            
+            // Function to bind media toggle to a link element.
+            rp.bindMediaToggle = function (link) {
+                var finalMedia = link.media || "all";
+                
+                function enableStylesheet() {
+                    if (link.addEventListener) {
+                        link.removeEventListener("load", enableStylesheet);
+                    } else if (link.attachEvent) {
+                        link.detachEvent("onload", enableStylesheet);
+                    }
+                    link.setAttribute("onload", null);
+                    link.media = finalMedia;
+                }
+                
+                if (link.addEventListener) {
+                    link.addEventListener("load", enableStylesheet);
+                } else if (link.attachEvent) {
+                    link.attachEvent("onload", enableStylesheet);
+                }
+                
+                setTimeout(function () {
+                    link.rel = "stylesheet";
+                    link.media = "only x";
+                });
+                
+                setTimeout(enableStylesheet, 3000);
+            };
+            
+            // Polyfill function for rel=preload.
+            rp.poly = function () {
+                if (rp.support()) {
+                    return;
+                }
+                var links = w.document.getElementsByTagName("link");
+                for (var i = 0; i < links.length; i++) {
+                    var link = links[i];
+                    if (link.rel === "preload" && link.getAttribute("as") === "style" && !link.getAttribute("data-loadcss")) {
+                        link.setAttribute("data-loadcss", true);
+                        rp.bindMediaToggle(link);
+                    }
+                }
+            };
+            
+            // Run polyfill if necessary.
+            if (!rp.support()) {
+                rp.poly();
+                var run = w.setInterval(rp.poly, 500);
+                if (w.addEventListener) {
+                    w.addEventListener("load", function () {
+                        rp.poly();
+                        w.clearInterval(run);
+                    });
+                } else if (w.attachEvent) {
+                    w.attachEvent("onload", function () {
+                        rp.poly();
+                        w.clearInterval(run);
+                    });
+                }
+            }
+            
+            // Export loadCSS for commonjs, or define it as a global function.
+            if (typeof exports !== "undefined") {
+                exports.loadCSS = loadCSS;
+            } else {
+                w.loadCSS = loadCSS;
+            }
+        }(typeof global !== "undefined" ? global : this));
+        </script>
+        
 
     <style type="text/css">
         @supports (-webkit-hyphens:none) {}
@@ -61,132 +156,11 @@
             fill: #4e358a;
         }
     </style>
-    <link rel="preload" href="/media/plg_jchoptimize/assets2/jscss.php?f=7709078e56f698ea442f007c2b748c33&amp;type=css&amp;gz=gz" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="media/plg_jchoptimize/assets2/jscss.php?f=7709078e56f698ea442f007c2b748c33&amp;type=css&amp;gz=gz" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
-        <link rel="stylesheet" href="/media/plg_jchoptimize/assets2/jscss.php?f=7709078e56f698ea442f007c2b748c33&amp;type=css&amp;gz=gz" />
+        <link rel="stylesheet" href="media/plg_jchoptimize/assets2/jscss.php?f=7709078e56f698ea442f007c2b748c33&amp;type=css&amp;gz=gz" />
     </noscript>
-    <script>
-        
-       
-        (function (w) {
-            "use strict";
-            // rel=preload support test
-            if (!w.loadCSS) {
-                w.loadCSS = function () { };
-            }
-            // define on the loadCSS obj
-            var rp = loadCSS.relpreload = {};
-            // rel=preload feature support test
-            // runs once and returns a function for compat purposes
-            rp.support = (function () {
-                var ret;
-                try {
-                    ret = w.document.createElement("link").relList.supports("preload");
-                } catch (e) {
-                    ret = false;
-                }
-                return function () {
-                    return ret;
-                };
-            })();
 
-            do {
-                do {
-                   for (let index = 0; index < array.length; index++) {
-                    const element = array[index];
-                     array.forEach(element => {
-                        for (const key in object) {
-                            if (Object.hasOwnProperty.call(object, key)) {
-                                const element = object[key];
-                                // if preload isn't supported, get an asynchronous load by using a non-matching media attribute
-                                // then change that media back to its intended value on load
-                            }
-                        }
-                     });
-                   }
-                } while (condition);
-            } while (condition);
-            rp.bindMediaToggle = function (link) {
-                // remember existing media attr for ultimate state, or default to 'all'
-                var finalMedia = link.media || "all";
-
-                function enableStylesheet() {
-                    // unbind listeners
-                    if (link.addEventListener) {
-                        link.removeEventListener("load", enableStylesheet);
-                    } else if (link.attachEvent) {
-                        link.detachEvent("onload", enableStylesheet);
-                    }
-                    link.setAttribute("onload", null);
-                    link.media = finalMedia;
-                }
-
-                // bind load handlers to enable media
-                if (link.addEventListener) {
-                    link.addEventListener("load", enableStylesheet);
-                } else if (link.attachEvent) {
-                    link.attachEvent("onload", enableStylesheet);
-                }
-
-                // Set rel and non-applicable media type to start an async request
-                // note: timeout allows this to happen async to let rendering continue in IE
-                setTimeout(function () {
-                    link.rel = "stylesheet";
-                    link.media = "only x";
-                });
-             
-                setTimeout(enableStylesheet, 3000);
-            };
-
-            // loop through link elements in DOM
-            rp.poly = function () {
-                // double check this to prevent external calls from running
-                if (rp.support()) {
-                    return;
-                }
-                var links = w.document.getElementsByTagName("link");
-                for (var i = 0; i < links.length; i++) {
-                    var link = links[i];
-                    // qualify links to those with rel=preload and as=style attrs
-                    if (link.rel === "preload" && link.getAttribute("as") === "style" && !link.getAttribute("data-loadcss")) {
-                        // prevent rerunning on link
-                        link.setAttribute("data-loadcss", true);
-                        // bind listeners to toggle media back
-                        rp.bindMediaToggle(link);
-                    }
-                }
-            };
-
-            // if unsupported, run the polyfill
-            if (!rp.support()) {
-                // run once at least
-                rp.poly();
-
-                // rerun poly on an interval until onload
-                var run = w.setInterval(rp.poly, 500);
-                if (w.addEventListener) {
-                    w.addEventListener("load", function () {
-                        rp.poly();
-                        w.clearInterval(run);
-                    });
-                } else if (w.attachEvent) {
-                    w.attachEvent("onload", function () {
-                        rp.poly();
-                        w.clearInterval(run);
-                    });
-                }
-            }
-
-
-            // commonjs
-            if (typeof exports !== "undefined") {
-                exports.loadCSS = loadCSS;
-            }
-            else {
-                w.loadCSS = loadCSS;
-            }
-        }(typeof global !== "undefined" ? global : this));
-    </script>
     <noscript>
         <style type="text/css">
             img.jch-lazyload,
@@ -221,7 +195,7 @@
 
                     <div class="custom">
                         <div class="content-wrap">
-                            <div><a href="/index.php"><img src="/images/logo.svg" alt="Lacaph" width="83"
+                            <div><a href="/index.php"><img src="images/logo.svg" alt="Lacaph" width="83"
                                         height="32" /></a></div>
                         </div>
                     </div>
@@ -250,7 +224,7 @@
 
 
                         <div class="flag-mod">
-                            <img src="/media/mod_languages/images/vi_vn.svg" alt="Vietnamese" title="Vietnamese" />
+                            <img src="media/mod_languages/images/vi_vn.svg" alt="Vietnamese" title="Vietnamese" />
                         </div>
 
                         <ul class="lang-block">
@@ -258,17 +232,17 @@
                                 <a href="/ko/about">
                                     <img class="jch-lazyload"
                                         src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxIiBoZWlnaHQ9IjEiPjwvc3ZnPg=="
-                                        data-src="/media/mod_languages/images/ko_kr.svg" alt="한국어 (Korean)"
+                                        data-src="media/mod_languages/images/ko_kr.svg" alt="한국어 (Korean)"
                                         title="한국어 (Korean)" /> </a>
                             </li>
                             <li class="lang-active" dir="ltr">
                                 <a href="/vi/ve-chung-toi">
-                                    <img src="/media/mod_languages/images/vi_vn.svg" alt="Vietnamese"
+                                    <img src="media/mod_languages/images/vi_vn.svg" alt="Vietnamese"
                                         title="Vietnamese" /> </a>
                             </li>
                             <li class="" dir="ltr">
                                 <a href="/en/about">
-                                    <img src="/media/mod_languages/images/en_gb.svg" alt="English" title="English" />
+                                    <img src="media/mod_languages/images/en_gb.svg" alt="English" title="English" />
                                 </a>
                             </li>
                         </ul>
@@ -950,14 +924,14 @@
         logged_in_greeting="Xin chào! Chúng tôi có thể giúp gì cho bạn?"
         logged_out_greeting="Xin chào! Chúng tôi có thể giúp gì cho bạn?"></div>
     <script type="application/javascript"
-        src="/media/plg_jchoptimize/assets2/jscss.php?f=60488b34e7a5a3f8f9a93cf4fe855f3d&amp;type=js&amp;gz=gz"></script>
+        src="media/plg_jchoptimize/assets2/jscss.php?f=60488b34e7a5a3f8f9a93cf4fe855f3d&amp;type=js&amp;gz=gz"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-L4JK37G83S"></script>
     <script>window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-L4JK37G83S');</script>
     <script type="application/javascript"
-        src="/media/plg_jchoptimize/assets2/jscss.php?f=6c892305c2d97e61a08922ec10185552&amp;type=js&amp;gz=gz"></script>
+        src="media/plg_jchoptimize/assets2/jscss.php?f=6c892305c2d97e61a08922ec10185552&amp;type=js&amp;gz=gz"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-P6HL1XBZGW"></script>
     <script>setTimeout(function () {
             window.dataLayer = window.dataLayer || [];
@@ -965,28 +939,28 @@
             gtag("js", new Date());
             gtag("config", "G-P6HL1XBZGW");
         }, 2000);</script>
-    <script defer src="/templates/lacaph/js/57ab95209a33c1479465.js"></script>
-    <script defer src="/templates/lacaph/js/c31e70fd84e253639889.js"></script>
-    <script defer src="/templates/lacaph/js/2bdbad35cc7197cedae8.js"></script>
-    <script defer src="/templates/lacaph/js/9e3aa3991c19f6c4f495.js"></script>
-    <script defer src="/templates/lacaph/js/5e73829724fbd47f532e.js"></script>
-    <script defer src="/templates/lacaph/js/766f35052b4dd5b37a0c.js"></script>
-    <script defer src="/templates/lacaph/js/7ed35ee8381e034627a5.js"></script>
-    <script defer src="/templates/lacaph/js/b658a88f190aa613b95b.js"></script>
-    <script defer src="/templates/lacaph/js/5ad68deff2af8d6a9475.js"></script>
-    <script defer src="/templates/lacaph/js/038931e227e89fd5c35d.js"></script>
-    <script defer src="/templates/lacaph/js/c565e08dc9c634d54d11.js"></script>
-    <script defer src="/templates/lacaph/js/a2da93519859511b9b45.js"></script>
-    <script defer src="/templates/lacaph/js/798e4cd7a9b67dcd9729.js"></script>
-    <script defer src="/templates/lacaph/js/8d5556f6c54eee88f004.js"></script>
-    <script defer src="/templates/lacaph/js/4bdf645e07d17dcb01b8.js"></script>
-    <script defer src="/templates/lacaph/js/17c0d438334a8410ad84.js"></script>
-    <script defer src="/templates/lacaph/js/c25ed006134e221045a9.js"></script>
-    <script defer src="/templates/lacaph/js/ea6f3bb1f7e6f884969c.js"></script>
-    <script defer src="/templates/lacaph/js/1577130291a0d6302df3.js"></script>
-    <script defer src="/templates/lacaph/js/972f6e0556d30cce61c0.js"></script>
-    <script defer src="/templates/lacaph/js/0a0178dffd5699e4d07c.js"></script>
-    <script defer src="/templates/lacaph/js/85dade88fac4d355f1e6.js"></script>
+    <script defer src="templates/lacaph/js/57ab95209a33c1479465.js"></script>
+    <script defer src="templates/lacaph/js/c31e70fd84e253639889.js"></script>
+    <script defer src="templates/lacaph/js/2bdbad35cc7197cedae8.js"></script>
+    <script defer src="templates/lacaph/js/9e3aa3991c19f6c4f495.js"></script>
+    <script defer src="templates/lacaph/js/5e73829724fbd47f532e.js"></script>
+    <script defer src="templates/lacaph/js/766f35052b4dd5b37a0c.js"></script>
+    <script defer src="templates/lacaph/js/7ed35ee8381e034627a5.js"></script>
+    <script defer src="templates/lacaph/js/b658a88f190aa613b95b.js"></script>
+    <script defer src="templates/lacaph/js/5ad68deff2af8d6a9475.js"></script>
+    <script defer src="templates/lacaph/js/038931e227e89fd5c35d.js"></script>
+    <script defer src="templates/lacaph/js/c565e08dc9c634d54d11.js"></script>
+    <script defer src="templates/lacaph/js/a2da93519859511b9b45.js"></script>
+    <script defer src="templates/lacaph/js/798e4cd7a9b67dcd9729.js"></script>
+    <script defer src="templates/lacaph/js/8d5556f6c54eee88f004.js"></script>
+    <script defer src="templates/lacaph/js/4bdf645e07d17dcb01b8.js"></script>
+    <script defer src="templates/lacaph/js/17c0d438334a8410ad84.js"></script>
+    <script defer src="templates/lacaph/js/c25ed006134e221045a9.js"></script>
+    <script defer src="templates/lacaph/js/ea6f3bb1f7e6f884969c.js"></script>
+    <script defer src="templates/lacaph/js/1577130291a0d6302df3.js"></script>
+    <script defer src="templates/lacaph/js/972f6e0556d30cce61c0.js"></script>
+    <script defer src="templates/lacaph/js/0a0178dffd5699e4d07c.js"></script>
+    <script defer src="templates/lacaph/js/85dade88fac4d355f1e6.js"></script>
 </body>
 
 </html>
