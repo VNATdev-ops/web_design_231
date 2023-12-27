@@ -191,14 +191,14 @@ form{
     align-items: center;
 }
 .input-field{
-    padding: 10px 0;
+    padding: 15px 0;
     width: 100%;
 }
 .input-field input{
     background-color: transparent;
     border: none;
     border-bottom: #4e358a 2px solid;
-    height: 30px;
+    height: 40px;
     width: 100%;
     font-family: Open-Sans;
     font-size: 1rem;

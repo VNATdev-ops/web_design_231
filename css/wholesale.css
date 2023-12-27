@@ -13,12 +13,6 @@ main a{
     color: #4e358a;
     text-align: left;
 }
-h1{
-    line-height: 3rem;
-    color: #4e358a;
-    font-family: Josefin Sans,sans-serif;
-    text-transform: uppercase;
-}
 h2{
     text-align: center;
     margin-top: 30px;
@@ -86,7 +80,14 @@ h3{
 .container{
     margin: 50px 10%;
 }
-
+.page-header h1{
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    color: #4e358a;
+    font-family: Josefin Sans,sans-serif;
+    text-transform: uppercase;
+}
 .ls-product{
     text-align: center;
 
@@ -226,7 +227,7 @@ h3{
 
 @media screen and (max-width: 700px) {
     .container{
-        margin: 30px 20px;
+        margin: 30px 50px;
     }
     .article-links{
         margin: 30px 0;
