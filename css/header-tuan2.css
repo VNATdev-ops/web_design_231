@@ -22,7 +22,7 @@ header {
     margin: 0px auto;
 }
 
-header .row {
+header .row-tuan {
     height: auto;
     display: flex;
     justify-content: space-between;
@@ -32,7 +32,7 @@ header .row {
     transition: max-height 0.4s ease;
 }
 
-header .row.hide {
+header .row-tuan.hide {
     max-height: 0;
     overflow: hidden;
 }
