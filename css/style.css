@@ -211,7 +211,7 @@ section{
 
 
 .banner-1 {
-    position: relative; /* Make the container position relative */
+    position: relative;
     height: 400px;
     display: flex;
     flex-direction: column;
