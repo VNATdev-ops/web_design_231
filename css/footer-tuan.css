@@ -1,12 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-body{
+
+.footer-tuan{
 	line-height: 1.5;
-	font-family: 'Poppins', sans-serif;
+	font-family: Open Sans;
+	color: #ffffff;
 }
 *{
 	margin:0;
 	padding:0;
 	box-sizing: border-box;
+}
+.footer-tuan a:hover{
+	color: rgba(0, 0, 0, 0.795);
 }
 .container-footer-tuan{
 	max-width: 1170px;
@@ -18,67 +22,76 @@ body{
 }
 ul{
 	list-style: none;
+	list-style-type: none;
 }
 .footer-tuan{
 	background-color: #4e358a;
     padding: 80px 0;
 }
 .footer-col-tuan{
-   width: 25%;
-   padding: 0 15px;
+   width: 20%;
+   margin: 0 2.5%;
+   display: flex;
+   flex-direction: column;
 }
 .footer-col-tuan h1{
 	font-size: 25px;
+	line-height: 40px;
 	color: #ffffff;
-	text-transform: capitalize;
-	/* margin-bottom: 20px; */
+	margin-bottom: 30px;
 	font-weight: 700;
 	position: relative;
+	font-family: Josefin Sans;
+}
+.footer-col-tuan h4{
+	color: #ffffff;
+	margin-bottom: 20px;
+	font-size: 17px;
+	font-weight: 700;
+	font-family: Open-Sans;
 }
 .footer-col-tuan ul{
     padding-left: 0;
 }
 .footer-col-tuan ul li:not(:last-child){
-	margin-bottom: 10px;
+	margin-bottom: 20px;
 }
 .footer-col-tuan ul li a{
 	font-size: 16px;
-	text-transform: capitalize;
 	color: #ffffff;
 	text-decoration: none;
-	font-weight: 300;
-	color: #ffffff;
 	display: block;
-	/* transition: all 0.3s ease; */
 }
-.footer-tuan-x ul li a:hover{
-	color: rgba(0, 0, 0, 0.795);
+.footer-col-tuan .social-links-tuan{
+	margin: 8px 0;
 }
-.footer-col-tuan .social-links a{
+.footer-col-tuan .social-links-tuan a{
 	display: inline-block;
     font-size: 30px;
-	/* height: 50px; */
-	/* width: 40px; */
 	margin:0 10px 10px 0;
 	text-align: center;
 	color: #ffffff;
 }
-.footer-col-tuan .social-links a:hover{
+.footer-col-tuan .social-links-tuan a:hover{
 	opacity: 0.5;
-
 }
 
 /*responsive*/
-@media(max-width: 767px){
-  .footer-col-tuan{
-    width: 50%;
-    margin-bottom: 30px;
-}
+@media(max-width: 900px){
+	.row-footer-tuan{
+		justify-content: center;
+	}
+	.footer-col-tuan{
+		width: 70%;
+		padding: 20px 30px;
+		align-items: center;
+		text-align: center;
+	}
 }
 @media(max-width: 574px){
-  .footer-col-tuan{
-    width: 100%;
-}
+	.footer-col-tuan{
+		width: 100%;
+	}
 }
 
 

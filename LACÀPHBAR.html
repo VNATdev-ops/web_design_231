@@ -174,6 +174,16 @@
 </header>
    
 
+<div class="position-relative" style="z-index: 99;">
+    <div class="position-fixed top-50 start-100 translate-middle">
+      <button type="button" class="btn btn-tuan" style="background-color: #4d3f99;">
+        <div class="outer">
+          <div class="inner rotate">Feedback</div>
+      </div>
+      </button>
+    </div>
+  </div>
+
  
     <div class="banner container-fluid">
         <h1 class="fw-bolder fw-bold">LACÀPH BAR</h1>
@@ -204,8 +214,69 @@
     <div class="container pt-3">
     <p class="text-capitalize">Hằng ngày từ 9:00–17:00</p>
     </div>
-    <div class="container pt-3">
-    <p class="text-capitalize card-title fw-bolder fw-bold" style="color: #4e358a;">OPEN GOOGLE MAPS</p>
+    <div class="container">
+        <div class="place">
+            <div class="bar">
+                <div class="map-wrap">
+                    <div class="button" onclick="toggleMapBar()">
+                        <button class="open-button" href="#">
+                            MỞ BẢN ĐỒ GOOGLE <i class="fa-solid fa-chevron-down" style="color: #4e358a; padding-left: 10px;"></i>
+                        </button>
+                        <button class="close-button" href="#" style="display: none;">
+                            ĐÓNG BẢN ĐỒ GOOGLE <i class="fa-solid fa-chevron-up" style="color: #4e358a; padding-left: 10px;"></i>
+                        </button>
+                        <hr class="hr-tuan">
+                    </div>
+    
+                    <div class="map hide w-100 " style="">
+                        <iframe title="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.464259374663!2d106.70099831538788!3d10.775710192322009!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f250219e89b:0x74f9cd6a6fa5317!2sLacàph Bar!5e0!3m2!1svi!2s!4v1609839820738!5m2!1svi!2s" frameborder="" width="100%" height="100%"></iframe>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="space">
+    
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        var mapDisplayBar = document.querySelector('.bar .map');
+                        var openButtonBar = document.querySelector('.bar .open-button');
+                        var closeButtonBar = document.querySelector('.bar .close-button');
+    
+                        openButtonBar.addEventListener('click', function () {
+                            mapDisplayBar.classList.remove('hide');
+                            mapDisplayBar.style.display = 'block';
+                            openButtonBar.style.display = 'none';
+                            closeButtonBar.style.display = 'block';
+                        });
+    
+                        closeButtonBar.addEventListener('click', function () {
+                            mapDisplayBar.classList.add('hide');
+                            openButtonBar.style.display = 'block';
+                            closeButtonBar.style.display = 'none';
+                        });
+    
+                        var mapDisplaySpace = document.querySelector('.space .map');
+                        var openButtonSpace = document.querySelector('.space .open-button');
+                        var closeButtonSpace = document.querySelector('.space .close-button');
+    
+                        openButtonSpace.addEventListener('click', function () {
+                            mapDisplaySpace.classList.remove('hide');
+                            mapDisplaySpace.style.display = 'block';
+                            openButtonSpace.style.display = 'none';
+                            closeButtonSpace.style.display = 'block';
+                        });
+    
+                        closeButtonSpace.addEventListener('click', function () {
+                            mapDisplaySpace.classList.add('hide');
+                            openButtonSpace.style.display = 'block';
+                            closeButtonSpace.style.display = 'none';
+                        });
+                    });
+    
+                </script>
+                
+            </div>
+        </div>
     </div>
 
     <div class="banner-1">
@@ -224,57 +295,58 @@
     <footer class="footer-tuan">
         <div class="container-footer-tuan">
           <div class="row-footer-tuan">
-            <div class="footer-col-tuan ">
-              <h4 class=""><img src="images.tuan/Logo_Lacàph_footer.webp " alt="" width="160" height="62"></h4>
-              <br>
-              <ul class="">
-                <li><a href="#">Bản quyền Ⓒ 2023 Lacàph
-               thuộc Cty TNHH Collective</a></li>
-                <li><a href="#">Cty TNHH Collective
-               GPĐKKD số 0315880703
-               do sở KHĐT Tp. HCM
-               cấp ngày 05/09/2019</a></li>
-              </ul>
+          <div class="footer-col-tuan ">
+            <h4 class=""><img src="images.tuan/Logo_Lacàph_footer.webp " alt="" width="160" height="62"></h4>
+            <br>
+            <ul class="">
+            <li><p>Bản quyền Ⓒ 2023 Lacàph
+              thuộc Cty TNHH Collective</p></li>
+            <li><p>Cty TNHH Collective
+              GPĐKKD số 0315880703
+              do sở KHĐT Tp. HCM
+              cấp ngày 05/09/2019</p></li>
+            </ul>
+          </div>
+          <div class="footer-col-tuan">
+            <h1>LACÀPH SPACE</h1>
+            <ul>
+            <li><p>220A Nguyễn Công Trứ
+             Phường Nguyễn Thái Bình
+             Quận 1, Tp. Hồ Chí Minh</p></li>
+            <li><p>Chủ nhật–Thứ 5, 9:30–17:30
+             hoặc theo lịch hẹn</p></li>
+            <li><p>Thứ 6–Thứ 7, 9:30–21:30
+             <br>hoặc theo lịch hẹn</p></li>
+            <li><p>Số điện thoại
+             <br><a href="tel:+">+84 (0)86 672 1202</a></p></li>
+            <li><p>Email
+             <br><a href="mailto:">hello@lacaph.com</a></p></li>
+            </ul>
+          </div>
+          <div class="footer-col-tuan footer-tuan-x">
+            <h1>CHÍNH SÁCH CỬA HÀNG</h1>
+            <ul>
+            <li><a href="#">Chính sách đổi trả</a></li>
+            <li><a href="#">Chính sách vận chuyển</a></li>
+            <li><a href="#">Phương thức thanh toán</a></li>
+            <li><a href="#">Chính sách bảo mật</a></li>
+            </ul>
+          </div>
+          <div class="footer-col-tuan">
+            <h4 style="color: #fff;">Theo dõi chúng tôi!</h4>
+            <div class="social-links-tuan">
+            <a href="#"><i class="fa-brands fa-square-facebook" style="padding-right: 10px;"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram" style="padding-right: 10px;"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube" style="padding-right: 10px;"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin" style="padding-right: 10px;"></i></a>  
             </div>
-            <div class="footer-col-tuan">
-              <h1>LACÀPH SPACE</h1>
-              <ul>
-                <li><a href="#">220A Nguyễn Công Trứ
-               Phường Nguyễn Thái Bình
-               Quận 1, Tp. Hồ Chí Minh</a></li>
-                <li><a href="#">Chủ nhật–Thứ 5, 9:30–17:30
-               hoặc theo lịch hẹn</a></li>
-                <li><a href="#">Thứ 6–Thứ 7, 9:30–21:30
-               <br>hoặc theo lịch hẹn</a></li>
-                <li><a href="#">Số điện thoại
-               <br>+84 (0)86 672 1202</a></li>
-                <li><a href="#">Email
-               <br>hello@lacaph.com</a></li>
-              </ul>
-            </div>
-            <div class="footer-col-tuan footer-tuan-x">
-              <h1>CHÍNH SÁCH CỬA HÀNG</h1>
-              <ul>
-                <li><a href="#">Chính sách đổi trả</a></li>
-                <li><a href="#">Chính sách vận chuyển</a></li>
-                <li><a href="#">Phương thức thanh toán</a></li>
-                <li><a href="#">Chính sách bảo mật</a></li>
-              </ul>
-            </div>
-            <div class="footer-col-tuan">
-              <h1>FOLLOW US</h1>
-              <div class="social-links">
-                <a href="#"><i class="ri-facebook-box-fill"></i></a>
-                <a href="#"><i class="ri-instagram-fill"></i></a>
-                <a href="#"><i class="ri-youtube-fill"></i></a>
-                <a href="#"><i class="ri-linkedin-box-fill"></i></a>
-                <img src="images.tuan/tchotel_2022_LL.png" alt="" style="padding-bottom: 6px;">
-                <img src="images.tuan/logoSaleNoti.webp" alt="" width="200" height="76" style="padding-bottom: 6px;" >
-  
-              </div>
+            <div class="" style="width:80% ; display: flex; flex-direction: column; align-items: center;">
+            <a href="#"><img src="images.tuan/tc_2022_l_green_bg_rgb-3.webp" alt="" width="100" height="auto" style="padding: 10px 0;"></a>
+            <a href="#"><img src="images.tuan/logoSaleNoti.webp" alt="" width="220" height="auto" style="padding: 10px 0;" ></a>
             </div>
           </div>
+          </div>
         </div>
-     </footer>
+       </footer>
 </body>
 </html>
