@@ -21,6 +21,78 @@ li{
 section{
     background-color: #fffced;   
 }
+/* ===== main ==== */
+.card-tuan{
+    background-color: rgba(0,0,0,.5);
+    padding: 20px;
+    max-width: 400px;
+    top: 50%;
+    position: absolute;
+    max-height: min-content;
+}
+.text-tuan{
+    text-align: left;
+    left: 20px;
+    color: #fff;
+}
+
+.summit-button-tuan{
+    margin-top: 30px;
+}
+.summit-button-tuan button{
+    justify-content: center;
+    align-items: center;
+    width: 165px;
+    height: 50px;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: rgba(0,0,0,.5);
+    /* background-image: url(../images/button.png); */
+    background-size: 100%;
+    background-repeat: no-repeat;
+    opacity: 1;
+    display: inline-flex;
+    padding: 3px 20px 0px 0px;
+    background-position: 50% center;
+    border-width: 0px;
+    transition: opacity 0.2s ease 0s;
+    cursor: pointer;
+}
+.summit-button-tuan button:hover{
+    background-image: url(../images/button.png);
+    color: #4e358a;
+}
+
+
+.dongkhampha_cc-tuan{
+    margin-top: 20px;
+    align-items: center;
+}
+.dongkhampha_cc-tuan a{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0;
+    color: #fff;
+}
+.dongkhampha_cc-tuan hr{
+    display: block;
+    width: 50%;
+    height: 3px;
+    background-color: #fff;
+    margin: 10px auto 0;
+    border-radius: 3px;
+}
+/* .dongkhampha_cc-tuan:hover > hr{
+    width: 100%;
+    background-color: #fff;
+} */
+
 .frame {
     border: 10px solid black;
   padding: 35px;
