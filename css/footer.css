@@ -62,17 +62,17 @@ ul{
 	text-decoration: none;
 	display: block;
 }
-.footer-col-tuan .social-links{
+.footer-col-tuan .social-links-tuan{
 	margin: 8px 0;
 }
-.footer-col-tuan .social-links a{
+.footer-col-tuan .social-links-tuan a{
 	display: inline-block;
     font-size: 30px;
 	margin:0 10px 10px 0;
 	text-align: center;
 	color: #ffffff;
 }
-.footer-col-tuan .social-links a:hover{
+.footer-col-tuan .social-links-tuan a:hover{
 	opacity: 0.5;
 }
 
