@@ -134,7 +134,7 @@ a{
     text-transform: uppercase;
 }
 .container{
-    margin: 50px 100px;
+    padding: 50px 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
