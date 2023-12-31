@@ -329,7 +329,23 @@ main .row{
 
 @media screen and (max-width: 1000px) {
     .container{
-        margin: 30px 50px;
+        padding: 30px 80px;
+    }
+    .form{
+        padding: 30px 5%;
+    }
+    .place{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .space, .bar{
+        width: 100%;
+        padding: 20px 0;
+    }
+}
+@media screen and (max-width: 700px) {
+    .container{
+        padding: 30px 50px;
     }
     .contact-form{
         margin: 10px -50px;
