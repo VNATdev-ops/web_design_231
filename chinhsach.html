@@ -60,7 +60,7 @@
             <div class="pop-up-header">
                 <div class="header-container" >
                     <div class="button-nav">
-                        <div class="close-button" onclick="closePopup()">
+                        <div class="close-button" onclick="closeMenuPopup()">
                             <button><img src="./images/close-button.png" alt=""></button>
                         </div>
                         <div class="chucnang">
@@ -136,15 +136,15 @@
 
                     //Menu size
                     function updateMenuSize() {
-                                let screenWidth = window.innerWidth;
-                                let menu = document.querySelector('#menu');
+                        let screenWidth = window.innerWidth;
+                        let menu = document.querySelector('#menu');
 
-                                if (screenWidth <= 1200) {
-                                    menu.style.width = '100%'; 
-                                } else {
-                                    menu.style.width = 'auto'; 
-                                }
-                            }
+                        if (screenWidth <= 1200) {
+                            menu.style.width = '100%'; 
+                        } else {
+                            menu.style.width = 'auto'; 
+                        }
+                    }
 
                     updateMenuSize();
                     window.addEventListener('resize', updateMenuSize);
@@ -161,7 +161,7 @@
                         popupContent.style.left = '0';
                     }
 
-                    function closePopup() {
+                    function closeMenuPopup() {
                         popupContent.style.left = '-100%';
                     }
 
@@ -449,10 +449,10 @@
 			   hoặc theo lịch hẹn</p></li>
 				<li><p>Thứ 6–Thứ 7, 9:30–21:30
 			   <br>hoặc theo lịch hẹn</p></li>
-				<li><p>Số điện thoại
-			   <br><a href="tel:+">+84 (0)86 672 1202</a></p></li>
-				<li><p>Email
-			   <br><a href="mailto:">hello@lacaph.com</a></p></li>
+               <li><p><span style="font-weight: bold;">Số điện thoại</span>
+                <br><a href="tel:+">+84 (0)86 672 1202</a></p></li>
+                 <li><p><span style="font-weight: bold;">Email</span>
+                <br><a href="mailto:">hello@lacaph.com</a></p></li>
 			  </ul>
 			</div>
 			<div class="footer-col-tuan footer-tuan-x">
@@ -466,7 +466,7 @@
 			</div>
 			<div class="footer-col-tuan">
 			  <h4 style="color: #fff;">Theo dõi chúng tôi!</h4>
-			  <div class="social-links">
+			  <div class="social-links-tuan">
 				<a href="https://www.facebook.com/lacaph.coffee/"><i class="fa-brands fa-square-facebook" style="padding-right: 10px;"></i></a>
 				<a href="https://www.instagram.com/lacaph.coffee/"><i class="fa-brands fa-instagram" style="padding-right: 10px;"></i></a>
 				<a href="https://www.youtube.com/channel/UCrXnkWygCQUPbgccJDmBUFw"><i class="fa-brands fa-youtube" style="padding-right: 10px;"></i></a>

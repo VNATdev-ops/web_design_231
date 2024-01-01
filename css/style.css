@@ -15,6 +15,10 @@ a{
     text-decoration: none;
     color: #4e358a;
 }
+hr{
+    opacity: 1;
+    height: 2.5px;
+}
 li{
     list-style-type: none;
 }
@@ -29,6 +33,10 @@ section{
     top: 50%;
     position: absolute;
     max-height: min-content;
+}
+.card-title{
+    text-transform: uppercase;
+    font-weight: 600;
 }
 .text-tuan{
     text-align: left;
@@ -83,9 +91,9 @@ section{
 .dongkhampha_cc-tuan hr{
     display: block;
     width: 50%;
-    height: 3px;
+    height: 2.5px;
     background-color: #fff;
-    margin: 10px auto 0;
+    margin: 15px auto 0;
     border-radius: 3px;
 }
 
@@ -124,7 +132,7 @@ section{
 }
 .button .hr-tuan{
     width: 20%;
-    height: 3px;
+    height: 2.5px;
     margin-top: 15px;
     background-color: #4e358a;
     margin-left: 0;
@@ -399,6 +407,81 @@ section{
     background-position: center;
     border: 2px solid #f4dcbb;
 }
+.product-swiper{
+    background-color: transparent;
+    grid-area: product;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 40px 0;
+    color: #4e358a;
+}
+.swiper-container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+.swiper-wrapper {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+.mod_redshop_product {
+    width: 300px;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+}
+.mod_redshop_products_title {
+    position: relative;
+    line-height: 2.75rem;
+    margin: 20px;
+}
+.mod_redshop_products_image{
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+}
+.mod_redshop_products_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.mod_redshop_products_desc > p{
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.mod_redshop_products_price {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.swiper-pagination-bullet{
+    background-color: #4e358a;
+    position: relative;
+    margin-top: 20px;
+}
+.swiper-button-next,
+.swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #4e358a;
+    cursor: pointer;
+}
+.swiper-button-next {
+    right: 30px;
+}
+.swiper-button-prev {
+    left: 30px;
+}
 .category-container{
     background-color: transparent;
     grid-area: category-container;
@@ -412,6 +495,38 @@ section{
 .card-body h3,
 .text-center h1 {
     color: #4e358a;
+}
+.pop-up-window{
+    position: fixed;
+    left: -100%; /* Initially set to -100% to hide the popup */
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #4e358a;
+    z-index: 99999;
+    transition: left .4s ease; 
+    display: flex;
+    justify-content: center;
+}
+.product-popup-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 30px;
+    color: #fff;
+}
+.product-popup-content .mod_redshop_products_title{
+    margin-left: 0;
+}
+.product-popup-content .mod_redshop_products_title > h3{
+    text-align: left;
+    color: #fff;
+}
+.popup-navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 /* button */
 .outer {
@@ -467,7 +582,7 @@ section{
 }
 .btn-wrap hr{
     width: 50%;
-    height: 2px;
+    height: 2.5px;
     background-color: #4e358a;
     margin-left: 0;
     transition: 0.4s ease;
@@ -751,7 +866,7 @@ textarea:focus{
 }
 .dongkhampha_cc hr{
     width: 50%;
-    height: 2px;
+    height: 2.5px;
     background-color: #fff;
     transition: all 0.4s ease;
 }

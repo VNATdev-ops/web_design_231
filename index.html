@@ -84,13 +84,13 @@
               <nav>
                   <ul>
                       <li><a href="vechungtoi/ve-chung-toi.html">Về chúng tôi</a></li>
-                  <li><a href="muahang.html">Mua hàng</a></li>
-                  <li><a href="cauchuyen.html">Câu chuyện</a></li>
-                  <li><a href="LACÀPHBAR.html">Lacàph Bar</a></li>
-                  <li><a href="LACÀPHSPACE.html">Lacàph Space</a></li>
-                  <li><a href="sach.html">Sách</a></li>
-                  <li><a href="wholesale.html">Wholesale</a></li>
-                  <li><a href="lienhe.html">Liên hệ</a></li>
+                      <li><a href="muahang.html">Mua hàng</a></li>
+                      <li><a href="cauchuyen.html">Câu chuyện</a></li>
+                      <li><a href="LACÀPHBAR.html">Lacàph Bar</a></li>
+                      <li><a href="LACÀPHSPACE.html">Lacàph Space</a></li>
+                      <li><a href="sach.html">Sách</a></li>
+                      <li><a href="wholesale.html">Wholesale</a></li>
+                      <li><a href="lienhe.html">Liên hệ</a></li>
                   </ul>
                 </nav>
             </div>
@@ -414,7 +414,7 @@
             
             <div class="pop-up-window">
                 <div class="product-popup-content" >
-                    <i class="fa-solid fa-xmark" style="color: #ffffff; font-size: 50px; cursor: pointer; position:absolute; top:30px; right: 30px; " onclick="closePopup()"></i>
+                    <i class="fa-solid fa-xmark" style="color: #ffffff; font-size: 30px; cursor: pointer; position:absolute; top:30px; right: 30px; " onclick="closePopup()"></i>
                     <div class="mod_redshop_products_title">
                         <h3></h3>
                     </div>
@@ -426,11 +426,11 @@
                     </div>
                     <div class="btn-wrap">
                         <div class="mod_redshop_products_readmore" onclick="closePopup()">
-                            <a class="readmore-link" href="#">
-                                <!-- Khám Phá -->
+                            <a class="readmore-link" href="#" style="color: #fff;">
+                                Khám Phá
                             </a>
                         </div>
-                        <!-- <hr> -->
+                        <hr>
                     </div>
                 </div>
             </div>
@@ -480,28 +480,28 @@
                     productPrice.textContent = productDetails.price;
                 }
 
-                // function getProductDetails(productIndex) {
-                //     var productDetails = {
-                //         1: { 
-                //             title: 'Lacàph Signature Cold Brew', 
-                //             description: 'Sản xuất từ những hạt cà phê Arabica chất lượng được rang một cách tỉ mỉ làm tăng hương vị sô cô la đậm đà, sau đó cà phê được chúng tôi ủ lạnh hơn 18 tiếng đồng hồ để tạo ra một sản phẩm cà phê đóng chai cực kỳ tươi ngon.', 
-                //             price: '90.000 VND' },
-                //         2: { 
-                //             title: 'Lacàph Espresso Blend', 
-                //             description: 'Sản xuất từ hạt Arabica và hạt Robusta giúp lưu giữ nhiều lớp mùi vị. Cà phê từ nông trường tiên phong trong lĩnh vực canh tác Arabica vùng Tây Nguyên được thu hoạch, chọn lọc bằng tay trước khi được sơ chế bằng phương pháp khô tự nhiên, phơi và đóng gói. Lacàph Espresso Blend là một loại cà phê mượt mà, tròn vị, kết hợp hoàn hảo giữa vị chua nhẹ và vị ngọt thanh.', 
-                //             price: '190.000 VND' },
-                //         3: { 
-                //             title: 'Lacàph Filter Blend', 
-                //             description: 'Sản xuất từ những hạt Arabica Red Bourbon chất lượng thu hoạch bằng tay từ vườn cà phê của anh Hadjim, nằm ở miền Trung Tây Nguyên. Những hạt cà phê được sơ chế ướt (Fully - Washed) sau đó sẽ vận chuyển đến xưởng rang Lacàph để kết hợp cùng Arabica từ nông hộ khác. Lacàph Filter Blend là một loại cà phê có sự kết hợp nhịp nhàng giữa vị chua và ngọt dịu êm.', 
-                //             price: '200.000 VND' },
-                //         4: { 
-                //             title: 'Lacàph Phin Blend', 
-                //             description: 'Sản xuất từ những hạt Robusta chất lượng ở vùng đất đỏ bazan tỉnh Đắk Nông kết hợp với tỉ lệ nhỏ hạt Arabica tạo ra hương vị đậm đà. Hạt Robusta được sơ chế theo phương pháp bán ướt giúp tăng vị ngọt và tạo thêm nhiều lớp hương vị. Lacàph Phin Blend là một loại cà phê hướng đến sự cân bằng, hơi hướng hiện đại hơn so với các loại cà phê phin truyền thống.', 
-                //             price: '180.000 VND' }
-                //     };
+                function getProductDetails(productIndex) {
+                    var productDetails = {
+                        1: { 
+                            title: 'Lacàph Signature Cold Brew', 
+                            description: 'Sản xuất từ những hạt cà phê Arabica chất lượng được rang một cách tỉ mỉ làm tăng hương vị sô cô la đậm đà, sau đó cà phê được chúng tôi ủ lạnh hơn 18 tiếng đồng hồ để tạo ra một sản phẩm cà phê đóng chai cực kỳ tươi ngon.', 
+                            price: '90.000 VND' },
+                        2: { 
+                            title: 'Lacàph Espresso Blend', 
+                            description: 'Sản xuất từ hạt Arabica và hạt Robusta giúp lưu giữ nhiều lớp mùi vị. Cà phê từ nông trường tiên phong trong lĩnh vực canh tác Arabica vùng Tây Nguyên được thu hoạch, chọn lọc bằng tay trước khi được sơ chế bằng phương pháp khô tự nhiên, phơi và đóng gói. Lacàph Espresso Blend là một loại cà phê mượt mà, tròn vị, kết hợp hoàn hảo giữa vị chua nhẹ và vị ngọt thanh.', 
+                            price: '190.000 VND' },
+                        3: { 
+                            title: 'Lacàph Filter Blend', 
+                            description: 'Sản xuất từ những hạt Arabica Red Bourbon chất lượng thu hoạch bằng tay từ vườn cà phê của anh Hadjim, nằm ở miền Trung Tây Nguyên. Những hạt cà phê được sơ chế ướt (Fully - Washed) sau đó sẽ vận chuyển đến xưởng rang Lacàph để kết hợp cùng Arabica từ nông hộ khác. Lacàph Filter Blend là một loại cà phê có sự kết hợp nhịp nhàng giữa vị chua và ngọt dịu êm.', 
+                            price: '200.000 VND' },
+                        4: { 
+                            title: 'Lacàph Phin Blend', 
+                            description: 'Sản xuất từ những hạt Robusta chất lượng ở vùng đất đỏ bazan tỉnh Đắk Nông kết hợp với tỉ lệ nhỏ hạt Arabica tạo ra hương vị đậm đà. Hạt Robusta được sơ chế theo phương pháp bán ướt giúp tăng vị ngọt và tạo thêm nhiều lớp hương vị. Lacàph Phin Blend là một loại cà phê hướng đến sự cân bằng, hơi hướng hiện đại hơn so với các loại cà phê phin truyền thống.', 
+                            price: '180.000 VND' }
+                    };
 
-                //     return productDetails[productIndex];
-                // }
+                    return productDetails[productIndex];
+                }
 
                 function showPreviousProduct() {
                     if (currentProductIndex > 1) {
@@ -688,10 +688,10 @@
                  hoặc theo lịch hẹn</p></li>
                 <li><p>Thứ 6–Thứ 7, 9:30–21:30
                  <br>hoặc theo lịch hẹn</p></li>
-                <li><p>Số điện thoại
-                 <br><a href="tel:+">+84 (0)86 672 1202</a></p></li>
-                <li><p>Email
-                 <br><a href="mailto:">hello@lacaph.com</a></p></li>
+                 <li><p><span style="font-weight: bold;">Số điện thoại</span>
+                  <br><a href="tel:+">+84 (0)86 672 1202</a></p></li>
+                 <li><p><span style="font-weight: bold;">Email</span>
+                  <br><a href="mailto:">hello@lacaph.com</a></p></li>
                 </ul>
               </div>
               <div class="footer-col-tuan footer-tuan-x">

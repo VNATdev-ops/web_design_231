@@ -74,7 +74,7 @@ a{
 .noidung1 p{
     margin-bottom: 1rem;
     font-size: 100%;
-    font-weight: 100;
+    font-weight: 400;
     line-height: 25px;
 }
 .noidunggiua{
@@ -245,8 +245,7 @@ textarea:focus{
         margin: 50px 3% 0 3%;
     }
     .contact-form{
-        position: absolute;
-        left: 0;
+        margin: 50px -30px -30px -30px;
     }
     .form{
         padding: 30px 5%;
