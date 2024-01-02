@@ -901,11 +901,23 @@ textarea:focus{
 }
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    .text-tuan{
+    /* .text-tuan{
         font-size: 15px;
+    } */
+    .carousel-inner, .carousel-inner img  {
+        font-size: 16px;
+        width: 100%;
+        height: 500px;
     }
-    .carousel-inner{
+    .card-tuan{
+        height: 460px;
+
     }
+    .tuan-bt{
+       
+        
+    }
+
     .carousel-item, .img-tuan2{
     }
 }
