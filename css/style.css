@@ -901,12 +901,12 @@ textarea:focus{
 }
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    .card-tuan-rp{
-    padding: 10px;
-    /* max-width: 0px; */
-    top: 50%;
-    position: absolute;
-    max-height: min-content;
+    .text-tuan{
+        font-size: 15px;
+    }
+    .carousel-inner{
+    }
+    .carousel-item, .img-tuan2{
     }
 }
 
