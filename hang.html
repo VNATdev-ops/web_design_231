@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lacàph | Mua Hàng</title>
-    <link rel="shortcut icon" type="image/png" href="/images/favicon.ico"/>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <title>Lacàph | Đặc Đen Đắng</title>
+    <link rel="shortcut icon" type="image/png" href="./images/favicon.ico"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/default.css">
     <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/hang.css">
+    <link rel="stylesheet" href="./css/sach.css">
     <link rel="stylesheet" href="./css/footer.css">
 </head>
 <body>
@@ -27,13 +27,13 @@
                     </label>
                 </div>
                 <div class="logo">
-                    <a href="#"><img src="images/logo.svg" alt=""></a>
+                    <a href="#"><img src="./images/logo.svg" alt=""></a>
                 </div>
                 <div class="chucnang">
-                    <a href="#"><img src="images/vi_vn.svg" alt=""></a>
+                    <a href="#"><img src="./images/vi_vn.svg" alt=""></a>
                     <span class="timkiem-button"><i class="fa-solid fa-magnifying-glass" style="color: #4e358a;"></i></span>
-                    <a href="#"><i class="fa-solid fa-user" style="color: #4e358a;"></i></a>
-                    <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #4e358a;"></i></a>
+                    <a href="./login.html"><i class="fa-solid fa-user" style="color: #4e358a;"></i></a>
+                    <a href="./gio-hang.html"><i class="fa-solid fa-basket-shopping" style="color: #4e358a;"></i></a>
                 </div>
             </div>
 
@@ -47,18 +47,18 @@
             <div class="row" id="menu">
                 <nav>
                     <ul>
-                        <li><a href="vechungtoi/ve-chung-toi.html">Về chúng tôi</a></li>
-                        <li><a href="muahang.html">Mua hàng</a></li>
-                        <li><a href="cauchuyen.html">Câu chuyện</a></li>
-                        <li><a href="LACÀPHBAR.html">Lacàph Bar</a></li>
-                        <li><a href="LACÀPHSPACE.html">Lacàph Space</a></li>
-                        <li><a href="sach.html">Sách</a></li>
-                        <li><a href="wholesale.html">Wholesale</a></li>
-                        <li><a href="lienhe.html">Liên hệ</a></li>
+                        <li><a href="./vechungtoi/ve-chung-toi.html">Về chúng tôi</a></li>
+                        <li><a href="./muahang.html">Mua hàng</a></li>
+                        <li><a href="./cauchuyen.html">Câu chuyện</a></li>
+                        <li><a href="./LACÀPHBAR.html">Lacàph Bar</a></li>
+                        <li><a href="./LACÀPHSPACE.html">Lacàph Space</a></li>
+                        <li><a href="./sach.html">Sách</a></li>
+                        <li><a href="./wholesale.html">Wholesale</a></li>
+                        <li><a href="./lienhe.html">Liên hệ</a></li>
                     </ul>
                 </nav>
             </div>
-
+    
             <div class="pop-up-header">
                 <div class="header-container" >
                     <div class="button-nav">
@@ -66,8 +66,8 @@
                             <button><img src="./images/close-button.png" alt=""></button>
                         </div>
                         <div class="chucnang">
-                            <a href="#"><i class="fa-solid fa-user" style="color: #ffffff;"></i></a>
-                            <a href="#"><i class="fa-solid fa-basket-shopping" style="color: #ffffff;"></i></a>
+                            <a href="./login.html"><i class="fa-solid fa-user" style="color: #ffffff;"></i></a>
+                            <a href="./gio-hang.html"><i class="fa-solid fa-basket-shopping" style="color: #ffffff;"></i></a>
                         </div>
                     </div>
                     <div class="timkiem">
@@ -79,14 +79,14 @@
                 <div class="menu">
                     <nav>
                         <ul>
-                            <li><a href="vechungtoi/ve-chung-toi.html">Về chúng tôi</a></li>
-                        <li><a href="muahang.html">Mua hàng</a></li>
-                        <li><a href="cauchuyen.html">Câu chuyện</a></li>
-                        <li><a href="LACÀPHBAR.html">Lacàph Bar</a></li>
-                        <li><a href="LACÀPHSPACE.html">Lacàph Space</a></li>
-                        <li><a href="sach.html">Sách</a></li>
-                        <li><a href="wholesale.html">Wholesale</a></li>
-                        <li><a href="lienhe.html">Liên hệ</a></li>
+                            <li><a href="./vechungtoi/ve-chung-toi.html">Về chúng tôi</a></li>
+                            <li><a href="./muahang.html">Mua hàng</a></li>
+                            <li><a href="./cauchuyen.html">Câu chuyện</a></li>
+                            <li><a href="./LACÀPHBAR.html">Lacàph Bar</a></li>
+                            <li><a href="./LACÀPHSPACE.html">Lacàph Space</a></li>
+                            <li><a href="./sach.html">Sách</a></li>
+                            <li><a href="./wholesale.html">Wholesale</a></li>
+                            <li><a href="./lienhe.html">Liên hệ</a></li>    
                         </ul>
                     </nav>
                 </div>
@@ -139,28 +139,29 @@
                     }
 
                     // Check screen width before attaching event listeners
-                    window.addEventListener('scroll', updateScroll);
-                    openButton.addEventListener('click', toggleSearchBar);
+                        window.addEventListener('scroll', updateScroll);
+                        openButton.addEventListener('click', toggleSearchBar);
 
                     //Menu size
                     function updateMenuSize() {
-                        let screenWidth = window.innerWidth;
-                        let menu = document.querySelector('#menu');
+                                    let screenWidth = window.innerWidth;
+                                    let menu = document.querySelector('#menu');
 
-                        if (screenWidth <= 1200) {
-                            menu.style.width = '100%'; 
-                        } else {
-                            menu.style.width = 'auto'; 
-                        }
-                    }
+                                    if (screenWidth <= 1200) {
+                                        menu.style.width = '100%'; 
+                                    } else {
+                                        menu.style.width = 'auto'; 
+                                    }
+                                }
 
-                    updateMenuSize();
-                    window.addEventListener('resize', updateMenuSize);
-                });
+                        updateMenuSize();
+                        window.addEventListener('resize', updateMenuSize);
 
+                    });
 
                     //pop-up header
                     var popupMenu = document.querySelector('.pop-up-header');
+
                     function openPopupMenu() {
                         popupMenu.style.left = '0';
                     }
@@ -172,25 +173,7 @@
         </div>
     </header>
 
-    <div class="dongdautrang">
-        <div class="h_dongchu">
-            <p>Miễn phí giao hàng toàn quốc cho các đơn hàng từ 1 triệu đồng trở lên (Đã bao gồm VAT).
-            </p>
-        </div>
-    </div>
-    <div class="hang_noidung">
-        <div class="hang_thangchidan">
-            <div class="hang_dongdan">
-                <a href="muahang.html" class="dan">MUA HÀNG</a> 
-                >
-                <a href="xemtatca.html" class="dan">SẢN PHẨM ĐẶT TRƯNG</a>
-                >
-                <a href="hang.html" class="dan">PHIN BLEND DRIP BAGS</a>
-            </div>
-        </div>
-    </div>
-
-<!-- -->
+    <!-- -->
 <div class="position-relative">
     <div class="position-fixed top-50 start-100 translate-middle">
       <button type="button" class="btn btn-tuan">
@@ -201,23 +184,94 @@
     </div>
   </div>
   <!--  -->
+    
 
+
+
+    <div class="duongdan">
+        <div class="link-container">
+            <a href="./muahang.html">MUA HÀNG</a> 
+            <i class="fa-solid fa-angle-right" style="color: #ffffff;"></i>
+            <a href="./hang.html">SẢN PHẨM KHÁC</a> 
+            <i class="fa-solid fa-angle-right" style="color: #ffffff;"></i>
+            ĐẶC ĐEN ĐẮNG
+        </div>
+    </div>
 
     <main>
         <section class="dac-den-dang">
             <div class="slideshow">
-                <div class="anh"><img src="images/cauc-muah/97af60e50b954daaa2609baa41ff9e87_w1920_h1080.png" alt=""></div>
-                 
+                <div class="slideshow-container">
+                    <div class="mySlides fade"><img src="./images/sach/sach-1.jpg" alt=""></div>
+                    <div class="mySlides fade"><img src="./images/sach/sach-2.jpg" alt=""></div>
+                    <div class="mySlides fade"><img src="./images/sach/sach-3.jpg" alt=""></div>
+                    <div class="mySlides fade"><img src="./images/sach/sach-4.jpg" alt=""></div>
+                    <div class="mySlides fade"><img src="./images/sach/sach-5.jpg" alt=""></div>
+                    <div class="mySlides fade"><img src="./images/sach/sach-6.jpg" alt=""></div>
+                    <div class="mySlides fade"><img src="./images/sach/sach-7.jpg" alt=""></div>
+                
+                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                    <a class="next" onclick="plusSlides(1)">❯</a>
+                </div>
+                
+                <div class="dot-container">
+                    <span class="dot" onclick="currentSlide(1)"></span> 
+                    <span class="dot" onclick="currentSlide(2)"></span> 
+                    <span class="dot" onclick="currentSlide(3)"></span> 
+                    <span class="dot" onclick="currentSlide(4)"></span> 
+                    <span class="dot" onclick="currentSlide(5)"></span> 
+                    <span class="dot" onclick="currentSlide(6)"></span> 
+                    <span class="dot" onclick="currentSlide(7)"></span> 
+                </div>
             </div>
+            
+            
+            <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
+                
+                function plusSlides(n) {
+                showSlides(slideIndex += n);
+                }
+                
+                function currentSlide(n) {
+                showSlides(slideIndex = n);
+                }
+                
+                function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}    
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
+                }
+            </script>
+                
             <div class="info">
-                <h1>PHIN BLEND DRIP BAGS</h1>
+                <h1>Đặc Đen Đắng</h1>
                 <div class="description">
-                    <p>Lacàph Phin Blend Drip Bags là sản phẩm cà phê hoàn hảo ở bất cứ nơi đâu khi bạn không có các dụng cụ pha chế cần thiết. Cải tiến màng lọc không mùi cùng bột cà phê xay mịn từ Lacàph Phin Blend, sản phẩm nhanh chóng mang lại cho bạn tách cà phê thơm ngon.
+                    <p>Coffee is deeply rooted in the culture of Việt Nam, an intrinsic part of the 
+                        country’s history and society for over a hundred years. But have you ever 
+                        wondered how Việt Nam became a global coffee powerhouse, the role coffee 
+                        played in President Hồ Chí Minh’s rise to power, or how a small brown bean 
+                        lifted thousands out of poverty and created a coffee culture unlike any other?
                     </p>
-                    <p>Hộp 10 gói x 15g
+                    <p><a href="#">Đặc Đen Đắng: The Vietnamese Coffee Book</a> 
+                        answers these questions and more. It shares the story of Việt Nam 
+                        and its coffee, tales of people who work in the country’s booming coffee sector, 
+                        and the role coffee has played in shaping Việt Nam since the arrival of the first 
+                        beans more than 160 years ago.
                     </p>
                     <div class="product_price">
-                        190.000 VND
+                        1.250.000 VND
                     </div>
                     <div class="cart">
                         <div class="cart_quantity">
@@ -246,6 +300,11 @@
             
             <div id="product-info">
                 <div id="des" class="description-box">
+                    <p>Đặc Đen Đắng: The Vietnamese Coffee Book is 224 pages, consisting of five chapters; Coffee 101, History of Coffee, Historic Cafés, Local Stories, and Movers &amp; Shakers.
+                        <br>
+                        The book is 27.1cm by 35.7cm and 2.2cm thick (10.7″, 14.0″, 0.9″). It weighs in at 2.1kg (4.6lbs). It can comfortably fit in a regular size carry-on suitcase.
+                        <br>
+                        ISBN: 978-604-310-318-2.</p>
                 </div>
 
                 <div id="spec" class="description-box"></div>
@@ -334,14 +393,15 @@
                             <span class="swiper-pagination-bullet"></span>
                         </div>
                         
-                        <!-- Navigation buttons -->
+                        <!-- Navigation buttons 
                         <div class="swiper-button-next"></div>
                         <div class="swiper-button-prev"></div>
+                        -->
                     </div>
                     
                     <div class="pop-up-window">
                         <div class="product-popup-content" >
-                            <i class="fa-solid fa-xmark" style="color: #ffffff; font-size: 50px; cursor: pointer; position:absolute; top:30px; right: 30px; " onclick="closePopup()"></i>
+                            <i class="fa-solid fa-xmark" style="color: #ffffff; font-size: 30px; cursor: pointer; position:absolute; top:30px; right: 30px; " onclick="closePopup()"></i>
                             <div class="mod_redshop_products_title">
                                 <h3></h3>
                             </div>
@@ -353,7 +413,7 @@
                             </div>
                             <div class="btn-wrap">
                                 <div class="mod_redshop_products_readmore" onclick="closePopup()">
-                                    <a class="readmore-link" href="khampha.html">
+                                    <a class="readmore-link" href="./khampha.html">
                                         Khám Phá
                                     </a>
                                 </div>
@@ -362,11 +422,8 @@
                         </div>
                     </div>
                     
-
-                    <!-- JavaScript -->
                     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
                     <script>
-                        // Initialize Swiper
                         var swiper = new Swiper('.swiper-container', {
                             slidesPerView: 1,
                             spaceBetween: 10,
@@ -378,18 +435,16 @@
                                 el: '.swiper-pagination',
                                 clickable: true,
                             },
-                            loop: true, //infinite scrolling
+                            loop: true, 
                         });
 
-                        // toggle the left position of the pop-up content
                         var popupContent = document.querySelector('.pop-up-window');
-                        var currentProductIndex = 0; // Track the current product index
+                        var currentProductIndex = 0; 
 
                         swiper.on('slideChange', function () {
                             popupContent.style.left = '-100%';
                         });
 
-                        // Function to toggle the pop-up content visibility
                         function togglePopup(productIndex) {
                             currentProductIndex = productIndex;
                             popupContent.style.left = '0';
@@ -453,65 +508,88 @@
                 </div>
             
         </section>
-
     </main>
+
     
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var buyingButton = document.querySelector('.buying-button');
+    
+            function toggleButtonVisibility() {
+                if (window.innerWidth < 1000) {
+                    buyingButton.classList.remove('hide');
+                } else {
+                    buyingButton.classList.add('hide');
+                }
+            }
+    
+            toggleButtonVisibility();
+            window.addEventListener('resize', toggleButtonVisibility);
+        });
+    </script>
+    
+
     <!-- footer -->
     <footer class="footer-tuan">
 		<div class="container-footer-tuan">
 		  <div class="row-footer-tuan">
 			<div class="footer-col-tuan ">
-                <h4 class=""><a href="index.html"><img src="images.tuan/Logo_Lacàph_footer.webp " alt="" width="160" height="62"></a></h4>
+                <h4 class=""><a href="./index.html"><img src="./images.tuan/Logo_Lacàph_footer.webp " alt="" width="160" height="62"></a></h4>
                 <br>
                 <ul class="">
-                <li><p>Bản quyền Ⓒ 2023 Lacàph
-                  thuộc Cty TNHH Collective</p></li>
-                <li><p>Cty TNHH Collective
-                  GPĐKKD số 0315880703
-                  do sở KHĐT Tp. HCM
-                  cấp ngày 05/09/2019</p></li>
+                  <li><p>Bản quyền Ⓒ 2023 Lacàph
+                      thuộc Cty TNHH Collective</p></li>
+                  <li><p>Cty TNHH Collective
+                      GPĐKKD số 0315880703
+                      do sở KHĐT Tp. HCM
+                      cấp ngày 05/09/2019</p></li>
                 </ul>
               </div>
               <div class="footer-col-tuan">
                 <h1>LACÀPH SPACE</h1>
                 <ul>
-                <li><p>220A Nguyễn Công Trứ
+                  <li><p>220A Nguyễn Công Trứ
                  Phường Nguyễn Thái Bình
                  Quận 1, Tp. Hồ Chí Minh</p></li>
-                <li><p>Chủ nhật–Thứ 5, 9:30–17:30
+                  <li><p>Chủ nhật–Thứ 5, 9:30–17:30
                  hoặc theo lịch hẹn</p></li>
-                <li><p>Thứ 6–Thứ 7, 9:30–21:30
+                  <li><p>Thứ 6–Thứ 7, 9:30–21:30
                  <br>hoặc theo lịch hẹn</p></li>
-                <li><p>Số điện thoại
-                 <br><a href="tel:+">+84 (0)86 672 1202</a></p></li>
-                <li><p>Email
-                 <br><a href="mailto:">hello@lacaph.com</a></p></li>
+                 <li><p><span style="font-weight: bold;">Số điện thoại</span>
+                    <br><a href="tel:+">+84 (0)86 672 1202</a></p></li>
+                 <li><p><span style="font-weight: bold;">Email</span>
+                    <br><a href="mailto:">hello@lacaph.com</a></p></li>
                 </ul>
               </div>
               <div class="footer-col-tuan footer-tuan-x">
                 <h1>CHÍNH SÁCH CỬA HÀNG</h1>
                 <ul>
-                <li><a href="chinhsach.html">Chính sách đổi trả</a></li>
-                <li><a href="chinhsach.html">Chính sách vận chuyển</a></li>
-                <li><a href="chinhsach.html">Phương thức thanh toán</a></li>
-                <li><a href="chinhsach.html">Chính sách bảo mật</a></li>
-                </ul>
-              </div>
-              <div class="footer-col-tuan">
-                <h4 style="color: #fff;">Theo dõi chúng tôi!</h4>
-                <div class="social-links-tuan">
-                    <a href="https://www.facebook.com/lacaph.coffee/"><i class="fa-brands fa-square-facebook" style="padding-right: 10px;"></i></a>
-                    <a href="https://www.instagram.com/lacaph.coffee/"><i class="fa-brands fa-instagram" style="padding-right: 10px;"></i></a>
-                    <a href="https://www.youtube.com/channel/UCrXnkWygCQUPbgccJDmBUFw"><i class="fa-brands fa-youtube" style="padding-right: 10px;"></i></a>
-                    <a href="https://www.linkedin.com/company/lacaph/"><i class="fa-brands fa-linkedin" style="padding-right: 10px;"></i></a>  
-                  </div>
-                  <div class="" style="width:80% ; display: flex; flex-direction: column; align-items: center;">
-                    <a href="https://www.tripadvisor.com/Attraction_Review-g293925-d21493307-Reviews-Lacaph-Ho_Chi_Minh_City.html"><img src="images.tuan/tc_2022_l_green_bg_rgb-3.webp" alt="" width="100" height="auto" style="padding: 10px 0;"></a>
-                    <a href="http://online.gov.vn/Home/WebDetails/81715?AspxAutoDetectCookieSupport=1"><img src="images.tuan/logoSaleNoti.webp" alt="" width="220" height="auto" style="padding: 10px 0;" ></a>
+                  <li><a href="./chinhsach.html">Chính sách đổi trả</a></li>
+                  <li><a href="./chinhsach.html">Chính sách vận chuyển</a></li>
+                  <li><a href="./chinhsach.html">Phương thức thanh toán</a></li>
+                  <li><a href="./chinhsach.html">Chính sách bảo mật</a></li>
+                  </ul>
+                </div>
+                <div class="footer-col-tuan">
+                  <h4 style="color: #fff;">Theo dõi chúng tôi!</h4>
+                  <div class="social-links-tuan">
+                      <a href="https://www.facebook.com/lacaph.coffee/"><i class="fa-brands fa-square-facebook" style="padding-right: 10px;"></i></a>
+                      <a href="https://www.instagram.com/lacaph.coffee/"><i class="fa-brands fa-instagram" style="padding-right: 10px;"></i></a>
+                      <a href="https://www.youtube.com/channel/UCrXnkWygCQUPbgccJDmBUFw"><i class="fa-brands fa-youtube" style="padding-right: 10px;"></i></a>
+                      <a href="https://www.linkedin.com/company/lacaph/"><i class="fa-brands fa-linkedin" style="padding-right: 10px;"></i></a>  
+                    </div>
+                    <div class="" style="width:80% ; display: flex; flex-direction: column; align-items: center;">
+                      <a href="https://www.tripadvisor.com/Attraction_Review-g293925-d21493307-Reviews-Lacaph-Ho_Chi_Minh_City.html"><img src="./images.tuan/tc_2022_l_green_bg_rgb-3.webp" alt="" width="100" height="auto" style="padding: 10px 0;"></a>
+                      <a href="http://online.gov.vn/Home/WebDetails/81715?AspxAutoDetectCookieSupport=1"><img src="./images.tuan/logoSaleNoti.webp" alt="" width="220" height="auto" style="padding: 10px 0;" ></a> 
 			  </div>
 			</div>
 		  </div>
 		</div>
 	 </footer>
+
+     <div class="buying-button">
+        <button><i class="fa-solid fa-basket-shopping" style="color: #ffffff; padding-right: 7px; font-size: 17px;"></i>CHỌN MUA</button>
+        <button>MUA NGAY</button>
+    </div>
 </body>
 </html>
